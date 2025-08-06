@@ -1,0 +1,8 @@
+CREATE TABLE [tools_4486_tb](
+[a] varchar(100)
+)
+;
+CREATE TABLE [tools_4486_tb_2](
+[a] varchar(100)
+)
+;

@@ -1,0 +1,52 @@
+CREATE VIEW [menu_view](
+[STRMCODE] numeric(38,15),
+[MENUPATH] varchar(4000),
+[MENUNAME] varchar(200),
+[MENUURL] varchar(500)
+)
+;
+CREATE VIEW [minwonform_view](
+[STRMCODE] numeric(38,15),
+[MENUPATH] varchar(4000),
+[MENUNAME] varchar(200),
+[MENUURL] varchar(500),
+[FILEPATH] varchar(500),
+[FILEURL] varchar(200)
+)
+;
+CREATE VIEW [product_privs](
+[PRODUCT] varchar(30),
+[USERID] varchar(30),
+[ATTRIBUTE] varchar(240),
+[SCOPE] varchar(240),
+[NUMERIC_VALUE] numeric(15,2),
+[CHAR_VALUE] varchar(240),
+[DATE_VALUE] datetime,
+[LONG_VALUE] varchar(1073741823)
+)
+;
+CREATE VIEW [tb_pageadm_data2](
+[STRPAGENAME] varchar(200),
+[STRDEPT] varchar(200),
+[STRNAME] varchar(200),
+[STRTEL] varchar(200),
+[CHARETC] varchar(1),
+[STRPAGEPATH] varchar(500)
+)
+;
+CREATE VIEW [v_dansu](
+[SEQ] numeric(10,0),
+[ADDR] varchar(200),
+[DANSU_DATE] varchar(200),
+[END_DATE] numeric(8,0),
+[CONTENT] varchar(4000)
+)
+;
+CREATE VIEW [webpage_view](
+[STRMCODE] numeric(38,15),
+[MENUPATH] varchar(4000),
+[MENUNAME] varchar(200),
+[STRPATH] varchar(500),
+[MENUURL] varchar(500)
+)
+;

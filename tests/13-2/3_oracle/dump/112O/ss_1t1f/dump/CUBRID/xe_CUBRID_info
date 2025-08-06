@@ -1,0 +1,13 @@
+xe_CUBRID_procedure_header
+xe_CUBRID_function_header
+xe_CUBRID_class
+xe_CUBRID_vclass
+xe_CUBRID_synonym
+xe_CUBRID_serial
+xe_CUBRID_procedure
+xe_CUBRID_function
+xe_CUBRID_pk
+xe_CUBRID_fk
+xe_CUBRID_grant.SYSTEM
+xe_CUBRID_grant.TOOLS_4486
+xe_CUBRID_vclass_query_spec

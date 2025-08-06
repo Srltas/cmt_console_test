@@ -1,0 +1,15 @@
+Migration Report summary:
+    Time used: 00 00:02:00.191
+    schema: Exported[0]; Imported[0]
+    table: Exported[228]; Imported[228]
+    view: Exported[8]; Imported[8]
+    primary key: Exported[116]; Imported[116]
+    foreign key: Exported[2]; Imported[2]
+    index: Exported[7]; Imported[7]
+    sequence: Exported[50]; Imported[50]
+    synonym: Exported[223]; Imported[223]
+    trigger: Exported[0]; Imported[0]
+    plcsql_function: Exported[1]; Imported[1]
+    plcsql_procedure: Exported[1]; Imported[1]
+    grant: Exported[230]; Imported[230]
+    record: Exported[2341567]; Imported[2341567]

@@ -1,0 +1,184 @@
+CREATE TABLE [CUBRID].[credit1](
+[trade_datetime] datetime DEFAULT to_datetime('0001-01-01 00:00:00','yyyy-mm-dd hh24:mi:ss') NOT NULL
+)
+;
+CREATE TABLE [CUBRID].[cubrid_image_list](
+[image_id] varchar(10),
+[image_type] varchar(200),
+[image_type_raw] bit varying(144),
+[image_description] varchar(200),
+[image_file_name] varchar(100),
+[image_file] bit varying(1073741823)
+)
+;
+CREATE TABLE [CUBRID].[imsi_tbl](
+[col1] varchar(4000),
+[col2] varchar(4000)
+)
+;
+CREATE TABLE [CUBRID].[plcsql_tbl](
+[id] int,
+[name] varchar(200)
+)
+;
+CREATE TABLE [CUBRID].[seoul_bicycle_usage_info](
+[rental_date] datetime,
+[rental_office_number] int,
+[rental_office] varchar(200),
+[rental_type_name] varchar(50),
+[gender_type] varchar(20),
+[age_type] varchar(20),
+[use_number] int,
+[momentum] numeric(10,3),
+[carbon_amount] double,
+[distance_meters] numeric(10,2),
+[use_min] varchar(255),
+[random_value] varchar(255)
+)
+;
+CREATE TABLE [CUBRID].[seoul_bus_route](
+[route_id] varchar(10),
+[route_name] varchar(60),
+[sequence_number] int,
+[node_id] varchar(10),
+[ars_id] varchar(5),
+[bus_stop_name] varchar(1073741823),
+[gps_x] varchar(100),
+[gps_y] varchar(100),
+[create_date_tz] varchar(100),
+[create_date_local_tz] datetime
+)
+;
+CREATE TABLE [CUBRID].[seoul_bus_route_line](
+[route_id] varchar(20),
+[route_name] varchar(60),
+[bus_stop_name_list] varchar(1073741823)
+)
+;
+CREATE TABLE [CUBRID].[t1](
+[a] int,
+[b] varchar(100)
+)
+;
+CREATE TABLE [CUBRID].[temp09](
+[col1] blob
+)
+;
+CREATE TABLE [CUBRID].[test_date_default](
+[trade_datetime] datetime DEFAULT to_datetime('0001-01-01 00:00:00','yyyy-mm-dd hh24:mi:ss') NOT NULL
+)
+;
+CREATE TABLE [CUBRID].[test_number](
+[num] numeric(38,15),
+[num_star] numeric(38,15)
+)
+;
+CREATE TABLE [CUBRID].[test_tbl](
+[col1] varchar(5)
+)
+;
+CREATE TABLE [CUBRID].[tools4345](
+[b1] bit varying(1073741823) NOT NULL,
+[c1] varchar(1073741823) NOT NULL
+)
+;
+CREATE TABLE [CUBRID].[tools4350](
+[commentcol] varchar(1000) COMMENT 'comment test column in tools4350',
+[b] numeric(38,15) COMMENT 'comment test column b',
+[c] char(3) COMMENT 'comment test column c',
+[d] numeric(38,15) COMMENT 'comment test column d',
+[e] datetime COMMENT 'comment test column e'
+) COMMENT = 'comment test table'
+;
+CREATE TABLE [CUBRID].[tools4376](
+[col3] varchar(100) COMMENT 'column comment for tools4376',
+[col2] numeric(15,0) COMMENT 'index comment col2_idx',
+[col1] numeric(38,15) COMMENT 'pk comment'
+) COMMENT = 'table_comment'
+;
+CREATE TABLE [CUBRID].[tools4410](
+[i] int COMMENT 'TOOLS4410_I',
+[j] numeric(10,0) COMMENT 'TOOLS4410_J'
+) COMMENT = 'test''''single quote'
+;
+CREATE TABLE [CUBRID].[tools4474](
+[col] int COMMENT 'TOOLS4474_COL'
+)
+;
+CREATE TABLE [CUBRID].[tools4547](
+[id] numeric(38,15),
+[col1] numeric(38,15)
+)
+;
+CREATE TABLE [CUBRID].[tools4556](
+[id] numeric(38,15),
+[curdate] datetime DEFAULT CURRENT_DATE,
+[curtime] timestamp DEFAULT LOCALTIMESTAMP,
+[current_date] datetime DEFAULT CURRENT_DATE,
+[current_timestamp] timestamp DEFAULT CURRENT_TIMESTAMP,
+[dbtimezone] varchar(50) DEFAULT (DBTIMEZONE),
+[localtimestamp] timestamp DEFAULT LOCALTIMESTAMP,
+[sessiontimezone] varchar(50) DEFAULT (SESSIONTIMEZONE),
+[sys_date] datetime DEFAULT SYSDATE,
+[systimestamp] timestamp DEFAULT SYSTIMESTAMP
+)
+;
+CREATE TABLE [CUBRID].[tools4557](
+[id] int,
+[workday] numeric(38,15) DEFAULT CAST(to_char(SYSDATE, 'DDD') AS NUMBER),
+[workday_char] varchar(3) DEFAULT to_char(SYSDATE, 'DDD'),
+[current_year] varchar(4) DEFAULT to_char(SYSDATE, 'YYYY'),
+[current_month] varchar(2) DEFAULT to_char(SYSDATE, 'MM'),
+[current_day] varchar(2) DEFAULT to_char(SYSDATE, 'DD'),
+[timestamp_char] varchar(30) DEFAULT TO_CHAR(SYSTIMESTAMP, 'YYYY-MM-DD HH24:MI:SS.FF'),
+[timestamp_year] numeric(38,15),
+[timestamp_month] numeric(38,15),
+[timestamp_day] numeric(38,15),
+[timestamp_hour] numeric(38,15),
+[timestamp_minute] numeric(38,15),
+[timestamp_second] numeric(38,15),
+[numeric_char] varchar(10) DEFAULT TO_CHAR(12345.67),
+[char_number] numeric(38,15) DEFAULT CAST('12345.67' AS NUMBER),
+[date_number] numeric(38,15) DEFAULT CAST(TO_CHAR(SYSDATE, 'YYYYMMDD') AS NUMBER),
+[char_date] datetime DEFAULT CAST('20230530' AS DATE)
+)
+;
+CREATE TABLE [CUBRID].[tools4561](
+[id] numeric(38,15),
+[description] varchar(1073741823),
+[created_date] datetime
+)
+;
+CREATE TABLE [CUBRID].[tools4563_fk](
+[fk_id] char(1) NOT NULL
+)
+;
+CREATE TABLE [CUBRID].[tools4563_pk](
+[id] char(1),
+[data] varchar(100)
+)
+;
+CREATE TABLE [CUBRID].[tools4585](
+[id] numeric(38,15),
+[lob_data] varchar(1073741823)
+)
+;
+CREATE TABLE [CUBRID].[tools4644](
+[col_varchar2] varchar(100) DEFAULT ('default_varchar2'),
+[col_char] char(1) DEFAULT ('0'),
+[col_number] numeric(38,15) DEFAULT (0),
+[col_date] datetime DEFAULT (SYSDATE),
+[col_timestamp] timestamp DEFAULT (SYSTIMESTAMP),
+[col_clob] varchar(1073741823) DEFAULT ('default_clob'),
+[col_blob] bit varying(1073741823) DEFAULT X'EMPTY_BLOB()',
+[col_raw] bit varying(800) DEFAULT X'HEXTORAW('64656661756C745F726177')',
+[col_nvarchar2] varchar(100) DEFAULT (u'default_nvarchar2'),
+[col_nchar] char(1) DEFAULT (u'0'),
+[col_float] double DEFAULT (0.0),
+[col_binary_float] float DEFAULT (0.0),
+[col_binary_double] double DEFAULT (0.0),
+[col_interval_day_to_second] varchar(255) DEFAULT (INTERVAL '0' DAY),
+[col_interval_year_to_month] varchar(255) DEFAULT (INTERVAL '0' YEAR),
+[col_bfile] blob DEFAULT (BFILENAME('DEFAULT_DIR', 'default_bfile.txt'))
+)
+;

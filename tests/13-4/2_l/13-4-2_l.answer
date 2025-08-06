@@ -1,0 +1,84 @@
+Thank you for using CUBRID Migration Toolkit(CMT) Console.
+
+Reading migration history file: <1753849479511.mh>
+
+2025-07-30 13:24:39.586 Migration started at 2025-07-30 13:24:39
+2025-07-30 13:24:39.641 Create table[PUBLIC.athlete] successfully.
+2025-07-30 13:24:39.642 Create table[PUBLIC.code] successfully.
+2025-07-30 13:24:39.643 Create table[PUBLIC.event] successfully.
+2025-07-30 13:24:39.643 Create table[PUBLIC.game] successfully.
+2025-07-30 13:24:39.644 Create table[PUBLIC.history] successfully.
+2025-07-30 13:24:39.645 Create table[PUBLIC.nation] successfully.
+2025-07-30 13:24:39.646 Create table[PUBLIC.olympic] successfully.
+2025-07-30 13:24:39.647 Create table[PUBLIC.record] successfully.
+2025-07-30 13:24:39.648 Create table[PUBLIC.stadium] successfully.
+2025-07-30 13:24:40.716 Create sequence[event_no] successfully.
+2025-07-30 13:24:40.720 Create sequence[stadium_no] successfully.
+2025-07-30 13:24:41.726 Begin to export records of table[athlete].
+2025-07-30 13:24:41.733 Begin to export records of table[game].
+2025-07-30 13:24:41.733 Begin to export records of table[event].
+2025-07-30 13:24:41.733 Begin to export records of table[code].
+2025-07-30 13:24:41.739 Exported 6 records from table [code] successfully.
+2025-07-30 13:24:41.742 Begin to export records of table[history].
+2025-07-30 13:24:41.748 Exported 422 records from table [event] successfully.
+2025-07-30 13:24:41.749 Imported 6 records from [code] to table [code] successfully.
+2025-07-30 13:24:41.750 Exported 147 records from table [history] successfully.
+2025-07-30 13:24:41.751 Begin to export records of table[nation].
+2025-07-30 13:24:41.757 Exported 215 records from table [nation] successfully.
+2025-07-30 13:24:41.766 Exported 1000 records from table [athlete] successfully.
+2025-07-30 13:24:41.769 Imported 147 records from [history] to table [history] successfully.
+2025-07-30 13:24:41.776 Imported 215 records from [nation] to table [nation] successfully.
+2025-07-30 13:24:41.777 Exported 1000 records from table [game] successfully.
+2025-07-30 13:24:41.781 Exported 1000 records from table [athlete] successfully.
+2025-07-30 13:24:41.783 Imported 422 records from [event] to table [event] successfully.
+2025-07-30 13:24:41.793 Exported 1000 records from table [athlete] successfully.
+2025-07-30 13:24:41.800 Exported 1000 records from table [game] successfully.
+2025-07-30 13:24:41.804 Exported 1000 records from table [athlete] successfully.
+2025-07-30 13:24:41.814 Imported 1000 records from [athlete] to table [athlete] successfully.
+2025-07-30 13:24:41.815 Exported 1000 records from table [athlete] successfully.
+2025-07-30 13:24:41.828 Exported 1000 records from table [game] successfully.
+2025-07-30 13:24:41.828 Exported 1000 records from table [athlete] successfully.
+2025-07-30 13:24:41.833 Imported 1000 records from [athlete] to table [athlete] successfully.
+2025-07-30 13:24:41.835 Exported 677 records from table [athlete] successfully.
+2025-07-30 13:24:41.840 Imported 1000 records from [athlete] to table [athlete] successfully.
+2025-07-30 13:24:41.846 Exported 1000 records from table [game] successfully.
+2025-07-30 13:24:41.849 Imported 1000 records from [athlete] to table [athlete] successfully.
+2025-07-30 13:24:41.861 Imported 1000 records from [athlete] to table [athlete] successfully.
+2025-07-30 13:24:41.865 Exported 1000 records from table [game] successfully.
+2025-07-30 13:24:41.866 Imported 1000 records from [athlete] to table [athlete] successfully.
+2025-07-30 13:24:41.866 Imported 677 records from [athlete] to table [athlete] successfully.
+2025-07-30 13:24:41.882 Exported 1000 records from table [game] successfully.
+2025-07-30 13:24:41.892 Imported 1000 records from [game] to table [game] successfully.
+2025-07-30 13:24:41.899 Imported 1000 records from [game] to table [game] successfully.
+2025-07-30 13:24:41.905 Imported 1000 records from [game] to table [game] successfully.
+<Press [enter] to continue...>
+2025-07-30 13:24:41.925 Begin to export records of table[stadium].
+2025-07-30 13:24:41.925 Begin to export records of table[olympic].
+2025-07-30 13:24:41.925 Begin to export records of table[record].
+2025-07-30 13:24:41.930 Exported 141 records from table [stadium] successfully.
+2025-07-30 13:24:41.933 Exported 25 records from table [olympic] successfully.
+2025-07-30 13:24:41.941 Imported 1000 records from [game] to table [game] successfully.
+2025-07-30 13:24:41.945 Imported 141 records from [stadium] to table [stadium] successfully.
+2025-07-30 13:24:41.947 Imported 25 records from [olympic] to table [olympic] successfully.
+2025-07-30 13:24:41.947 Imported 1000 records from [game] to table [game] successfully.
+2025-07-30 13:24:41.949 Exported 1000 records from table [record] successfully.
+2025-07-30 13:24:41.957 Imported 1000 records from [record] to table [record] successfully.
+2025-07-30 13:24:41.966 Exported 1000 records from table [record] successfully.
+2025-07-30 13:24:41.973 Imported 1000 records from [record] to table [record] successfully.
+2025-07-30 13:24:42.097 Exported 1000 records from table [game] successfully.
+2025-07-30 13:24:42.106 Imported 1000 records from [game] to table [game] successfully.
+2025-07-30 13:24:42.110 Exported 1000 records from table [game] successfully.
+2025-07-30 13:24:42.119 Exported 653 records from table [game] successfully.
+2025-07-30 13:24:42.122 Imported 1000 records from [game] to table [game] successfully.
+2025-07-30 13:24:42.134 Imported 1000 records from [game] to table [game] successfully.
+2025-07-30 13:24:42.135 Imported 653 records from [game] to table [game] successfully.
+2025-07-30 13:24:42.923 Create primary key[athlete] successfully.
+2025-07-30 13:24:42.923 Create primary key[code] successfully.
+2025-07-30 13:24:42.924 Create primary key[event] successfully.
+2025-07-30 13:24:42.924 Create primary key[game] successfully.
+2025-07-30 13:24:42.925 Create primary key[history] successfully.
+2025-07-30 13:24:42.926 Create primary key[nation] successfully.
+2025-07-30 13:24:42.926 Create primary key[olympic] successfully.
+2025-07-30 13:24:42.927 Create primary key[record] successfully.
+2025-07-30 13:24:42.927 Create primary key[stadium] successfully.
+2025-07-30 13:24:43.928 Migration is finished.

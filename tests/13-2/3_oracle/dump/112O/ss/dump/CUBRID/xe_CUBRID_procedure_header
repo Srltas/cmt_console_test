@@ -1,0 +1,7 @@
+CREATE PROCEDURE [cubrid].[comment_procedure1]  (
+/* 주석 */
+p_test_in_args IN NUMERIC DEFAULT 1,
+p_test_out_args OUT NUMERIC,
+p_test_inout_args IN OUT NUMERIC 
+) AUTHID OWNER  AS LANGUAGE PLCSQL BEGIN RAISE_APPLICATION_ERROR(1000, '[comment_procedure1]: incomplete during loaddb'); /* __CUBRID_NO_BODY__ */ END;
+

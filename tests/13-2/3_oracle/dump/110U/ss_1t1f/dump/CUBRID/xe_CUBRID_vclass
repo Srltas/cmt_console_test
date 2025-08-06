@@ -1,0 +1,6 @@
+CREATE VIEW [tools4376_v1](
+[COL3] varchar(100) COMMENT 'view column comment',
+[COL2] numeric(15,0) COMMENT 'view column comment idx',
+[COL1] numeric(38,15) COMMENT 'view column comment pk'
+) COMMENT 'view comment for tools4376'
+;

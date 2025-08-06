@@ -1,0 +1,3 @@
+CREATE /*+ NO_STATS */ INDEX [paymail_idx01] ON [SYSTEM].[paymail]([prt_no]);
+CREATE /*+ NO_STATS */ INDEX [paymail_idx02_f] ON [SYSTEM].[paymail](substrb("prt_no",1,6));
+CREATE /*+ NO_STATS */ INDEX [idx_sms_send] ON [SYSTEM].[sms_history]([sms_send_gbn],[sms_send_date],[sms_send_yn],[sms_prtno]);

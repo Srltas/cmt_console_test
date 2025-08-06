@@ -1,0 +1,3 @@
+CREATE /*+ NO_STATS */  UNIQUE INDEX [ol$name] ON [ol$]([ol_name]);
+CREATE /*+ NO_STATS */  UNIQUE INDEX [ol$signature] ON [ol$]([signature],[category]);
+CREATE /*+ NO_STATS */  UNIQUE INDEX [ol$hnt_num] ON [ol$hints]([ol_name],[hint#]);

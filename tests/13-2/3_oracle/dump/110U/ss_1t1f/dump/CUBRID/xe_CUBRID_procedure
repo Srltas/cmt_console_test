@@ -1,0 +1,10 @@
+CREATE OR REPLACE PROCEDURE [cubrid].[comment_procedure1]  (
+/* 주석 */
+p_test_in_args IN NUMERIC DEFAULT 1,
+p_test_out_args OUT NUMERIC,
+p_test_inout_args IN OUT NUMERIC 
+) AUTHID OWNER  AS 
+BEGIN 
+	DBMS_OUTPUT.PUT_LINE('COMMENT_PROCEDURE1');
+END comment_procedure1;
+

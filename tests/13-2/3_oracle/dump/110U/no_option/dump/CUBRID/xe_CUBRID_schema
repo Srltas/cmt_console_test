@@ -1,0 +1,653 @@
+CREATE TABLE [credit1](
+[trade_datetime] datetime DEFAULT to_datetime('0001-01-01 00:00:00','yyyy-mm-dd hh24:mi:ss') NOT NULL
+)
+;
+CREATE TABLE [cubrid_image_list](
+[image_id] varchar(10),
+[image_type] varchar(200),
+[image_type_raw] bit varying(144),
+[image_description] varchar(200),
+[image_file_name] varchar(100),
+[image_file] bit varying(1073741823)
+)
+;
+CREATE TABLE [imsi_tbl](
+[col1] varchar(4000),
+[col2] varchar(4000)
+)
+;
+CREATE TABLE [plcsql_tbl](
+[id] int,
+[name] varchar(200)
+)
+;
+CREATE TABLE [seoul_bicycle_usage_info](
+[rental_date] datetime,
+[rental_office_number] int,
+[rental_office] varchar(200),
+[rental_type_name] varchar(50),
+[gender_type] varchar(20),
+[age_type] varchar(20),
+[use_number] int,
+[momentum] numeric(10,3),
+[carbon_amount] double,
+[distance_meters] numeric(10,2),
+[use_min] varchar(255),
+[random_value] varchar(255)
+)
+;
+CREATE TABLE [seoul_bus_route](
+[route_id] varchar(10),
+[route_name] varchar(60),
+[sequence_number] int,
+[node_id] varchar(10),
+[ars_id] varchar(5),
+[bus_stop_name] varchar(1073741823),
+[gps_x] varchar(100),
+[gps_y] varchar(100),
+[create_date_tz] varchar(100),
+[create_date_local_tz] datetime
+)
+;
+CREATE TABLE [seoul_bus_route_line](
+[route_id] varchar(20),
+[route_name] varchar(60),
+[bus_stop_name_list] varchar(1073741823)
+)
+;
+CREATE TABLE [t1](
+[a] int,
+[b] varchar(100)
+)
+;
+CREATE TABLE [temp09](
+[col1] blob
+)
+;
+CREATE TABLE [test_date_default](
+[trade_datetime] datetime DEFAULT to_datetime('0001-01-01 00:00:00','yyyy-mm-dd hh24:mi:ss') NOT NULL
+)
+;
+CREATE TABLE [test_number](
+[num] numeric(38,15),
+[num_star] numeric(38,15)
+)
+;
+CREATE TABLE [test_tbl](
+[col1] varchar(5)
+)
+;
+CREATE TABLE [tools4345](
+[b1] bit varying(1073741823) NOT NULL,
+[c1] varchar(1073741823) NOT NULL
+)
+;
+CREATE TABLE [tools4350](
+[commentcol] varchar(1000) COMMENT 'comment test column in tools4350',
+[b] numeric(38,15) COMMENT 'comment test column b',
+[c] char(3) COMMENT 'comment test column c',
+[d] numeric(38,15) COMMENT 'comment test column d',
+[e] datetime COMMENT 'comment test column e'
+) COMMENT = 'comment test table'
+;
+CREATE TABLE [tools4376](
+[col3] varchar(100) COMMENT 'column comment for tools4376',
+[col2] numeric(15,0) COMMENT 'index comment col2_idx',
+[col1] numeric(38,15) COMMENT 'pk comment'
+) COMMENT = 'table_comment'
+;
+CREATE TABLE [tools4410](
+[i] int COMMENT 'TOOLS4410_I',
+[j] numeric(10,0) COMMENT 'TOOLS4410_J'
+) COMMENT = 'test''''single quote'
+;
+CREATE TABLE [tools4474](
+[col] int COMMENT 'TOOLS4474_COL'
+)
+;
+CREATE TABLE [tools4547](
+[id] numeric(38,15),
+[col1] numeric(38,15)
+)
+;
+CREATE TABLE [tools4556](
+[id] numeric(38,15),
+[curdate] datetime DEFAULT CURRENT_DATE,
+[curtime] timestamp DEFAULT LOCALTIMESTAMP,
+[current_date] datetime DEFAULT CURRENT_DATE,
+[current_timestamp] timestamp DEFAULT CURRENT_TIMESTAMP,
+[dbtimezone] varchar(50) DEFAULT (DBTIMEZONE),
+[localtimestamp] timestamp DEFAULT LOCALTIMESTAMP,
+[sessiontimezone] varchar(50) DEFAULT (SESSIONTIMEZONE),
+[sys_date] datetime DEFAULT SYSDATE,
+[systimestamp] timestamp DEFAULT SYSTIMESTAMP
+)
+;
+CREATE TABLE [tools4557](
+[id] int,
+[workday] numeric(38,15) DEFAULT CAST(to_char(SYSDATE, 'DDD') AS NUMBER),
+[workday_char] varchar(3) DEFAULT to_char(SYSDATE, 'DDD'),
+[current_year] varchar(4) DEFAULT to_char(SYSDATE, 'YYYY'),
+[current_month] varchar(2) DEFAULT to_char(SYSDATE, 'MM'),
+[current_day] varchar(2) DEFAULT to_char(SYSDATE, 'DD'),
+[timestamp_char] varchar(30) DEFAULT TO_CHAR(SYSTIMESTAMP, 'YYYY-MM-DD HH24:MI:SS.FF'),
+[timestamp_year] numeric(38,15),
+[timestamp_month] numeric(38,15),
+[timestamp_day] numeric(38,15),
+[timestamp_hour] numeric(38,15),
+[timestamp_minute] numeric(38,15),
+[timestamp_second] numeric(38,15),
+[numeric_char] varchar(10) DEFAULT TO_CHAR(12345.67),
+[char_number] numeric(38,15) DEFAULT CAST('12345.67' AS NUMBER),
+[date_number] numeric(38,15) DEFAULT CAST(TO_CHAR(SYSDATE, 'YYYYMMDD') AS NUMBER),
+[char_date] datetime DEFAULT CAST('20230530' AS DATE)
+)
+;
+CREATE TABLE [tools4561](
+[id] numeric(38,15),
+[description] varchar(1073741823),
+[created_date] datetime
+)
+;
+CREATE TABLE [tools4563_fk](
+[fk_id] char(1) NOT NULL
+)
+;
+CREATE TABLE [tools4563_pk](
+[id] char(1),
+[data] varchar(100)
+)
+;
+CREATE TABLE [tools4585](
+[id] numeric(38,15),
+[lob_data] varchar(1073741823)
+)
+;
+CREATE TABLE [tools4644](
+[col_varchar2] varchar(100) DEFAULT ('default_varchar2'),
+[col_char] char(1) DEFAULT ('0'),
+[col_number] numeric(38,15) DEFAULT (0),
+[col_date] datetime DEFAULT (SYSDATE),
+[col_timestamp] timestamp DEFAULT (SYSTIMESTAMP),
+[col_clob] varchar(1073741823) DEFAULT ('default_clob'),
+[col_blob] bit varying(1073741823) DEFAULT X'EMPTY_BLOB()',
+[col_raw] bit varying(800) DEFAULT X'HEXTORAW('64656661756C745F726177')',
+[col_nvarchar2] varchar(100) DEFAULT (u'default_nvarchar2'),
+[col_nchar] char(1) DEFAULT (u'0'),
+[col_float] double DEFAULT (0.0),
+[col_binary_float] float DEFAULT (0.0),
+[col_binary_double] double DEFAULT (0.0),
+[col_interval_day_to_second] varchar(255) DEFAULT (INTERVAL '0' DAY),
+[col_interval_year_to_month] varchar(255) DEFAULT (INTERVAL '0' YEAR),
+[col_bfile] blob DEFAULT (BFILENAME('DEFAULT_DIR', 'default_bfile.txt'))
+)
+;
+CREATE VIEW [tools4376_v1](
+[COL3] varchar(100) COMMENT 'view column comment',
+[COL2] numeric(15,0) COMMENT 'view column comment idx',
+[COL1] numeric(38,15) COMMENT 'view column comment pk'
+) COMMENT 'view comment for tools4376'
+;
+CREATE PRIVATE SYNONYM [basin] FOR [basin];
+CREATE PRIVATE SYNONYM [board] FOR [board];
+CREATE PRIVATE SYNONYM [board10] FOR [board10];
+CREATE PRIVATE SYNONYM [board11] FOR [board11];
+CREATE PRIVATE SYNONYM [board12] FOR [board12];
+CREATE PRIVATE SYNONYM [board3] FOR [board3];
+CREATE PRIVATE SYNONYM [board4] FOR [board4];
+CREATE PRIVATE SYNONYM [board5] FOR [board5];
+CREATE PRIVATE SYNONYM [board6] FOR [board6];
+CREATE PRIVATE SYNONYM [board_report] FOR [board_report];
+CREATE PRIVATE SYNONYM [board_sujil] FOR [board_sujil];
+CREATE PRIVATE SYNONYM [bonbu_discuss] FOR [bonbu_discuss];
+CREATE PRIVATE SYNONYM [child_ask] FOR [child_ask];
+CREATE PRIVATE SYNONYM [child_ask2] FOR [child_ask2];
+CREATE PRIVATE SYNONYM [child_com] FOR [child_com];
+CREATE PRIVATE SYNONYM [child_diary] FOR [child_diary];
+CREATE PRIVATE SYNONYM [child_pds] FOR [child_pds];
+CREATE PRIVATE SYNONYM [contest_data] FOR [contest_data];
+CREATE PRIVATE SYNONYM [count] FOR [count];
+CREATE PRIVATE SYNONYM [count_20090112] FOR [count_20090112];
+CREATE PRIVATE SYNONYM [dansu2] FOR [dansu2];
+CREATE PRIVATE SYNONYM [dansu_board] FOR [dansu_board];
+CREATE PRIVATE SYNONYM [dansu_test] FOR [dansu_test];
+CREATE PRIVATE SYNONYM [deptno] FOR [deptno];
+CREATE PRIVATE SYNONYM [divcode] FOR [divcode];
+CREATE PRIVATE SYNONYM [edu_apply] FOR [edu_apply];
+CREATE PRIVATE SYNONYM [edu_code] FOR [edu_code];
+CREATE PRIVATE SYNONYM [edu_info] FOR [edu_info];
+CREATE PRIVATE SYNONYM [event_20070601_3] FOR [event_20070601_3];
+CREATE PRIVATE SYNONYM [event_20081120] FOR [event_20081120];
+CREATE PRIVATE SYNONYM [event_20110925] FOR [event_20110925];
+CREATE PRIVATE SYNONYM [event_2011_11] FOR [event_2011_11];
+CREATE PRIVATE SYNONYM [event_quiz] FOR [event_quiz];
+CREATE PRIVATE SYNONYM [fee_faq] FOR [fee_faq];
+CREATE PRIVATE SYNONYM [fee_qna] FOR [fee_qna];
+CREATE PRIVATE SYNONYM [gamsa2006] FOR [gamsa2006];
+CREATE PRIVATE SYNONYM [gamsaboard1] FOR [gamsaboard1];
+CREATE PRIVATE SYNONYM [gamsaboard2] FOR [gamsaboard2];
+CREATE PRIVATE SYNONYM [gamsawant] FOR [gamsawant];
+CREATE PRIVATE SYNONYM [gamsawant1] FOR [gamsawant1];
+CREATE PRIVATE SYNONYM [gijang] FOR [gijang];
+CREATE PRIVATE SYNONYM [gongsa_board] FOR [gongsa_board];
+CREATE PRIVATE SYNONYM [gong_board] FOR [gong_board];
+CREATE PRIVATE SYNONYM [ground] FOR [ground];
+CREATE PRIVATE SYNONYM [guest_stat] FOR [guest_stat];
+CREATE PRIVATE SYNONYM [hasudo] FOR [hasudo];
+CREATE PRIVATE SYNONYM [hasudo_120302] FOR [hasudo_120302];
+CREATE PRIVATE SYNONYM [hasudo_200508] FOR [hasudo_200508];
+CREATE PRIVATE SYNONYM [hasudo_20140305] FOR [hasudo_20140305];
+CREATE PRIVATE SYNONYM [hasudo_201503] FOR [hasudo_201503];
+CREATE PRIVATE SYNONYM [hasudo_bak] FOR [hasudo_bak];
+CREATE PRIVATE SYNONYM [hdoc_company] FOR [hdoc_company];
+CREATE PRIVATE SYNONYM [hdoc_company_1] FOR [hdoc_company_1];
+CREATE PRIVATE SYNONYM [hdoc_post] FOR [hdoc_post];
+CREATE PRIVATE SYNONYM [h_board] FOR [h_board];
+CREATE PRIVATE SYNONYM [imsiw_ziya1225] FOR [imsiw_ziya1225];
+CREATE PRIVATE SYNONYM [imsi_ziya1225] FOR [imsi_ziya1225];
+CREATE PRIVATE SYNONYM [info_board] FOR [info_board];
+CREATE PRIVATE SYNONYM [inground_post] FOR [inground_post];
+CREATE PRIVATE SYNONYM [inspect_post] FOR [inspect_post];
+CREATE PRIVATE SYNONYM [jachigu] FOR [jachigu];
+CREATE PRIVATE SYNONYM [jachigu_7] FOR [jachigu_7];
+CREATE PRIVATE SYNONYM [jachigu_7_20050927] FOR [jachigu_7_20050927];
+CREATE PRIVATE SYNONYM [jachigu_7_201505] FOR [jachigu_7_201505];
+CREATE PRIVATE SYNONYM [jejung_debt] FOR [jejung_debt];
+CREATE PRIVATE SYNONYM [jejung_jasan] FOR [jejung_jasan];
+CREATE PRIVATE SYNONYM [jejung_stats] FOR [jejung_stats];
+CREATE PRIVATE SYNONYM [joo] FOR [joo];
+CREATE PRIVATE SYNONYM [jubu] FOR [jubu];
+CREATE PRIVATE SYNONYM [jubuwork_board] FOR [jubuwork_board];
+CREATE PRIVATE SYNONYM [jubu_dialog] FOR [jubu_dialog];
+CREATE PRIVATE SYNONYM [jubu_free] FOR [jubu_free];
+CREATE PRIVATE SYNONYM [jubu_freecmt] FOR [jubu_freecmt];
+CREATE PRIVATE SYNONYM [jubu_note] FOR [jubu_note];
+CREATE PRIVATE SYNONYM [kind_board] FOR [kind_board];
+CREATE PRIVATE SYNONYM [love_discuss] FOR [love_discuss];
+CREATE PRIVATE SYNONYM [love_discusscmt] FOR [love_discusscmt];
+CREATE PRIVATE SYNONYM [love_gallery] FOR [love_gallery];
+CREATE PRIVATE SYNONYM [love_gallerycmt] FOR [love_gallerycmt];
+CREATE PRIVATE SYNONYM [love_greeting] FOR [love_greeting];
+CREATE PRIVATE SYNONYM [love_greetingcmt] FOR [love_greetingcmt];
+CREATE PRIVATE SYNONYM [love_singo] FOR [love_singo];
+CREATE PRIVATE SYNONYM [love_tea] FOR [love_tea];
+CREATE PRIVATE SYNONYM [love_thisway] FOR [love_thisway];
+CREATE PRIVATE SYNONYM [love_year] FOR [love_year];
+CREATE PRIVATE SYNONYM [love_yearcmt] FOR [love_yearcmt];
+CREATE PRIVATE SYNONYM [love_yearimg] FOR [love_yearimg];
+CREATE PRIVATE SYNONYM [manageetcboard] FOR [manageetcboard];
+CREATE PRIVATE SYNONYM [manager] FOR [manager];
+CREATE PRIVATE SYNONYM [manager_access] FOR [manager_access];
+CREATE PRIVATE SYNONYM [media_press] FOR [media_press];
+CREATE PRIVATE SYNONYM [memo_board] FOR [memo_board];
+CREATE PRIVATE SYNONYM [minwon_admin] FOR [minwon_admin];
+CREATE PRIVATE SYNONYM [minwon_admin_120327] FOR [minwon_admin_120327];
+CREATE PRIVATE SYNONYM [minwon_faq] FOR [minwon_faq];
+CREATE PRIVATE SYNONYM [minwon_qna] FOR [minwon_qna];
+CREATE PRIVATE SYNONYM [model_board] FOR [model_board];
+CREATE PRIVATE SYNONYM [monitor] FOR [monitor];
+CREATE PRIVATE SYNONYM [monitor_120510jmh] FOR [monitor_120510jmh];
+CREATE PRIVATE SYNONYM [monitor_20120114] FOR [monitor_20120114];
+CREATE PRIVATE SYNONYM [monitor_20140227] FOR [monitor_20140227];
+CREATE PRIVATE SYNONYM [msearch] FOR [msearch];
+CREATE PRIVATE SYNONYM [msearch_dblist] FOR [msearch_dblist];
+CREATE PRIVATE SYNONYM [news_board] FOR [news_board];
+CREATE PRIVATE SYNONYM [old_event_find] FOR [old_event_find];
+CREATE PRIVATE SYNONYM [old_event_quiz] FOR [old_event_quiz];
+CREATE PRIVATE SYNONYM [pai] FOR [pai];
+CREATE PRIVATE SYNONYM [paymail] FOR [paymail];
+CREATE PRIVATE SYNONYM [plan_table] FOR [plan_table];
+CREATE PRIVATE SYNONYM [poll_article] FOR [poll_article];
+CREATE PRIVATE SYNONYM [poll_list] FOR [poll_list];
+CREATE PRIVATE SYNONYM [praise_board] FOR [praise_board];
+CREATE PRIVATE SYNONYM [praise_board_121231] FOR [praise_board_121231];
+CREATE PRIVATE SYNONYM [product] FOR [product];
+CREATE PRIVATE SYNONYM [prt_sms] FOR [prt_sms];
+CREATE PRIVATE SYNONYM [qnatest] FOR [qnatest];
+CREATE PRIVATE SYNONYM [ratmul] FOR [ratmul];
+CREATE PRIVATE SYNONYM [ratmul_120302] FOR [ratmul_120302];
+CREATE PRIVATE SYNONYM [request_board] FOR [request_board];
+CREATE PRIVATE SYNONYM [request_board_20101213] FOR [request_board_20101213];
+CREATE PRIVATE SYNONYM [satisfaction] FOR [satisfaction];
+CREATE PRIVATE SYNONYM [siljukpyunggaboard] FOR [siljukpyunggaboard];
+CREATE PRIVATE SYNONYM [singo1] FOR [singo1];
+CREATE PRIVATE SYNONYM [singo1_121231] FOR [singo1_121231];
+CREATE PRIVATE SYNONYM [singo2] FOR [singo2];
+CREATE PRIVATE SYNONYM [singo2_121231] FOR [singo2_121231];
+CREATE PRIVATE SYNONYM [singo3] FOR [singo3];
+CREATE PRIVATE SYNONYM [singo_clean] FOR [singo_clean];
+CREATE PRIVATE SYNONYM [smslog] FOR [smslog];
+CREATE PRIVATE SYNONYM [sms_history] FOR [sms_history];
+CREATE PRIVATE SYNONYM [sms_test] FOR [sms_test];
+CREATE PRIVATE SYNONYM [soonsoo365_contest] FOR [soonsoo365_contest];
+CREATE PRIVATE SYNONYM [soonsoo365_contest_2013] FOR [soonsoo365_contest_2013];
+CREATE PRIVATE SYNONYM [soonsoo365_contest_2014] FOR [soonsoo365_contest_2014];
+CREATE PRIVATE SYNONYM [soonsoo365_contest_2015] FOR [soonsoo365_contest_2015];
+CREATE PRIVATE SYNONYM [soonsoo365_contest_del] FOR [soonsoo365_contest_del];
+CREATE PRIVATE SYNONYM [staffinformation] FOR [staffinformation];
+CREATE PRIVATE SYNONYM [staffinformation1] FOR [staffinformation1];
+CREATE PRIVATE SYNONYM [staffinformation2] FOR [staffinformation2];
+CREATE PRIVATE SYNONYM [standard] FOR [standard];
+CREATE PRIVATE SYNONYM [standard1] FOR [standard1];
+CREATE PRIVATE SYNONYM [statistics] FOR [statistics];
+CREATE PRIVATE SYNONYM [suggest_board] FOR [suggest_board];
+CREATE PRIVATE SYNONYM [suggest_data] FOR [suggest_data];
+CREATE PRIVATE SYNONYM [suzildata] FOR [suzildata];
+CREATE PRIVATE SYNONYM [suzildata_20091103] FOR [suzildata_20091103];
+CREATE PRIVATE SYNONYM [suzilterm_board] FOR [suzilterm_board];
+CREATE PRIVATE SYNONYM [tbl_01] FOR [tbl_01];
+CREATE PRIVATE SYNONYM [tbl_busu_code] FOR [tbl_busu_code];
+CREATE PRIVATE SYNONYM [tbl_job_code] FOR [tbl_job_code];
+CREATE PRIVATE SYNONYM [tbl_vote_20080916] FOR [tbl_vote_20080916];
+CREATE PRIVATE SYNONYM [tb_busanorg_data] FOR [tb_busanorg_data];
+CREATE PRIVATE SYNONYM [tb_busanorg_data2] FOR [tb_busanorg_data2];
+CREATE PRIVATE SYNONYM [tb_busantel_data] FOR [tb_busantel_data];
+CREATE PRIVATE SYNONYM [tb_busantel_data2] FOR [tb_busantel_data2];
+CREATE PRIVATE SYNONYM [tb_evaluation] FOR [tb_evaluation];
+CREATE PRIVATE SYNONYM [tb_menu_data] FOR [tb_menu_data];
+CREATE PRIVATE SYNONYM [tb_pageadm_data] FOR [tb_pageadm_data];
+CREATE PRIVATE SYNONYM [tb_watertel_data] FOR [tb_watertel_data];
+CREATE PRIVATE SYNONYM [tb_water_tour_data] FOR [tb_water_tour_data];
+CREATE PRIVATE SYNONYM [telcutoff] FOR [telcutoff];
+CREATE PRIVATE SYNONYM [telcutoff_old] FOR [telcutoff_old];
+CREATE PRIVATE SYNONYM [tel_1] FOR [tel_1];
+CREATE PRIVATE SYNONYM [test] FOR [test];
+CREATE PRIVATE SYNONYM [test_ser] FOR [test_ser];
+CREATE PRIVATE SYNONYM [toad_plan_table] FOR [toad_plan_table];
+CREATE PRIVATE SYNONYM [tocust_faq] FOR [tocust_faq];
+CREATE PRIVATE SYNONYM [tocust_qna] FOR [tocust_qna];
+CREATE PRIVATE SYNONYM [tocust_qna_del] FOR [tocust_qna_del];
+CREATE PRIVATE SYNONYM [todaysujil_count] FOR [todaysujil_count];
+CREATE PRIVATE SYNONYM [tools_4474_sn] FOR [tools4474];
+CREATE PRIVATE SYNONYM [tour2012] FOR [tour2012];
+CREATE PRIVATE SYNONYM [tour2013] FOR [tour2013];
+CREATE PRIVATE SYNONYM [visit] FOR [visit];
+CREATE PRIVATE SYNONYM [voluntary] FOR [voluntary];
+CREATE PRIVATE SYNONYM [waterterm_board] FOR [waterterm_board];
+CREATE PRIVATE SYNONYM [water_board] FOR [water_board];
+CREATE PRIVATE SYNONYM [water_data] FOR [water_data];
+CREATE PRIVATE SYNONYM [water_eval] FOR [water_eval];
+CREATE PRIVATE SYNONYM [webact] FOR [webact];
+CREATE PRIVATE SYNONYM [webcountm] FOR [webcountm];
+CREATE PRIVATE SYNONYM [webcust] FOR [webcust];
+CREATE PRIVATE SYNONYM [webcust_120510jmh] FOR [webcust_120510jmh];
+CREATE PRIVATE SYNONYM [webcust_jmh0511] FOR [webcust_jmh0511];
+CREATE PRIVATE SYNONYM [webdel] FOR [webdel];
+CREATE PRIVATE SYNONYM [webdelymm] FOR [webdelymm];
+CREATE PRIVATE SYNONYM [webest] FOR [webest];
+CREATE PRIVATE SYNONYM [webfee] FOR [webfee];
+CREATE PRIVATE SYNONYM [webfee_bak] FOR [webfee_bak];
+CREATE PRIVATE SYNONYM [webgam] FOR [webgam];
+CREATE PRIVATE SYNONYM [webimsi] FOR [webimsi];
+CREATE PRIVATE SYNONYM [webjhj] FOR [webjhj];
+CREATE PRIVATE SYNONYM [webjng] FOR [webjng];
+CREATE PRIVATE SYNONYM [weblmt] FOR [weblmt];
+CREATE PRIVATE SYNONYM [webmember] FOR [webmember];
+CREATE PRIVATE SYNONYM [webmember_2011_11] FOR [webmember_2011_11];
+CREATE PRIVATE SYNONYM [webmember_20140227] FOR [webmember_20140227];
+CREATE PRIVATE SYNONYM [webmember_event_20050430] FOR [webmember_event_20050430];
+CREATE PRIVATE SYNONYM [webmember_jmh0511] FOR [webmember_jmh0511];
+CREATE PRIVATE SYNONYM [webnam] FOR [webnam];
+CREATE PRIVATE SYNONYM [webnum] FOR [webnum];
+CREATE PRIVATE SYNONYM [weboff] FOR [weboff];
+CREATE PRIVATE SYNONYM [webpay] FOR [webpay];
+CREATE PRIVATE SYNONYM [webrecvmm] FOR [webrecvmm];
+CREATE PRIVATE SYNONYM [webreqfee] FOR [webreqfee];
+CREATE PRIVATE SYNONYM [webrpt] FOR [webrpt];
+CREATE PRIVATE SYNONYM [websms] FOR [websms];
+CREATE PRIVATE SYNONYM [websub] FOR [websub];
+CREATE PRIVATE SYNONYM [websup] FOR [websup];
+CREATE PRIVATE SYNONYM [webtyp] FOR [webtyp];
+CREATE PRIVATE SYNONYM [webust] FOR [webust];
+CREATE PRIVATE SYNONYM [webust_del_hyc] FOR [webust_del_hyc];
+CREATE PRIVATE SYNONYM [webwvr] FOR [webwvr];
+CREATE PRIVATE SYNONYM [wlove_brief2012] FOR [wlove_brief2012];
+CREATE PRIVATE SYNONYM [yearkmanageboard] FOR [yearkmanageboard];
+CREATE PRIVATE SYNONYM [yoibupyunggaboard] FOR [yoibupyunggaboard];
+CREATE SERIAL [tools4556_seq] START WITH 17 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 2;
+CREATE PROCEDURE [cubrid].[comment_procedure1]  (
+/* 주석 */
+p_test_in_args IN NUMERIC DEFAULT 1,
+p_test_out_args OUT NUMERIC,
+p_test_inout_args IN OUT NUMERIC 
+) AUTHID OWNER  AS LANGUAGE PLCSQL BEGIN RAISE_APPLICATION_ERROR(1000, '[comment_procedure1]: incomplete during loaddb'); /* __CUBRID_NO_BODY__ */ END; 
+
+CREATE FUNCTION [cubrid].[tools4547_fuction] 
+RETURN VARCHAR AS LANGUAGE PLCSQL BEGIN RAISE_APPLICATION_ERROR(1000, '[tools4547_fuction]: incomplete during loaddb'); /* __CUBRID_NO_BODY__ */ END; 
+
+GRANT SELECT ON [old_event_find] TO [CUBRID];
+GRANT SELECT ON [old_event_quiz] TO [CUBRID];
+GRANT SELECT ON [paymail] TO [CUBRID];
+GRANT ALTER ON [plan_table] TO [CUBRID];
+GRANT UPDATE ON [plan_table] TO [CUBRID];
+GRANT INSERT ON [plan_table] TO [CUBRID];
+GRANT INDEX ON [plan_table] TO [CUBRID];
+GRANT DELETE ON [plan_table] TO [CUBRID];
+GRANT SELECT ON [plan_table] TO [CUBRID];
+GRANT SELECT ON [poll_article] TO [CUBRID];
+GRANT SELECT ON [poll_list] TO [CUBRID];
+GRANT SELECT ON [praise_board] TO [CUBRID];
+GRANT SELECT ON [praise_board_121231] TO [CUBRID];
+GRANT SELECT ON [ratmul] TO [CUBRID];
+GRANT SELECT ON [ratmul_120302] TO [CUBRID];
+GRANT SELECT ON [request_board] TO [CUBRID];
+GRANT SELECT ON [request_board_20101213] TO [CUBRID];
+GRANT SELECT ON [satisfaction] TO [CUBRID];
+GRANT SELECT ON [siljukpyunggaboard] TO [CUBRID];
+GRANT SELECT ON [singo1_121231] TO [CUBRID];
+GRANT SELECT ON [singo2_121231] TO [CUBRID];
+GRANT SELECT ON [singo3] TO [CUBRID];
+GRANT SELECT ON [singo_clean] TO [CUBRID];
+GRANT SELECT ON [smslog] TO [CUBRID];
+GRANT SELECT ON [sms_history] TO [CUBRID];
+GRANT SELECT ON [sms_test] TO [CUBRID];
+GRANT SELECT ON [love_discusscmt] TO [CUBRID];
+GRANT SELECT ON [love_gallery] TO [CUBRID];
+GRANT SELECT ON [love_gallerycmt] TO [CUBRID];
+GRANT SELECT ON [love_greeting] TO [CUBRID];
+GRANT SELECT ON [love_greetingcmt] TO [CUBRID];
+GRANT SELECT ON [love_singo] TO [CUBRID];
+GRANT SELECT ON [love_tea] TO [CUBRID];
+GRANT SELECT ON [love_thisway] TO [CUBRID];
+GRANT SELECT ON [love_year] TO [CUBRID];
+GRANT SELECT ON [love_yearcmt] TO [CUBRID];
+GRANT SELECT ON [love_yearimg] TO [CUBRID];
+GRANT SELECT ON [manageetcboard] TO [CUBRID];
+GRANT SELECT ON [manager] TO [CUBRID];
+GRANT SELECT ON [manager_access] TO [CUBRID];
+GRANT SELECT ON [media_press] TO [CUBRID];
+GRANT SELECT ON [memo_board] TO [CUBRID];
+GRANT SELECT ON [minwon_admin] TO [CUBRID];
+GRANT SELECT ON [minwon_admin_120327] TO [CUBRID];
+GRANT SELECT ON [minwon_faq] TO [CUBRID];
+GRANT SELECT ON [minwon_qna] TO [CUBRID];
+GRANT SELECT ON [model_board] TO [CUBRID];
+GRANT SELECT ON [monitor] TO [CUBRID];
+GRANT SELECT ON [monitor_120510jmh] TO [CUBRID];
+GRANT SELECT ON [monitor_20120114] TO [CUBRID];
+GRANT SELECT ON [monitor_20140227] TO [CUBRID];
+GRANT SELECT ON [msearch_dblist] TO [CUBRID];
+GRANT SELECT ON [news_board] TO [CUBRID];
+GRANT SELECT ON [tbl_01] TO [CUBRID];
+GRANT SELECT ON [tbl_busu_code] TO [CUBRID];
+GRANT SELECT ON [tbl_job_code] TO [CUBRID];
+GRANT SELECT ON [tbl_vote_20080916] TO [CUBRID];
+GRANT SELECT ON [tb_busanorg_data] TO [CUBRID];
+GRANT SELECT ON [tb_busanorg_data2] TO [CUBRID];
+GRANT SELECT ON [tb_busantel_data] TO [CUBRID];
+GRANT SELECT ON [tb_busantel_data2] TO [CUBRID];
+GRANT SELECT ON [tb_evaluation] TO [CUBRID];
+GRANT SELECT ON [tb_menu_data] TO [CUBRID];
+GRANT SELECT ON [tb_pageadm_data] TO [CUBRID];
+GRANT SELECT ON [tb_watertel_data] TO [CUBRID];
+GRANT SELECT ON [tb_water_tour_data] TO [CUBRID];
+GRANT SELECT ON [telcutoff] TO [CUBRID];
+GRANT SELECT ON [telcutoff_old] TO [CUBRID];
+GRANT SELECT ON [tel_1] TO [CUBRID];
+GRANT SELECT ON [test] TO [CUBRID];
+GRANT SELECT ON [test_ser] TO [CUBRID];
+GRANT SELECT ON [toad_plan_table] TO [CUBRID];
+GRANT SELECT ON [tocust_faq] TO [CUBRID];
+GRANT SELECT ON [tocust_qna] TO [CUBRID];
+GRANT SELECT ON [tocust_qna_del] TO [CUBRID];
+GRANT SELECT ON [todaysujil_count] TO [CUBRID];
+GRANT SELECT ON [tour2012] TO [CUBRID];
+GRANT SELECT ON [visit] TO [CUBRID];
+GRANT SELECT ON [voluntary] TO [CUBRID];
+GRANT SELECT ON [waterterm_board] TO [CUBRID];
+GRANT SELECT ON [water_board] TO [CUBRID];
+GRANT SELECT ON [water_data] TO [CUBRID];
+GRANT SELECT ON [water_eval] TO [CUBRID];
+GRANT SELECT ON [webact] TO [CUBRID];
+GRANT SELECT ON [webcountm] TO [CUBRID];
+GRANT SELECT ON [webcust] TO [CUBRID];
+GRANT SELECT ON [webcust_120510jmh] TO [CUBRID];
+GRANT SELECT ON [webcust_jmh0511] TO [CUBRID];
+GRANT SELECT ON [webdel] TO [CUBRID];
+GRANT SELECT ON [webdelymm] TO [CUBRID];
+GRANT SELECT ON [webest] TO [CUBRID];
+GRANT SELECT ON [webfee] TO [CUBRID];
+GRANT SELECT ON [webfee_bak] TO [CUBRID];
+GRANT SELECT ON [webgam] TO [CUBRID];
+GRANT SELECT ON [webimsi] TO [CUBRID];
+GRANT SELECT ON [webjhj] TO [CUBRID];
+GRANT SELECT ON [webjng] TO [CUBRID];
+GRANT SELECT ON [weblmt] TO [CUBRID];
+GRANT SELECT ON [webmember] TO [CUBRID];
+GRANT SELECT ON [webmember_2011_11] TO [CUBRID];
+GRANT SELECT ON [webmember_20140227] TO [CUBRID];
+GRANT SELECT ON [webmember_event_20050430] TO [CUBRID];
+GRANT SELECT ON [webmember_jmh0511] TO [CUBRID];
+GRANT SELECT ON [webnam] TO [CUBRID];
+GRANT SELECT ON [webnum] TO [CUBRID];
+GRANT SELECT ON [weboff] TO [CUBRID];
+GRANT SELECT ON [webpay] TO [CUBRID];
+GRANT SELECT ON [webrecvmm] TO [CUBRID];
+GRANT SELECT ON [webreqfee] TO [CUBRID];
+GRANT SELECT ON [webrpt] TO [CUBRID];
+GRANT SELECT ON [websms] TO [CUBRID];
+GRANT SELECT ON [websub] TO [CUBRID];
+GRANT SELECT ON [websup] TO [CUBRID];
+GRANT SELECT ON [webtyp] TO [CUBRID];
+GRANT SELECT ON [webust] TO [CUBRID];
+GRANT SELECT ON [webust_del_hyc] TO [CUBRID];
+GRANT SELECT ON [webwvr] TO [CUBRID];
+GRANT SELECT ON [wlove_brief2012] TO [CUBRID];
+GRANT SELECT ON [yearkmanageboard] TO [CUBRID];
+GRANT SELECT ON [yoibupyunggaboard] TO [CUBRID];
+GRANT SELECT ON [dansu2] TO [CUBRID];
+GRANT SELECT ON [dansu_board] TO [CUBRID];
+GRANT SELECT ON [dansu_test] TO [CUBRID];
+GRANT SELECT ON [deptno] TO [CUBRID];
+GRANT SELECT ON [divcode] TO [CUBRID];
+GRANT SELECT ON [edu_apply] TO [CUBRID];
+GRANT SELECT ON [edu_code] TO [CUBRID];
+GRANT SELECT ON [edu_info] TO [CUBRID];
+GRANT SELECT ON [event_20070601_3] TO [CUBRID];
+GRANT SELECT ON [event_20081120] TO [CUBRID];
+GRANT SELECT ON [event_20110925] TO [CUBRID];
+GRANT SELECT ON [event_2011_11] TO [CUBRID];
+GRANT SELECT ON [event_quiz] TO [CUBRID];
+GRANT SELECT ON [fee_faq] TO [CUBRID];
+GRANT SELECT ON [fee_qna] TO [CUBRID];
+GRANT SELECT ON [gamsa2006] TO [CUBRID];
+GRANT SELECT ON [gamsaboard1] TO [CUBRID];
+GRANT SELECT ON [gamsaboard2] TO [CUBRID];
+GRANT SELECT ON [gamsawant] TO [CUBRID];
+GRANT SELECT ON [gamsawant1] TO [CUBRID];
+GRANT SELECT ON [gongsa_board] TO [CUBRID];
+GRANT SELECT ON [gong_board] TO [CUBRID];
+GRANT SELECT ON [ground] TO [CUBRID];
+GRANT SELECT ON [guest_stat] TO [CUBRID];
+GRANT SELECT ON [hasudo] TO [CUBRID];
+GRANT SELECT ON [hasudo_120302] TO [CUBRID];
+GRANT SELECT ON [hasudo_200508] TO [CUBRID];
+GRANT SELECT ON [hasudo_20140305] TO [CUBRID];
+GRANT SELECT ON [hasudo_201503] TO [CUBRID];
+GRANT SELECT ON [hasudo_bak] TO [CUBRID];
+GRANT SELECT ON [hdoc_company] TO [CUBRID];
+GRANT SELECT ON [hdoc_company_1] TO [CUBRID];
+GRANT SELECT ON [hdoc_post] TO [CUBRID];
+GRANT SELECT ON [h_board] TO [CUBRID];
+GRANT SELECT ON [imsiw_ziya1225] TO [CUBRID];
+GRANT SELECT ON [imsi_ziya1225] TO [CUBRID];
+GRANT SELECT ON [info_board] TO [CUBRID];
+GRANT SELECT ON [inground_post] TO [CUBRID];
+GRANT SELECT ON [inspect_post] TO [CUBRID];
+GRANT SELECT ON [jachigu_7] TO [CUBRID];
+GRANT SELECT ON [jachigu_7_20050927] TO [CUBRID];
+GRANT SELECT ON [jachigu_7_201505] TO [CUBRID];
+GRANT SELECT ON [jejung_debt] TO [CUBRID];
+GRANT SELECT ON [jejung_jasan] TO [CUBRID];
+GRANT SELECT ON [jejung_stats] TO [CUBRID];
+GRANT SELECT ON [jubu] TO [CUBRID];
+GRANT SELECT ON [jubuwork_board] TO [CUBRID];
+GRANT SELECT ON [jubu_dialog] TO [CUBRID];
+GRANT SELECT ON [jubu_freecmt] TO [CUBRID];
+GRANT SELECT ON [jubu_note] TO [CUBRID];
+GRANT SELECT ON [kind_board] TO [CUBRID];
+GRANT SELECT ON [soonsoo365_contest_2015] TO [CUBRID];
+GRANT SELECT ON [soonsoo365_contest_del] TO [CUBRID];
+GRANT SELECT ON [staffinformation] TO [CUBRID];
+GRANT SELECT ON [staffinformation1] TO [CUBRID];
+GRANT SELECT ON [staffinformation2] TO [CUBRID];
+GRANT SELECT ON [standard1] TO [CUBRID];
+GRANT SELECT ON [statistics] TO [CUBRID];
+GRANT SELECT ON [suggest_board] TO [CUBRID];
+GRANT SELECT ON [suggest_data] TO [CUBRID];
+GRANT SELECT ON [suzildata] TO [CUBRID];
+GRANT SELECT ON [suzildata_20091103] TO [CUBRID];
+GRANT SELECT ON [suzilterm_board] TO [CUBRID];
+GRANT SELECT ON [basin] TO [CUBRID];
+GRANT SELECT ON [board] TO [CUBRID];
+GRANT SELECT ON [board10] TO [CUBRID];
+GRANT SELECT ON [board11] TO [CUBRID];
+GRANT SELECT ON [board12] TO [CUBRID];
+GRANT SELECT ON [board_report] TO [CUBRID];
+GRANT SELECT ON [board_sujil] TO [CUBRID];
+GRANT SELECT ON [bonbu_discuss] TO [CUBRID];
+GRANT SELECT ON [child_ask] TO [CUBRID];
+GRANT SELECT ON [child_ask2] TO [CUBRID];
+GRANT SELECT ON [child_com] TO [CUBRID];
+GRANT SELECT ON [child_diary] TO [CUBRID];
+GRANT SELECT ON [child_pds] TO [CUBRID];
+GRANT SELECT ON [contest_data] TO [CUBRID];
+GRANT SELECT ON [count] TO [CUBRID];
+GRANT SELECT ON [count_20090112] TO [CUBRID];
+GRANT INDEX ON [tools_4486_tb] TO [CUBRID];
+GRANT ALTER ON [tools_4486_tb] TO [CUBRID];
+GRANT DELETE ON [tools_4486_tb] TO [CUBRID];
+GRANT UPDATE ON [tools_4486_tb] TO [CUBRID];
+GRANT INSERT ON [tools_4486_tb] TO [CUBRID];
+GRANT SELECT ON [tools_4486_tb] TO [CUBRID];
+GRANT UPDATE ON [tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT SELECT ON [tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT INSERT ON [tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT INDEX ON [tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT DELETE ON [tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT ALTER ON [tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT SELECT ON [webpage_view] TO [CUBRID];
+GRANT SELECT ON [v_dansu] TO [CUBRID];
+GRANT SELECT ON [tb_pageadm_data2] TO [CUBRID];
+GRANT SELECT ON [minwonform_view] TO [CUBRID];
+GRANT SELECT ON [menu_view] TO [CUBRID];
+GRANT SELECT ON [tools_4486_view] TO [CUBRID];
+ALTER VIEW [tools4376_v1] ADD QUERY SELECT "COL3","COL2","COL1" FROM CUBRID.TOOLS4376 t;
+CREATE OR REPLACE PROCEDURE [cubrid].[comment_procedure1]  (
+/* 주석 */
+p_test_in_args IN NUMERIC DEFAULT 1,
+p_test_out_args OUT NUMERIC,
+p_test_inout_args IN OUT NUMERIC 
+) AUTHID OWNER  AS 
+BEGIN 
+	DBMS_OUTPUT.PUT_LINE('COMMENT_PROCEDURE1');
+END comment_procedure1;
+
+CREATE OR REPLACE FUNCTION [cubrid].[tools4547_fuction] 
+RETURN VARCHAR AS 
+    RETURN_MESSAGE VARCHAR(100); 
+BEGIN 
+    RETURN_MESSAGE := 'Hello, World!'; 
+    RETURN RETURN_MESSAGE; 
+END;
+

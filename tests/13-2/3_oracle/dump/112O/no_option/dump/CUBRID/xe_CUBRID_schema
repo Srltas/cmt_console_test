@@ -1,0 +1,653 @@
+CREATE TABLE [CUBRID].[credit1](
+[trade_datetime] datetime DEFAULT to_datetime('0001-01-01 00:00:00','yyyy-mm-dd hh24:mi:ss') NOT NULL
+)
+;
+CREATE TABLE [CUBRID].[cubrid_image_list](
+[image_id] varchar(10),
+[image_type] varchar(200),
+[image_type_raw] bit varying(144),
+[image_description] varchar(200),
+[image_file_name] varchar(100),
+[image_file] bit varying(1073741823)
+)
+;
+CREATE TABLE [CUBRID].[imsi_tbl](
+[col1] varchar(4000),
+[col2] varchar(4000)
+)
+;
+CREATE TABLE [CUBRID].[plcsql_tbl](
+[id] int,
+[name] varchar(200)
+)
+;
+CREATE TABLE [CUBRID].[seoul_bicycle_usage_info](
+[rental_date] datetime,
+[rental_office_number] int,
+[rental_office] varchar(200),
+[rental_type_name] varchar(50),
+[gender_type] varchar(20),
+[age_type] varchar(20),
+[use_number] int,
+[momentum] numeric(10,3),
+[carbon_amount] double,
+[distance_meters] numeric(10,2),
+[use_min] varchar(255),
+[random_value] varchar(255)
+)
+;
+CREATE TABLE [CUBRID].[seoul_bus_route](
+[route_id] varchar(10),
+[route_name] varchar(60),
+[sequence_number] int,
+[node_id] varchar(10),
+[ars_id] varchar(5),
+[bus_stop_name] varchar(1073741823),
+[gps_x] varchar(100),
+[gps_y] varchar(100),
+[create_date_tz] varchar(100),
+[create_date_local_tz] datetime
+)
+;
+CREATE TABLE [CUBRID].[seoul_bus_route_line](
+[route_id] varchar(20),
+[route_name] varchar(60),
+[bus_stop_name_list] varchar(1073741823)
+)
+;
+CREATE TABLE [CUBRID].[t1](
+[a] int,
+[b] varchar(100)
+)
+;
+CREATE TABLE [CUBRID].[temp09](
+[col1] blob
+)
+;
+CREATE TABLE [CUBRID].[test_date_default](
+[trade_datetime] datetime DEFAULT to_datetime('0001-01-01 00:00:00','yyyy-mm-dd hh24:mi:ss') NOT NULL
+)
+;
+CREATE TABLE [CUBRID].[test_number](
+[num] numeric(38,15),
+[num_star] numeric(38,15)
+)
+;
+CREATE TABLE [CUBRID].[test_tbl](
+[col1] varchar(5)
+)
+;
+CREATE TABLE [CUBRID].[tools4345](
+[b1] bit varying(1073741823) NOT NULL,
+[c1] varchar(1073741823) NOT NULL
+)
+;
+CREATE TABLE [CUBRID].[tools4350](
+[commentcol] varchar(1000) COMMENT 'comment test column in tools4350',
+[b] numeric(38,15) COMMENT 'comment test column b',
+[c] char(3) COMMENT 'comment test column c',
+[d] numeric(38,15) COMMENT 'comment test column d',
+[e] datetime COMMENT 'comment test column e'
+) COMMENT = 'comment test table'
+;
+CREATE TABLE [CUBRID].[tools4376](
+[col3] varchar(100) COMMENT 'column comment for tools4376',
+[col2] numeric(15,0) COMMENT 'index comment col2_idx',
+[col1] numeric(38,15) COMMENT 'pk comment'
+) COMMENT = 'table_comment'
+;
+CREATE TABLE [CUBRID].[tools4410](
+[i] int COMMENT 'TOOLS4410_I',
+[j] numeric(10,0) COMMENT 'TOOLS4410_J'
+) COMMENT = 'test''''single quote'
+;
+CREATE TABLE [CUBRID].[tools4474](
+[col] int COMMENT 'TOOLS4474_COL'
+)
+;
+CREATE TABLE [CUBRID].[tools4547](
+[id] numeric(38,15),
+[col1] numeric(38,15)
+)
+;
+CREATE TABLE [CUBRID].[tools4556](
+[id] numeric(38,15),
+[curdate] datetime DEFAULT CURRENT_DATE,
+[curtime] timestamp DEFAULT LOCALTIMESTAMP,
+[current_date] datetime DEFAULT CURRENT_DATE,
+[current_timestamp] timestamp DEFAULT CURRENT_TIMESTAMP,
+[dbtimezone] varchar(50) DEFAULT (DBTIMEZONE),
+[localtimestamp] timestamp DEFAULT LOCALTIMESTAMP,
+[sessiontimezone] varchar(50) DEFAULT (SESSIONTIMEZONE),
+[sys_date] datetime DEFAULT SYSDATE,
+[systimestamp] timestamp DEFAULT SYSTIMESTAMP
+)
+;
+CREATE TABLE [CUBRID].[tools4557](
+[id] int,
+[workday] numeric(38,15) DEFAULT CAST(to_char(SYSDATE, 'DDD') AS NUMBER),
+[workday_char] varchar(3) DEFAULT to_char(SYSDATE, 'DDD'),
+[current_year] varchar(4) DEFAULT to_char(SYSDATE, 'YYYY'),
+[current_month] varchar(2) DEFAULT to_char(SYSDATE, 'MM'),
+[current_day] varchar(2) DEFAULT to_char(SYSDATE, 'DD'),
+[timestamp_char] varchar(30) DEFAULT TO_CHAR(SYSTIMESTAMP, 'YYYY-MM-DD HH24:MI:SS.FF'),
+[timestamp_year] numeric(38,15),
+[timestamp_month] numeric(38,15),
+[timestamp_day] numeric(38,15),
+[timestamp_hour] numeric(38,15),
+[timestamp_minute] numeric(38,15),
+[timestamp_second] numeric(38,15),
+[numeric_char] varchar(10) DEFAULT TO_CHAR(12345.67),
+[char_number] numeric(38,15) DEFAULT CAST('12345.67' AS NUMBER),
+[date_number] numeric(38,15) DEFAULT CAST(TO_CHAR(SYSDATE, 'YYYYMMDD') AS NUMBER),
+[char_date] datetime DEFAULT CAST('20230530' AS DATE)
+)
+;
+CREATE TABLE [CUBRID].[tools4561](
+[id] numeric(38,15),
+[description] varchar(1073741823),
+[created_date] datetime
+)
+;
+CREATE TABLE [CUBRID].[tools4563_fk](
+[fk_id] char(1) NOT NULL
+)
+;
+CREATE TABLE [CUBRID].[tools4563_pk](
+[id] char(1),
+[data] varchar(100)
+)
+;
+CREATE TABLE [CUBRID].[tools4585](
+[id] numeric(38,15),
+[lob_data] varchar(1073741823)
+)
+;
+CREATE TABLE [CUBRID].[tools4644](
+[col_varchar2] varchar(100) DEFAULT ('default_varchar2'),
+[col_char] char(1) DEFAULT ('0'),
+[col_number] numeric(38,15) DEFAULT (0),
+[col_date] datetime DEFAULT (SYSDATE),
+[col_timestamp] timestamp DEFAULT (SYSTIMESTAMP),
+[col_clob] varchar(1073741823) DEFAULT ('default_clob'),
+[col_blob] bit varying(1073741823) DEFAULT X'EMPTY_BLOB()',
+[col_raw] bit varying(800) DEFAULT X'HEXTORAW('64656661756C745F726177')',
+[col_nvarchar2] varchar(100) DEFAULT (u'default_nvarchar2'),
+[col_nchar] char(1) DEFAULT (u'0'),
+[col_float] double DEFAULT (0.0),
+[col_binary_float] float DEFAULT (0.0),
+[col_binary_double] double DEFAULT (0.0),
+[col_interval_day_to_second] varchar(255) DEFAULT (INTERVAL '0' DAY),
+[col_interval_year_to_month] varchar(255) DEFAULT (INTERVAL '0' YEAR),
+[col_bfile] blob DEFAULT (BFILENAME('DEFAULT_DIR', 'default_bfile.txt'))
+)
+;
+CREATE VIEW [CUBRID].[tools4376_v1](
+[COL3] varchar(100) COMMENT 'view column comment',
+[COL2] numeric(15,0) COMMENT 'view column comment idx',
+[COL1] numeric(38,15) COMMENT 'view column comment pk'
+) COMMENT 'view comment for tools4376'
+;
+CREATE PRIVATE SYNONYM [CUBRID].[basin] FOR [SYSTEM].[basin];
+CREATE PRIVATE SYNONYM [CUBRID].[board] FOR [SYSTEM].[board];
+CREATE PRIVATE SYNONYM [CUBRID].[board10] FOR [SYSTEM].[board10];
+CREATE PRIVATE SYNONYM [CUBRID].[board11] FOR [SYSTEM].[board11];
+CREATE PRIVATE SYNONYM [CUBRID].[board12] FOR [SYSTEM].[board12];
+CREATE PRIVATE SYNONYM [CUBRID].[board3] FOR [SYSTEM].[board3];
+CREATE PRIVATE SYNONYM [CUBRID].[board4] FOR [SYSTEM].[board4];
+CREATE PRIVATE SYNONYM [CUBRID].[board5] FOR [SYSTEM].[board5];
+CREATE PRIVATE SYNONYM [CUBRID].[board6] FOR [SYSTEM].[board6];
+CREATE PRIVATE SYNONYM [CUBRID].[board_report] FOR [SYSTEM].[board_report];
+CREATE PRIVATE SYNONYM [CUBRID].[board_sujil] FOR [SYSTEM].[board_sujil];
+CREATE PRIVATE SYNONYM [CUBRID].[bonbu_discuss] FOR [SYSTEM].[bonbu_discuss];
+CREATE PRIVATE SYNONYM [CUBRID].[child_ask] FOR [SYSTEM].[child_ask];
+CREATE PRIVATE SYNONYM [CUBRID].[child_ask2] FOR [SYSTEM].[child_ask2];
+CREATE PRIVATE SYNONYM [CUBRID].[child_com] FOR [SYSTEM].[child_com];
+CREATE PRIVATE SYNONYM [CUBRID].[child_diary] FOR [SYSTEM].[child_diary];
+CREATE PRIVATE SYNONYM [CUBRID].[child_pds] FOR [SYSTEM].[child_pds];
+CREATE PRIVATE SYNONYM [CUBRID].[contest_data] FOR [SYSTEM].[contest_data];
+CREATE PRIVATE SYNONYM [CUBRID].[count] FOR [SYSTEM].[count];
+CREATE PRIVATE SYNONYM [CUBRID].[count_20090112] FOR [SYSTEM].[count_20090112];
+CREATE PRIVATE SYNONYM [CUBRID].[dansu2] FOR [SYSTEM].[dansu2];
+CREATE PRIVATE SYNONYM [CUBRID].[dansu_board] FOR [SYSTEM].[dansu_board];
+CREATE PRIVATE SYNONYM [CUBRID].[dansu_test] FOR [SYSTEM].[dansu_test];
+CREATE PRIVATE SYNONYM [CUBRID].[deptno] FOR [SYSTEM].[deptno];
+CREATE PRIVATE SYNONYM [CUBRID].[divcode] FOR [SYSTEM].[divcode];
+CREATE PRIVATE SYNONYM [CUBRID].[edu_apply] FOR [SYSTEM].[edu_apply];
+CREATE PRIVATE SYNONYM [CUBRID].[edu_code] FOR [SYSTEM].[edu_code];
+CREATE PRIVATE SYNONYM [CUBRID].[edu_info] FOR [SYSTEM].[edu_info];
+CREATE PRIVATE SYNONYM [CUBRID].[event_20070601_3] FOR [SYSTEM].[event_20070601_3];
+CREATE PRIVATE SYNONYM [CUBRID].[event_20081120] FOR [SYSTEM].[event_20081120];
+CREATE PRIVATE SYNONYM [CUBRID].[event_20110925] FOR [SYSTEM].[event_20110925];
+CREATE PRIVATE SYNONYM [CUBRID].[event_2011_11] FOR [SYSTEM].[event_2011_11];
+CREATE PRIVATE SYNONYM [CUBRID].[event_quiz] FOR [SYSTEM].[event_quiz];
+CREATE PRIVATE SYNONYM [CUBRID].[fee_faq] FOR [SYSTEM].[fee_faq];
+CREATE PRIVATE SYNONYM [CUBRID].[fee_qna] FOR [SYSTEM].[fee_qna];
+CREATE PRIVATE SYNONYM [CUBRID].[gamsa2006] FOR [SYSTEM].[gamsa2006];
+CREATE PRIVATE SYNONYM [CUBRID].[gamsaboard1] FOR [SYSTEM].[gamsaboard1];
+CREATE PRIVATE SYNONYM [CUBRID].[gamsaboard2] FOR [SYSTEM].[gamsaboard2];
+CREATE PRIVATE SYNONYM [CUBRID].[gamsawant] FOR [SYSTEM].[gamsawant];
+CREATE PRIVATE SYNONYM [CUBRID].[gamsawant1] FOR [SYSTEM].[gamsawant1];
+CREATE PRIVATE SYNONYM [CUBRID].[gijang] FOR [SYSTEM].[gijang];
+CREATE PRIVATE SYNONYM [CUBRID].[gongsa_board] FOR [SYSTEM].[gongsa_board];
+CREATE PRIVATE SYNONYM [CUBRID].[gong_board] FOR [SYSTEM].[gong_board];
+CREATE PRIVATE SYNONYM [CUBRID].[ground] FOR [SYSTEM].[ground];
+CREATE PRIVATE SYNONYM [CUBRID].[guest_stat] FOR [SYSTEM].[guest_stat];
+CREATE PRIVATE SYNONYM [CUBRID].[hasudo] FOR [SYSTEM].[hasudo];
+CREATE PRIVATE SYNONYM [CUBRID].[hasudo_120302] FOR [SYSTEM].[hasudo_120302];
+CREATE PRIVATE SYNONYM [CUBRID].[hasudo_200508] FOR [SYSTEM].[hasudo_200508];
+CREATE PRIVATE SYNONYM [CUBRID].[hasudo_20140305] FOR [SYSTEM].[hasudo_20140305];
+CREATE PRIVATE SYNONYM [CUBRID].[hasudo_201503] FOR [SYSTEM].[hasudo_201503];
+CREATE PRIVATE SYNONYM [CUBRID].[hasudo_bak] FOR [SYSTEM].[hasudo_bak];
+CREATE PRIVATE SYNONYM [CUBRID].[hdoc_company] FOR [SYSTEM].[hdoc_company];
+CREATE PRIVATE SYNONYM [CUBRID].[hdoc_company_1] FOR [SYSTEM].[hdoc_company_1];
+CREATE PRIVATE SYNONYM [CUBRID].[hdoc_post] FOR [SYSTEM].[hdoc_post];
+CREATE PRIVATE SYNONYM [CUBRID].[h_board] FOR [SYSTEM].[h_board];
+CREATE PRIVATE SYNONYM [CUBRID].[imsiw_ziya1225] FOR [SYSTEM].[imsiw_ziya1225];
+CREATE PRIVATE SYNONYM [CUBRID].[imsi_ziya1225] FOR [SYSTEM].[imsi_ziya1225];
+CREATE PRIVATE SYNONYM [CUBRID].[info_board] FOR [SYSTEM].[info_board];
+CREATE PRIVATE SYNONYM [CUBRID].[inground_post] FOR [SYSTEM].[inground_post];
+CREATE PRIVATE SYNONYM [CUBRID].[inspect_post] FOR [SYSTEM].[inspect_post];
+CREATE PRIVATE SYNONYM [CUBRID].[jachigu] FOR [SYSTEM].[jachigu];
+CREATE PRIVATE SYNONYM [CUBRID].[jachigu_7] FOR [SYSTEM].[jachigu_7];
+CREATE PRIVATE SYNONYM [CUBRID].[jachigu_7_20050927] FOR [SYSTEM].[jachigu_7_20050927];
+CREATE PRIVATE SYNONYM [CUBRID].[jachigu_7_201505] FOR [SYSTEM].[jachigu_7_201505];
+CREATE PRIVATE SYNONYM [CUBRID].[jejung_debt] FOR [SYSTEM].[jejung_debt];
+CREATE PRIVATE SYNONYM [CUBRID].[jejung_jasan] FOR [SYSTEM].[jejung_jasan];
+CREATE PRIVATE SYNONYM [CUBRID].[jejung_stats] FOR [SYSTEM].[jejung_stats];
+CREATE PRIVATE SYNONYM [CUBRID].[joo] FOR [SYSTEM].[joo];
+CREATE PRIVATE SYNONYM [CUBRID].[jubu] FOR [SYSTEM].[jubu];
+CREATE PRIVATE SYNONYM [CUBRID].[jubuwork_board] FOR [SYSTEM].[jubuwork_board];
+CREATE PRIVATE SYNONYM [CUBRID].[jubu_dialog] FOR [SYSTEM].[jubu_dialog];
+CREATE PRIVATE SYNONYM [CUBRID].[jubu_free] FOR [SYSTEM].[jubu_free];
+CREATE PRIVATE SYNONYM [CUBRID].[jubu_freecmt] FOR [SYSTEM].[jubu_freecmt];
+CREATE PRIVATE SYNONYM [CUBRID].[jubu_note] FOR [SYSTEM].[jubu_note];
+CREATE PRIVATE SYNONYM [CUBRID].[kind_board] FOR [SYSTEM].[kind_board];
+CREATE PRIVATE SYNONYM [CUBRID].[love_discuss] FOR [SYSTEM].[love_discuss];
+CREATE PRIVATE SYNONYM [CUBRID].[love_discusscmt] FOR [SYSTEM].[love_discusscmt];
+CREATE PRIVATE SYNONYM [CUBRID].[love_gallery] FOR [SYSTEM].[love_gallery];
+CREATE PRIVATE SYNONYM [CUBRID].[love_gallerycmt] FOR [SYSTEM].[love_gallerycmt];
+CREATE PRIVATE SYNONYM [CUBRID].[love_greeting] FOR [SYSTEM].[love_greeting];
+CREATE PRIVATE SYNONYM [CUBRID].[love_greetingcmt] FOR [SYSTEM].[love_greetingcmt];
+CREATE PRIVATE SYNONYM [CUBRID].[love_singo] FOR [SYSTEM].[love_singo];
+CREATE PRIVATE SYNONYM [CUBRID].[love_tea] FOR [SYSTEM].[love_tea];
+CREATE PRIVATE SYNONYM [CUBRID].[love_thisway] FOR [SYSTEM].[love_thisway];
+CREATE PRIVATE SYNONYM [CUBRID].[love_year] FOR [SYSTEM].[love_year];
+CREATE PRIVATE SYNONYM [CUBRID].[love_yearcmt] FOR [SYSTEM].[love_yearcmt];
+CREATE PRIVATE SYNONYM [CUBRID].[love_yearimg] FOR [SYSTEM].[love_yearimg];
+CREATE PRIVATE SYNONYM [CUBRID].[manageetcboard] FOR [SYSTEM].[manageetcboard];
+CREATE PRIVATE SYNONYM [CUBRID].[manager] FOR [SYSTEM].[manager];
+CREATE PRIVATE SYNONYM [CUBRID].[manager_access] FOR [SYSTEM].[manager_access];
+CREATE PRIVATE SYNONYM [CUBRID].[media_press] FOR [SYSTEM].[media_press];
+CREATE PRIVATE SYNONYM [CUBRID].[memo_board] FOR [SYSTEM].[memo_board];
+CREATE PRIVATE SYNONYM [CUBRID].[minwon_admin] FOR [SYSTEM].[minwon_admin];
+CREATE PRIVATE SYNONYM [CUBRID].[minwon_admin_120327] FOR [SYSTEM].[minwon_admin_120327];
+CREATE PRIVATE SYNONYM [CUBRID].[minwon_faq] FOR [SYSTEM].[minwon_faq];
+CREATE PRIVATE SYNONYM [CUBRID].[minwon_qna] FOR [SYSTEM].[minwon_qna];
+CREATE PRIVATE SYNONYM [CUBRID].[model_board] FOR [SYSTEM].[model_board];
+CREATE PRIVATE SYNONYM [CUBRID].[monitor] FOR [SYSTEM].[monitor];
+CREATE PRIVATE SYNONYM [CUBRID].[monitor_120510jmh] FOR [SYSTEM].[monitor_120510jmh];
+CREATE PRIVATE SYNONYM [CUBRID].[monitor_20120114] FOR [SYSTEM].[monitor_20120114];
+CREATE PRIVATE SYNONYM [CUBRID].[monitor_20140227] FOR [SYSTEM].[monitor_20140227];
+CREATE PRIVATE SYNONYM [CUBRID].[msearch] FOR [SYSTEM].[msearch];
+CREATE PRIVATE SYNONYM [CUBRID].[msearch_dblist] FOR [SYSTEM].[msearch_dblist];
+CREATE PRIVATE SYNONYM [CUBRID].[news_board] FOR [SYSTEM].[news_board];
+CREATE PRIVATE SYNONYM [CUBRID].[old_event_find] FOR [SYSTEM].[old_event_find];
+CREATE PRIVATE SYNONYM [CUBRID].[old_event_quiz] FOR [SYSTEM].[old_event_quiz];
+CREATE PRIVATE SYNONYM [CUBRID].[pai] FOR [SYSTEM].[pai];
+CREATE PRIVATE SYNONYM [CUBRID].[paymail] FOR [SYSTEM].[paymail];
+CREATE PRIVATE SYNONYM [CUBRID].[plan_table] FOR [SYSTEM].[plan_table];
+CREATE PRIVATE SYNONYM [CUBRID].[poll_article] FOR [SYSTEM].[poll_article];
+CREATE PRIVATE SYNONYM [CUBRID].[poll_list] FOR [SYSTEM].[poll_list];
+CREATE PRIVATE SYNONYM [CUBRID].[praise_board] FOR [SYSTEM].[praise_board];
+CREATE PRIVATE SYNONYM [CUBRID].[praise_board_121231] FOR [SYSTEM].[praise_board_121231];
+CREATE PRIVATE SYNONYM [CUBRID].[product] FOR [SYSTEM].[product];
+CREATE PRIVATE SYNONYM [CUBRID].[prt_sms] FOR [SYSTEM].[prt_sms];
+CREATE PRIVATE SYNONYM [CUBRID].[qnatest] FOR [SYSTEM].[qnatest];
+CREATE PRIVATE SYNONYM [CUBRID].[ratmul] FOR [SYSTEM].[ratmul];
+CREATE PRIVATE SYNONYM [CUBRID].[ratmul_120302] FOR [SYSTEM].[ratmul_120302];
+CREATE PRIVATE SYNONYM [CUBRID].[request_board] FOR [SYSTEM].[request_board];
+CREATE PRIVATE SYNONYM [CUBRID].[request_board_20101213] FOR [SYSTEM].[request_board_20101213];
+CREATE PRIVATE SYNONYM [CUBRID].[satisfaction] FOR [SYSTEM].[satisfaction];
+CREATE PRIVATE SYNONYM [CUBRID].[siljukpyunggaboard] FOR [SYSTEM].[siljukpyunggaboard];
+CREATE PRIVATE SYNONYM [CUBRID].[singo1] FOR [SYSTEM].[singo1];
+CREATE PRIVATE SYNONYM [CUBRID].[singo1_121231] FOR [SYSTEM].[singo1_121231];
+CREATE PRIVATE SYNONYM [CUBRID].[singo2] FOR [SYSTEM].[singo2];
+CREATE PRIVATE SYNONYM [CUBRID].[singo2_121231] FOR [SYSTEM].[singo2_121231];
+CREATE PRIVATE SYNONYM [CUBRID].[singo3] FOR [SYSTEM].[singo3];
+CREATE PRIVATE SYNONYM [CUBRID].[singo_clean] FOR [SYSTEM].[singo_clean];
+CREATE PRIVATE SYNONYM [CUBRID].[smslog] FOR [SYSTEM].[smslog];
+CREATE PRIVATE SYNONYM [CUBRID].[sms_history] FOR [SYSTEM].[sms_history];
+CREATE PRIVATE SYNONYM [CUBRID].[sms_test] FOR [SYSTEM].[sms_test];
+CREATE PRIVATE SYNONYM [CUBRID].[soonsoo365_contest] FOR [SYSTEM].[soonsoo365_contest];
+CREATE PRIVATE SYNONYM [CUBRID].[soonsoo365_contest_2013] FOR [SYSTEM].[soonsoo365_contest_2013];
+CREATE PRIVATE SYNONYM [CUBRID].[soonsoo365_contest_2014] FOR [SYSTEM].[soonsoo365_contest_2014];
+CREATE PRIVATE SYNONYM [CUBRID].[soonsoo365_contest_2015] FOR [SYSTEM].[soonsoo365_contest_2015];
+CREATE PRIVATE SYNONYM [CUBRID].[soonsoo365_contest_del] FOR [SYSTEM].[soonsoo365_contest_del];
+CREATE PRIVATE SYNONYM [CUBRID].[staffinformation] FOR [SYSTEM].[staffinformation];
+CREATE PRIVATE SYNONYM [CUBRID].[staffinformation1] FOR [SYSTEM].[staffinformation1];
+CREATE PRIVATE SYNONYM [CUBRID].[staffinformation2] FOR [SYSTEM].[staffinformation2];
+CREATE PRIVATE SYNONYM [CUBRID].[standard] FOR [SYSTEM].[standard];
+CREATE PRIVATE SYNONYM [CUBRID].[standard1] FOR [SYSTEM].[standard1];
+CREATE PRIVATE SYNONYM [CUBRID].[statistics] FOR [SYSTEM].[statistics];
+CREATE PRIVATE SYNONYM [CUBRID].[suggest_board] FOR [SYSTEM].[suggest_board];
+CREATE PRIVATE SYNONYM [CUBRID].[suggest_data] FOR [SYSTEM].[suggest_data];
+CREATE PRIVATE SYNONYM [CUBRID].[suzildata] FOR [SYSTEM].[suzildata];
+CREATE PRIVATE SYNONYM [CUBRID].[suzildata_20091103] FOR [SYSTEM].[suzildata_20091103];
+CREATE PRIVATE SYNONYM [CUBRID].[suzilterm_board] FOR [SYSTEM].[suzilterm_board];
+CREATE PRIVATE SYNONYM [CUBRID].[tbl_01] FOR [SYSTEM].[tbl_01];
+CREATE PRIVATE SYNONYM [CUBRID].[tbl_busu_code] FOR [SYSTEM].[tbl_busu_code];
+CREATE PRIVATE SYNONYM [CUBRID].[tbl_job_code] FOR [SYSTEM].[tbl_job_code];
+CREATE PRIVATE SYNONYM [CUBRID].[tbl_vote_20080916] FOR [SYSTEM].[tbl_vote_20080916];
+CREATE PRIVATE SYNONYM [CUBRID].[tb_busanorg_data] FOR [SYSTEM].[tb_busanorg_data];
+CREATE PRIVATE SYNONYM [CUBRID].[tb_busanorg_data2] FOR [SYSTEM].[tb_busanorg_data2];
+CREATE PRIVATE SYNONYM [CUBRID].[tb_busantel_data] FOR [SYSTEM].[tb_busantel_data];
+CREATE PRIVATE SYNONYM [CUBRID].[tb_busantel_data2] FOR [SYSTEM].[tb_busantel_data2];
+CREATE PRIVATE SYNONYM [CUBRID].[tb_evaluation] FOR [SYSTEM].[tb_evaluation];
+CREATE PRIVATE SYNONYM [CUBRID].[tb_menu_data] FOR [SYSTEM].[tb_menu_data];
+CREATE PRIVATE SYNONYM [CUBRID].[tb_pageadm_data] FOR [SYSTEM].[tb_pageadm_data];
+CREATE PRIVATE SYNONYM [CUBRID].[tb_watertel_data] FOR [SYSTEM].[tb_watertel_data];
+CREATE PRIVATE SYNONYM [CUBRID].[tb_water_tour_data] FOR [SYSTEM].[tb_water_tour_data];
+CREATE PRIVATE SYNONYM [CUBRID].[telcutoff] FOR [SYSTEM].[telcutoff];
+CREATE PRIVATE SYNONYM [CUBRID].[telcutoff_old] FOR [SYSTEM].[telcutoff_old];
+CREATE PRIVATE SYNONYM [CUBRID].[tel_1] FOR [SYSTEM].[tel_1];
+CREATE PRIVATE SYNONYM [CUBRID].[test] FOR [SYSTEM].[test];
+CREATE PRIVATE SYNONYM [CUBRID].[test_ser] FOR [SYSTEM].[test_ser];
+CREATE PRIVATE SYNONYM [CUBRID].[toad_plan_table] FOR [SYSTEM].[toad_plan_table];
+CREATE PRIVATE SYNONYM [CUBRID].[tocust_faq] FOR [SYSTEM].[tocust_faq];
+CREATE PRIVATE SYNONYM [CUBRID].[tocust_qna] FOR [SYSTEM].[tocust_qna];
+CREATE PRIVATE SYNONYM [CUBRID].[tocust_qna_del] FOR [SYSTEM].[tocust_qna_del];
+CREATE PRIVATE SYNONYM [CUBRID].[todaysujil_count] FOR [SYSTEM].[todaysujil_count];
+CREATE PRIVATE SYNONYM [CUBRID].[tools_4474_sn] FOR [CUBRID].[tools4474];
+CREATE PRIVATE SYNONYM [CUBRID].[tour2012] FOR [SYSTEM].[tour2012];
+CREATE PRIVATE SYNONYM [CUBRID].[tour2013] FOR [SYSTEM].[tour2013];
+CREATE PRIVATE SYNONYM [CUBRID].[visit] FOR [SYSTEM].[visit];
+CREATE PRIVATE SYNONYM [CUBRID].[voluntary] FOR [SYSTEM].[voluntary];
+CREATE PRIVATE SYNONYM [CUBRID].[waterterm_board] FOR [SYSTEM].[waterterm_board];
+CREATE PRIVATE SYNONYM [CUBRID].[water_board] FOR [SYSTEM].[water_board];
+CREATE PRIVATE SYNONYM [CUBRID].[water_data] FOR [SYSTEM].[water_data];
+CREATE PRIVATE SYNONYM [CUBRID].[water_eval] FOR [SYSTEM].[water_eval];
+CREATE PRIVATE SYNONYM [CUBRID].[webact] FOR [SYSTEM].[webact];
+CREATE PRIVATE SYNONYM [CUBRID].[webcountm] FOR [SYSTEM].[webcountm];
+CREATE PRIVATE SYNONYM [CUBRID].[webcust] FOR [SYSTEM].[webcust];
+CREATE PRIVATE SYNONYM [CUBRID].[webcust_120510jmh] FOR [SYSTEM].[webcust_120510jmh];
+CREATE PRIVATE SYNONYM [CUBRID].[webcust_jmh0511] FOR [SYSTEM].[webcust_jmh0511];
+CREATE PRIVATE SYNONYM [CUBRID].[webdel] FOR [SYSTEM].[webdel];
+CREATE PRIVATE SYNONYM [CUBRID].[webdelymm] FOR [SYSTEM].[webdelymm];
+CREATE PRIVATE SYNONYM [CUBRID].[webest] FOR [SYSTEM].[webest];
+CREATE PRIVATE SYNONYM [CUBRID].[webfee] FOR [SYSTEM].[webfee];
+CREATE PRIVATE SYNONYM [CUBRID].[webfee_bak] FOR [SYSTEM].[webfee_bak];
+CREATE PRIVATE SYNONYM [CUBRID].[webgam] FOR [SYSTEM].[webgam];
+CREATE PRIVATE SYNONYM [CUBRID].[webimsi] FOR [SYSTEM].[webimsi];
+CREATE PRIVATE SYNONYM [CUBRID].[webjhj] FOR [SYSTEM].[webjhj];
+CREATE PRIVATE SYNONYM [CUBRID].[webjng] FOR [SYSTEM].[webjng];
+CREATE PRIVATE SYNONYM [CUBRID].[weblmt] FOR [SYSTEM].[weblmt];
+CREATE PRIVATE SYNONYM [CUBRID].[webmember] FOR [SYSTEM].[webmember];
+CREATE PRIVATE SYNONYM [CUBRID].[webmember_2011_11] FOR [SYSTEM].[webmember_2011_11];
+CREATE PRIVATE SYNONYM [CUBRID].[webmember_20140227] FOR [SYSTEM].[webmember_20140227];
+CREATE PRIVATE SYNONYM [CUBRID].[webmember_event_20050430] FOR [SYSTEM].[webmember_event_20050430];
+CREATE PRIVATE SYNONYM [CUBRID].[webmember_jmh0511] FOR [SYSTEM].[webmember_jmh0511];
+CREATE PRIVATE SYNONYM [CUBRID].[webnam] FOR [SYSTEM].[webnam];
+CREATE PRIVATE SYNONYM [CUBRID].[webnum] FOR [SYSTEM].[webnum];
+CREATE PRIVATE SYNONYM [CUBRID].[weboff] FOR [SYSTEM].[weboff];
+CREATE PRIVATE SYNONYM [CUBRID].[webpay] FOR [SYSTEM].[webpay];
+CREATE PRIVATE SYNONYM [CUBRID].[webrecvmm] FOR [SYSTEM].[webrecvmm];
+CREATE PRIVATE SYNONYM [CUBRID].[webreqfee] FOR [SYSTEM].[webreqfee];
+CREATE PRIVATE SYNONYM [CUBRID].[webrpt] FOR [SYSTEM].[webrpt];
+CREATE PRIVATE SYNONYM [CUBRID].[websms] FOR [SYSTEM].[websms];
+CREATE PRIVATE SYNONYM [CUBRID].[websub] FOR [SYSTEM].[websub];
+CREATE PRIVATE SYNONYM [CUBRID].[websup] FOR [SYSTEM].[websup];
+CREATE PRIVATE SYNONYM [CUBRID].[webtyp] FOR [SYSTEM].[webtyp];
+CREATE PRIVATE SYNONYM [CUBRID].[webust] FOR [SYSTEM].[webust];
+CREATE PRIVATE SYNONYM [CUBRID].[webust_del_hyc] FOR [SYSTEM].[webust_del_hyc];
+CREATE PRIVATE SYNONYM [CUBRID].[webwvr] FOR [SYSTEM].[webwvr];
+CREATE PRIVATE SYNONYM [CUBRID].[wlove_brief2012] FOR [SYSTEM].[wlove_brief2012];
+CREATE PRIVATE SYNONYM [CUBRID].[yearkmanageboard] FOR [SYSTEM].[yearkmanageboard];
+CREATE PRIVATE SYNONYM [CUBRID].[yoibupyunggaboard] FOR [SYSTEM].[yoibupyunggaboard];
+CREATE SERIAL [CUBRID].[tools4556_seq] START WITH 17 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 2;
+CREATE PROCEDURE [cubrid].[comment_procedure1]  (
+/* 주석 */
+p_test_in_args IN NUMERIC DEFAULT 1,
+p_test_out_args OUT NUMERIC,
+p_test_inout_args IN OUT NUMERIC 
+) AUTHID OWNER  AS LANGUAGE PLCSQL BEGIN RAISE_APPLICATION_ERROR(1000, '[comment_procedure1]: incomplete during loaddb'); /* __CUBRID_NO_BODY__ */ END; 
+
+CREATE FUNCTION [cubrid].[tools4547_fuction] 
+RETURN VARCHAR AS LANGUAGE PLCSQL BEGIN RAISE_APPLICATION_ERROR(1000, '[tools4547_fuction]: incomplete during loaddb'); /* __CUBRID_NO_BODY__ */ END; 
+
+GRANT SELECT ON [SYSTEM].[old_event_find] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[old_event_quiz] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[paymail] TO [CUBRID];
+GRANT ALTER ON [SYSTEM].[plan_table] TO [CUBRID];
+GRANT UPDATE ON [SYSTEM].[plan_table] TO [CUBRID];
+GRANT INSERT ON [SYSTEM].[plan_table] TO [CUBRID];
+GRANT INDEX ON [SYSTEM].[plan_table] TO [CUBRID];
+GRANT DELETE ON [SYSTEM].[plan_table] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[plan_table] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[poll_article] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[poll_list] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[praise_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[praise_board_121231] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[ratmul] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[ratmul_120302] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[request_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[request_board_20101213] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[satisfaction] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[siljukpyunggaboard] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[singo1_121231] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[singo2_121231] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[singo3] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[singo_clean] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[smslog] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[sms_history] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[sms_test] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_discusscmt] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_gallery] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_gallerycmt] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_greeting] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_greetingcmt] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_singo] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_tea] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_thisway] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_year] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_yearcmt] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[love_yearimg] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[manageetcboard] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[manager] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[manager_access] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[media_press] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[memo_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[minwon_admin] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[minwon_admin_120327] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[minwon_faq] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[minwon_qna] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[model_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[monitor] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[monitor_120510jmh] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[monitor_20120114] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[monitor_20140227] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[msearch_dblist] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[news_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tbl_01] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tbl_busu_code] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tbl_job_code] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tbl_vote_20080916] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tb_busanorg_data] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tb_busanorg_data2] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tb_busantel_data] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tb_busantel_data2] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tb_evaluation] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tb_menu_data] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tb_pageadm_data] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tb_watertel_data] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tb_water_tour_data] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[telcutoff] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[telcutoff_old] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tel_1] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[test] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[test_ser] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[toad_plan_table] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tocust_faq] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tocust_qna] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tocust_qna_del] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[todaysujil_count] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tour2012] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[visit] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[voluntary] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[waterterm_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[water_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[water_data] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[water_eval] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webact] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webcountm] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webcust] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webcust_120510jmh] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webcust_jmh0511] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webdel] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webdelymm] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webest] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webfee] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webfee_bak] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webgam] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webimsi] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webjhj] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webjng] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[weblmt] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webmember] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webmember_2011_11] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webmember_20140227] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webmember_event_20050430] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webmember_jmh0511] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webnam] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webnum] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[weboff] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webpay] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webrecvmm] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webreqfee] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webrpt] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[websms] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[websub] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[websup] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webtyp] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webust] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webust_del_hyc] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[webwvr] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[wlove_brief2012] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[yearkmanageboard] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[yoibupyunggaboard] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[dansu2] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[dansu_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[dansu_test] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[deptno] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[divcode] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[edu_apply] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[edu_code] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[edu_info] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[event_20070601_3] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[event_20081120] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[event_20110925] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[event_2011_11] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[event_quiz] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[fee_faq] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[fee_qna] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[gamsa2006] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[gamsaboard1] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[gamsaboard2] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[gamsawant] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[gamsawant1] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[gongsa_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[gong_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[ground] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[guest_stat] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[hasudo] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[hasudo_120302] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[hasudo_200508] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[hasudo_20140305] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[hasudo_201503] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[hasudo_bak] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[hdoc_company] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[hdoc_company_1] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[hdoc_post] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[h_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[imsiw_ziya1225] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[imsi_ziya1225] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[info_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[inground_post] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[inspect_post] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jachigu_7] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jachigu_7_20050927] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jachigu_7_201505] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jejung_debt] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jejung_jasan] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jejung_stats] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jubu] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jubuwork_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jubu_dialog] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jubu_freecmt] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[jubu_note] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[kind_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[soonsoo365_contest_2015] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[soonsoo365_contest_del] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[staffinformation] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[staffinformation1] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[staffinformation2] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[standard1] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[statistics] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[suggest_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[suggest_data] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[suzildata] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[suzildata_20091103] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[suzilterm_board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[basin] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[board] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[board10] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[board11] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[board12] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[board_report] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[board_sujil] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[bonbu_discuss] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[child_ask] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[child_ask2] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[child_com] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[child_diary] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[child_pds] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[contest_data] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[count] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[count_20090112] TO [CUBRID];
+GRANT INDEX ON [TOOLS_4486].[tools_4486_tb] TO [CUBRID];
+GRANT ALTER ON [TOOLS_4486].[tools_4486_tb] TO [CUBRID];
+GRANT DELETE ON [TOOLS_4486].[tools_4486_tb] TO [CUBRID];
+GRANT UPDATE ON [TOOLS_4486].[tools_4486_tb] TO [CUBRID];
+GRANT INSERT ON [TOOLS_4486].[tools_4486_tb] TO [CUBRID];
+GRANT SELECT ON [TOOLS_4486].[tools_4486_tb] TO [CUBRID];
+GRANT UPDATE ON [TOOLS_4486].[tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT SELECT ON [TOOLS_4486].[tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT INSERT ON [TOOLS_4486].[tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT INDEX ON [TOOLS_4486].[tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT DELETE ON [TOOLS_4486].[tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT ALTER ON [TOOLS_4486].[tools_4486_tb_2] TO [CUBRID] WITH GRANT OPTION;
+GRANT SELECT ON [SYSTEM].[webpage_view] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[v_dansu] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[tb_pageadm_data2] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[minwonform_view] TO [CUBRID];
+GRANT SELECT ON [SYSTEM].[menu_view] TO [CUBRID];
+GRANT SELECT ON [TOOLS_4486].[tools_4486_view] TO [CUBRID];
+ALTER VIEW [CUBRID].[tools4376_v1] ADD QUERY SELECT "COL3","COL2","COL1" FROM CUBRID.TOOLS4376 t;
+CREATE OR REPLACE PROCEDURE [cubrid].[comment_procedure1]  (
+/* 주석 */
+p_test_in_args IN NUMERIC DEFAULT 1,
+p_test_out_args OUT NUMERIC,
+p_test_inout_args IN OUT NUMERIC 
+) AUTHID OWNER  AS 
+BEGIN 
+	DBMS_OUTPUT.PUT_LINE('COMMENT_PROCEDURE1');
+END comment_procedure1;
+
+CREATE OR REPLACE FUNCTION [cubrid].[tools4547_fuction] 
+RETURN VARCHAR AS 
+    RETURN_MESSAGE VARCHAR(100); 
+BEGIN 
+    RETURN_MESSAGE := 'Hello, World!'; 
+    RETURN RETURN_MESSAGE; 
+END;
+

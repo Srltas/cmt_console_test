@@ -1,0 +1,4 @@
+CREATE VIEW [tools_4486_view](
+[A] varchar(100)
+)
+;

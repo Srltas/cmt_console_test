@@ -1,0 +1,1 @@
+ALTER TABLE [CUBRID].[tools4563_fk] DROP CONSTRAINT [tools4563_fk_fk];

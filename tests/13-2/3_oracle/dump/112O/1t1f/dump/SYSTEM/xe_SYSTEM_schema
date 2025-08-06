@@ -1,0 +1,4104 @@
+CREATE TABLE [SYSTEM].[basin](
+[seq] numeric(38,15),
+[user_name] varchar(50),
+[user_num] varchar(50),
+[basin_date] varchar(20),
+[basin_week] varchar(20),
+[req_date] varchar(20),
+[user_pwd] varchar(20),
+[email] varchar(300),
+[telnum] varchar(20),
+[status] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[board](
+[no] int,
+[write_day] varchar(1000),
+[name] varchar(4000),
+[title] varchar(4000),
+[detail] varchar(4000),
+[password] varchar(4000),
+[tcpip] varchar(4000),
+[depth] int,
+[ref] varchar(4000),
+[pos] varchar(4000)
+)
+;
+CREATE TABLE [SYSTEM].[board10](
+[no] numeric(13,0) COMMENT '????',
+[nal] varchar(15) COMMENT '???',
+[name] varchar(15) COMMENT '????',
+[regno] varchar(15) COMMENT '???',
+[title] varchar(100) COMMENT '??',
+[msg] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[email] varchar(40) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[ret] numeric(10,0) COMMENT '???',
+[filesize] numeric(30,0) COMMENT '??????',
+[nalza] numeric(8,0) COMMENT '?????',
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML????',
+[board_gb] varchar(1) COMMENT '????'
+) COMMENT = '??/??'
+;
+CREATE TABLE [SYSTEM].[board11](
+[no] numeric(13,0) COMMENT '????',
+[nal] varchar(15) COMMENT '???',
+[name] varchar(15) COMMENT '????',
+[regno] varchar(15) COMMENT '???',
+[title] varchar(100) COMMENT '??',
+[msg] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[email] varchar(40) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[ret] numeric(10,0) COMMENT '???',
+[filesize] numeric(30,0) COMMENT '??????',
+[nalza] numeric(8,0) COMMENT '?????',
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML????',
+[board_gb] varchar(1) COMMENT '????'
+)
+;
+CREATE TABLE [SYSTEM].[board12](
+[no] numeric(13,0),
+[nal] varchar(15),
+[name] varchar(15),
+[regno] varchar(15),
+[title] varchar(100),
+[msg] varchar(4000),
+[filename] varchar(40),
+[email] varchar(40),
+[pwd] varchar(8),
+[ret] numeric(10,0),
+[filesize] numeric(30,0),
+[nalza] numeric(8,0),
+[ishtml] char(1) DEFAULT '0',
+[board_gb] varchar(1),
+[division] varchar(50)
+)
+;
+CREATE TABLE [SYSTEM].[board_report](
+[seq] numeric(10,0) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(10,0) COMMENT '??????',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[dept] varchar(100) COMMENT '????',
+[email] varchar(50) COMMENT '???',
+[reg_name] varchar(20) COMMENT '?????',
+[reg_date] varchar(20) COMMENT '???',
+[end_date] numeric(8,0) COMMENT '?????',
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML????'
+) COMMENT = '????????'
+;
+CREATE TABLE [SYSTEM].[board_sujil](
+[seq] numeric(10,0) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(10,0) COMMENT '??????',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[dept] varchar(100) COMMENT '????',
+[email] varchar(50) COMMENT '???',
+[reg_name] varchar(20) COMMENT '?????',
+[reg_date] varchar(20) COMMENT '???',
+[end_date] numeric(8,0) COMMENT '?????',
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML????'
+) COMMENT = '?????_???'
+;
+CREATE TABLE [SYSTEM].[bonbu_discuss](
+[seq] numeric(22,0) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[req_name] varchar(20) COMMENT '?????',
+[jumin_no] varchar(14) COMMENT '????',
+[req_telnum] varchar(20) COMMENT '????',
+[req_email] varchar(50) COMMENT '???',
+[req_post_no] varchar(6) COMMENT '????',
+[req_post_addr] varchar(100) COMMENT '??',
+[req_next_addr] varchar(100) COMMENT '????',
+[req_pwd] varchar(8) COMMENT '????',
+[req_date] varchar(20) COMMENT '??',
+[hits] numeric(22,0) COMMENT '???',
+[ansyn] char(1) COMMENT '????',
+[answer] varchar(4000) COMMENT '???',
+[reg_name] varchar(20) COMMENT '?????',
+[telnum] varchar(20) COMMENT '????',
+[email] varchar(50) COMMENT '???',
+[pwd] varchar(15) COMMENT '????',
+[reg_date] varchar(20) COMMENT '???',
+[visible] char(1) COMMENT '????'
+) COMMENT = '????? ??'
+;
+CREATE TABLE [SYSTEM].[child_ask](
+[no] numeric(13,0),
+[nal] varchar(15),
+[name] varchar(15),
+[regno] varchar(15),
+[title] varchar(50),
+[msg] varchar(4000),
+[filename] varchar(100),
+[email] varchar(40),
+[pwd] varchar(8),
+[ret] numeric(10,0),
+[filesize] numeric(30,0)
+)
+;
+CREATE TABLE [SYSTEM].[child_ask2](
+[seq] numeric(22,0) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[req_name] varchar(20) COMMENT '??? ??',
+[req_email] varchar(50) COMMENT '??? ???',
+[req_pwd] varchar(8) COMMENT '??? ????',
+[req_date] varchar(20) COMMENT '????',
+[hits] numeric(22,0) COMMENT '???',
+[ansyn] char(1) COMMENT '????',
+[answer] varchar(4000) COMMENT '???',
+[reg_name] varchar(20) COMMENT '???',
+[dept] varchar(20) COMMENT '????',
+[telnum] varchar(20) COMMENT '????',
+[email] varchar(50) COMMENT '???',
+[pwd] varchar(15) COMMENT '????',
+[reg_date] varchar(20) COMMENT '???'
+) COMMENT = '?????? ???????'
+;
+CREATE TABLE [SYSTEM].[child_com](
+[no] numeric(13,0),
+[nal] varchar(15),
+[name] varchar(15),
+[regno] varchar(15),
+[title] varchar(50),
+[msg] varchar(4000),
+[filename] varchar(100),
+[email] varchar(40),
+[pwd] varchar(8),
+[ret] numeric(10,0),
+[filesize] numeric(30,0)
+)
+;
+CREATE TABLE [SYSTEM].[child_diary](
+[no] numeric(13,0),
+[nal] varchar(15),
+[name] varchar(15),
+[regno] varchar(15),
+[title] varchar(50),
+[msg] varchar(4000),
+[filename] varchar(100),
+[email] varchar(40),
+[pwd] varchar(8),
+[ret] numeric(10,0),
+[filesize] numeric(30,0)
+)
+;
+CREATE TABLE [SYSTEM].[child_pds](
+[no] numeric(13,0),
+[nal] varchar(15),
+[name] varchar(15),
+[regno] varchar(15),
+[title] varchar(50),
+[msg] varchar(4000),
+[filename] varchar(100),
+[email] varchar(40),
+[pwd] varchar(8),
+[ret] numeric(10,0),
+[filesize] numeric(30,0)
+)
+;
+CREATE TABLE [SYSTEM].[contest_data](
+[intnum] numeric(38,15),
+[strname] varchar(200),
+[strgubun] varchar(20),
+[stroffice] varchar(200),
+[strschool] varchar(200),
+[strsubject] varchar(400),
+[strcontect] varchar(4000),
+[strname2] varchar(200),
+[strzipcode] varchar(20),
+[straddress1] varchar(200),
+[straddress2] varchar(200),
+[strtel] varchar(20),
+[strhp] varchar(20),
+[stremail] varchar(200),
+[strfile] varchar(200),
+[strsize] varchar(100),
+[strpwd] varchar(20),
+[datetoday] varchar(20),
+[strfile2] varchar(200),
+[strsize2] varchar(20),
+[strfile3] varchar(200),
+[strsize3] varchar(20),
+[datemtoday] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[count](
+[count] numeric(10,0),
+[ip] varchar(50),
+[count_1] numeric(10,0),
+[count_2] numeric(10,0),
+[count_3] numeric(10,0),
+[count_4] numeric(10,0),
+[count_5] numeric(10,0),
+[cntdate] varchar(10) DEFAULT to_char(sysdate,'yyyy-mm-dd')
+)
+;
+CREATE TABLE [SYSTEM].[count_20090112](
+[count] numeric(10,0),
+[ip] varchar(50),
+[count_1] numeric(10,0),
+[count_2] numeric(10,0),
+[count_3] numeric(10,0),
+[count_4] numeric(10,0),
+[count_5] numeric(10,0),
+[cntdate] varchar(10)
+)
+;
+CREATE TABLE [SYSTEM].[dansu2](
+[seq] numeric(10,0),
+[title] varchar(200),
+[content] varchar(4000),
+[filename] varchar(100),
+[filesize] numeric(10,0),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[dept] varchar(100),
+[email] varchar(50),
+[reg_name] varchar(20),
+[reg_date] varchar(20),
+[end_date] numeric(8,0),
+[ishtml] char(1) DEFAULT '0',
+[cutoff_s_date] varchar(8),
+[cutoff_s_time] varchar(4),
+[cutoff_e_date] varchar(8),
+[cutoff_e_time] varchar(4)
+)
+;
+CREATE TABLE [SYSTEM].[dansu_board](
+[seq] numeric(10,0) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(10,0) COMMENT '??????',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[dept] varchar(100) COMMENT '????',
+[email] varchar(50) COMMENT '???',
+[reg_name] varchar(20) COMMENT '?????',
+[reg_date] varchar(20) COMMENT '???',
+[end_date] numeric(8,0) COMMENT '?????',
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML ????',
+[addr] varchar(200),
+[dansu_date] varchar(200)
+) COMMENT = '????'
+;
+CREATE TABLE [SYSTEM].[dansu_test](
+[div_cd] varchar(3) NOT NULL,
+[cust_no] varchar(6) NOT NULL,
+[meter_id] varchar(1) NOT NULL,
+[bu_no] varchar(2) NOT NULL,
+[name] varchar(20) NOT NULL,
+[tel_no] varchar(20),
+[gu_nm] varchar(20),
+[dong_nm] varchar(20),
+[cutoff_s_date] varchar(8) NOT NULL,
+[cutoff_s_time] varchar(4) NOT NULL,
+[cutoff_e_date] varchar(8),
+[cutoff_e_time] varchar(4),
+[cutoff_code] varchar(2),
+[cutoff_area] varchar(50),
+[upd_date] varchar(8),
+[upd_time] varchar(6),
+[upd_emp] varchar(14)
+)
+;
+CREATE TABLE [SYSTEM].[deptno](
+[ser_no] numeric(3,0),
+[deptnm1] varchar(20),
+[deptnm2] varchar(20),
+[deptnm3] varchar(20),
+[deptno] varchar(7),
+[crt_date] datetime
+)
+;
+CREATE TABLE [SYSTEM].[divcode](
+[div_cd] varchar(3) NOT NULL COMMENT '???????',
+[addr] varchar(50) COMMENT '????',
+[div_nm] varchar(50) COMMENT '????(?)',
+[div_telno] varchar(30) COMMENT '????',
+[div_email] varchar(30) COMMENT '????',
+[div_addr] varchar(100) COMMENT '???????'
+) COMMENT = '???????'
+;
+CREATE TABLE [SYSTEM].[edu_apply](
+[no] numeric(13,0) COMMENT '????',
+[eduno] numeric(13,0) COMMENT '????',
+[name] varchar(15) COMMENT '????',
+[age] numeric(3,0) COMMENT '??',
+[sex] char(1) COMMENT '??',
+[email] varchar(40) COMMENT '???',
+[tel] varchar(15) COMMENT '????',
+[mobile] varchar(15) COMMENT '?????',
+[etc] varchar(4000) COMMENT '????',
+[nal] varchar(15) COMMENT '???',
+[state] char(1) COMMENT '??'
+) COMMENT = '????? ??'
+;
+CREATE TABLE [SYSTEM].[edu_code](
+[no] numeric(13,0) COMMENT '????',
+[ecode] varchar(2) COMMENT '??',
+[ename] varchar(50) COMMENT '???',
+[active] char(1) COMMENT '???',
+[egubun] char(1) COMMENT '????'
+) COMMENT = '????'
+;
+CREATE TABLE [SYSTEM].[edu_info](
+[no] numeric(13,0) COMMENT '????',
+[nal] varchar(15) COMMENT '???',
+[name] varchar(15) COMMENT '????',
+[regno] varchar(15) COMMENT '???',
+[title] varchar(100) COMMENT '???',
+[msg] varchar(4000) COMMENT '??',
+[filename] varchar(40) COMMENT '??????',
+[email] varchar(40) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[ret] numeric(10,0) COMMENT '???',
+[filesize] numeric(30,0) COMMENT '??????',
+[nalza] numeric(8,0) COMMENT '?????',
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML????',
+[sdate] varchar(10) COMMENT '?????',
+[edate] varchar(10) COMMENT '?????',
+[stime] varchar(8) COMMENT '??????',
+[etime] varchar(8) COMMENT '??????',
+[inwon] numeric(4,0) DEFAULT 0 COMMENT '????',
+[gubun] varchar(2) COMMENT '????'
+) COMMENT = '?????MASTER'
+;
+CREATE TABLE [SYSTEM].[event_20070601_3](
+[mem_id] varchar(20),
+[mem_nm] varchar(20),
+[prt_no] varchar(14),
+[rcv_amt] varchar(8),
+[rcv_date] varchar(8),
+[band_cd] varchar(1)
+)
+;
+CREATE TABLE [SYSTEM].[event_20081120](
+[seq] numeric(13,0) NOT NULL,
+[mem_nm] varchar(30),
+[phone_no1] varchar(4),
+[phone_no2] varchar(4),
+[phone_no3] varchar(4),
+[post_no1] varchar(3),
+[post_no2] varchar(3),
+[post_addr] varchar(40),
+[post_addr1] varchar(40),
+[check_s] varchar(1),
+[text_s] varchar(4000),
+[reg_date] varchar(40)
+)
+;
+CREATE TABLE [SYSTEM].[event_20110925](
+[num] int,
+[twitter_id] varchar(20) NOT NULL,
+[user_name] varchar(40) NOT NULL,
+[tel] varchar(20) NOT NULL,
+[hp] varchar(20) NOT NULL,
+[zip1] varchar(5) NOT NULL,
+[zip2] varchar(5) NOT NULL,
+[addr] varchar(200) NOT NULL,
+[address] varchar(200) NOT NULL,
+[writedate] varchar(40)
+)
+;
+CREATE TABLE [SYSTEM].[event_2011_11](
+[seq] numeric(38,15),
+[mem_id] varchar(40),
+[mem_nm] varchar(20),
+[regdate] varchar(30)
+)
+;
+CREATE TABLE [SYSTEM].[event_quiz](
+[seq] numeric(13,0),
+[reg_name] varchar(40),
+[jumin_no] varchar(40),
+[telnum] varchar(40),
+[post_no] varchar(40),
+[post_addr] varchar(40),
+[next_addr] varchar(40),
+[email] varchar(40),
+[quiz_1] varchar(40),
+[quiz_2] varchar(40),
+[ansyn] varchar(40),
+[reg_date] varchar(40)
+)
+;
+CREATE TABLE [SYSTEM].[fee_faq](
+[seq] numeric(10,0),
+[title] varchar(200),
+[content] varchar(4000),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[dept] varchar(100),
+[telnum] varchar(14),
+[email] varchar(50),
+[reg_name] varchar(20),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[fee_qna](
+[seq] numeric(10,0),
+[title] varchar(200),
+[content] varchar(4000),
+[req_name] varchar(20),
+[jumin_no] varchar(14),
+[req_addr] varchar(200),
+[req_telnum] varchar(14),
+[req_email] varchar(50),
+[req_pwd] varchar(8),
+[req_date] varchar(20),
+[hits] numeric(10,0),
+[ansyn] char(1),
+[answer] varchar(4000),
+[dept] varchar(100),
+[reg_name] varchar(20),
+[telnum] varchar(14),
+[email] varchar(50),
+[pwd] varchar(8),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[gamsa2006](
+[req_seq] numeric(10,0) NOT NULL,
+[req_name] varchar(60),
+[jumin_no] varchar(14),
+[email] varchar(50),
+[telnum] varchar(14),
+[post_no] varchar(6),
+[post_addr] varchar(100),
+[next_addr] varchar(100),
+[title] varchar(60),
+[content] varchar(4000),
+[singoplace] varchar(60),
+[req_date] varchar(10),
+[req_time] varchar(6),
+[hits] numeric(10,0)
+)
+;
+CREATE TABLE [SYSTEM].[gamsaboard1](
+[no] numeric(13,0) COMMENT '????',
+[title] varchar(40) COMMENT '??',
+[regdept] varchar(10) COMMENT '????',
+[regnm] varchar(10) COMMENT '???',
+[day_sin1] numeric(8,0) COMMENT '????????1',
+[day_sin2] numeric(8,0) COMMENT '????????2',
+[day_gamsa1] numeric(8,0) COMMENT '????1',
+[day_gamsa2] numeric(8,0) COMMENT '????2',
+[naeyong] varchar(4000) COMMENT '??',
+[filename] varchar(40) COMMENT '????',
+[email] varchar(40) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[filesize] numeric(30,0) COMMENT '??????',
+[nalza] varchar(15) COMMENT '???',
+[jin_code] varchar(8),
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML ????',
+[ret] numeric(10,0) COMMENT '???'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[gamsaboard2](
+[no] numeric(13,0) COMMENT '????',
+[title] varchar(40) COMMENT '??',
+[regdept] varchar(10) COMMENT '????',
+[regnm] varchar(10) COMMENT '???',
+[day_gamsa1] numeric(8,0) COMMENT '????1',
+[day_gamsa2] numeric(8,0) COMMENT '????2',
+[naeyong] varchar(4000) COMMENT '??',
+[filename] varchar(40) COMMENT '????',
+[email] varchar(40) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[filesize] numeric(30,0) COMMENT '??????',
+[nalza] varchar(15) COMMENT '???',
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML ????',
+[ret] numeric(10,0) COMMENT '???'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[gamsawant](
+[no] numeric(13,0) COMMENT '????',
+[nal] varchar(20) COMMENT '???',
+[addr] varchar(100) COMMENT '??',
+[name] varchar(20) COMMENT '??',
+[tel1] varchar(5) COMMENT '????1',
+[tel2] varchar(5) COMMENT '????2',
+[tel3] varchar(5) COMMENT '????3',
+[phone1] varchar(5) COMMENT '???1',
+[phone2] varchar(5) COMMENT '???2',
+[phone3] varchar(5) COMMENT '???3',
+[mail] varchar(40) COMMENT '???',
+[title] varchar(100) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[jumin] varchar(14) COMMENT '??????'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[gamsawant1](
+[no] numeric(13,0),
+[nal] varchar(20),
+[addr] varchar(100),
+[name] varchar(20),
+[tel1] varchar(5),
+[tel2] varchar(5),
+[tel3] varchar(5),
+[phone1] varchar(5),
+[phone2] varchar(5),
+[phone3] varchar(5),
+[mail] varchar(40),
+[title] varchar(100),
+[content] varchar(4000),
+[jumin] varchar(14)
+)
+;
+CREATE TABLE [SYSTEM].[gongsa_board](
+[no] numeric(10,0) COMMENT '??? ????',
+[gname] varchar(100) COMMENT '???',
+[pcent] varchar(3) COMMENT '????',
+[gaeyo] varchar(200) COMMENT '????',
+[st_dept] varchar(20) COMMENT '????',
+[day_strt] numeric(8,0) COMMENT '???',
+[day_end] numeric(8,0) COMMENT '?????',
+[day_stop] numeric(8,0) COMMENT '??',
+[rest_day] numeric(8,0) COMMENT '??',
+[sum_gaey] numeric(13,0) COMMENT '?(???)',
+[sum_beon] numeric(13,0) COMMENT '?(???)',
+[amtg_sig] numeric(12,0) COMMENT '???(???)',
+[amtb_sig] numeric(12,0) COMMENT '???(???)',
+[amtg_jag] numeric(12,0) COMMENT '???(???)',
+[amtb_jag] numeric(12,0) COMMENT '???(???)',
+[amtg_dor] numeric(12,0) COMMENT '?????(???)',
+[amtb_dor] numeric(12,0) COMMENT '?????(???)',
+[hnm_dog] varchar(30) COMMENT '??? ???',
+[nm_dog] varchar(10) COMMENT '??? ????',
+[hnm_hdog] varchar(30) COMMENT '???? ???',
+[nm_hdog] varchar(10) COMMENT '???? ????',
+[jik_hdae1] varchar(20) COMMENT '?????1(?)',
+[nm_hdae1] varchar(10) COMMENT '?????1(??)',
+[jik_hdae2] varchar(20) COMMENT '?????2(?)',
+[nm_hdae2] varchar(10) COMMENT '?????2(??)',
+[jy_jaje] varchar(300) COMMENT '????',
+[nm_gam] varchar(10) COMMENT '??',
+[nm_dam] varchar(10) COMMENT '??',
+[nm_soj] varchar(10) COMMENT '??',
+[nm_jubu] varchar(10) COMMENT '????',
+[nm_syak] varchar(10) COMMENT '??????',
+[nm_end] varchar(10) COMMENT '???????',
+[nm_sigong] varchar(10) COMMENT '???(????)',
+[ny_sigong] varchar(150) COMMENT '????(????)',
+[cr_sigong] varchar(100) COMMENT '????(????)',
+[day_sigong] numeric(8,0) COMMENT '???(????)',
+[nm_jaje] varchar(10) COMMENT '???(????)',
+[ny_jaje] varchar(150) COMMENT '????(????)',
+[cr_jaje] varchar(100) COMMENT '????(????)',
+[day_jaje] numeric(8,0) COMMENT '???(????)',
+[nm_anjeon] varchar(10) COMMENT '???(????)',
+[ny_anjeon] varchar(150) COMMENT '????(????)',
+[cr_anjeon] varchar(100) COMMENT '????(????)',
+[day_anjeon] numeric(8,0) COMMENT '???(????)',
+[nm_plan] varchar(10) COMMENT '???(??????)',
+[ny_plan] varchar(150) COMMENT '????(??????)',
+[cr_plan] varchar(100) COMMENT '????(??????)',
+[day_plan] numeric(8,0) COMMENT '???(??????)',
+[nm_hongb] varchar(10) COMMENT '???(????)',
+[ny_hongb] varchar(150) COMMENT '????(????)',
+[cr_hongb] varchar(100) COMMENT '????(????)',
+[day_hongb] numeric(8,0) COMMENT '???(????)',
+[nm_anne] varchar(10) COMMENT '???(????)',
+[ny_anne] varchar(150) COMMENT '????(????)',
+[cr_anne] varchar(100) COMMENT '????(????)',
+[day_anne] numeric(8,0) COMMENT '???(????)',
+[nm_myung] varchar(10) COMMENT '???(??????)',
+[ny_myung] varchar(150) COMMENT '????(??????)',
+[cr_myung] varchar(100) COMMENT '????(??????)',
+[day_myung] numeric(8,0) COMMENT '???(??????)',
+[nm_joong] varchar(10) COMMENT '???(????)',
+[ny_joong] varchar(150) COMMENT '????(????)',
+[cr_joong] varchar(100) COMMENT '????(????)',
+[day_joong] numeric(8,0) COMMENT '???(????)',
+[nm_sil] varchar(10) COMMENT '???(?????)',
+[ny_sil] varchar(150) COMMENT '????(?????)',
+[cr_sil] varchar(100) COMMENT '????(?????)',
+[day_sil] numeric(8,0) COMMENT '???(?????)',
+[nm_snal] varchar(10) COMMENT '???(?????)',
+[ny_snal] varchar(150) COMMENT '????(?????)',
+[cr_snal] varchar(100) COMMENT '????(?????)',
+[day_snal] numeric(8,0) COMMENT '???(?????)',
+[nm_enal] varchar(10) COMMENT '???(???? ??)',
+[ny_enal] varchar(150) COMMENT '????(???? ??)',
+[cr_enal] varchar(100) COMMENT '????(???? ??)',
+[day_enal] numeric(8,0) COMMENT '???(???? ??)',
+[hit] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[reg_date] varchar(10) COMMENT '???',
+[filesize] numeric(30,0) COMMENT '???? ???',
+[filename] varchar(40) COMMENT '?????'
+)
+;
+CREATE TABLE [SYSTEM].[gong_board](
+[seq] numeric(10,0),
+[name] varchar(100),
+[percent] varchar(3),
+[list] varchar(200),
+[st_dept] varchar(100),
+[st_day] varchar(10),
+[end_day] varchar(10),
+[stop] varchar(10),
+[restart] varchar(10),
+[samt1] varchar(12),
+[samt11] varchar(12),
+[amt2] varchar(12),
+[amt22] varchar(12),
+[amt3] varchar(12),
+[amt33] varchar(12),
+[amt4] varchar(12),
+[amt44] varchar(12),
+[com] varchar(50),
+[com_name] varchar(50),
+[hacom] varchar(50),
+[hacom_name] varchar(50),
+[dae_jik] varchar(20),
+[dae_name] varchar(20),
+[dae_jik1] varchar(20),
+[dae_name1] varchar(20),
+[ju_jaje] varchar(300),
+[gam] varchar(20),
+[gam1] varchar(20),
+[gam2] varchar(20),
+[gong] varchar(20),
+[gong1] varchar(20),
+[gong2] varchar(20),
+[sigong] varchar(20),
+[sigong1] varchar(100),
+[sigong2] varchar(100),
+[sigong3] varchar(10),
+[jaje] varchar(20),
+[jaje1] varchar(100),
+[jaje2] varchar(100),
+[jaje3] varchar(10),
+[an] varchar(20),
+[an1] varchar(100),
+[an2] varchar(100),
+[an3] varchar(10),
+[plan] varchar(20),
+[plan1] varchar(100),
+[plan2] varchar(100),
+[plan3] varchar(10),
+[hong] varchar(20),
+[hong1] varchar(100),
+[hong2] varchar(100),
+[hong3] varchar(10),
+[ane] varchar(20),
+[ane1] varchar(100),
+[ane2] varchar(100),
+[ane3] varchar(10),
+[myung] varchar(20),
+[myung1] varchar(100),
+[myung2] varchar(100),
+[myung3] varchar(10),
+[joong] varchar(20),
+[joong1] varchar(100),
+[joong2] varchar(100),
+[joong3] varchar(10),
+[sil] varchar(20),
+[sil1] varchar(100),
+[sil2] varchar(100),
+[sil3] varchar(10),
+[snal] varchar(20),
+[snal1] varchar(100),
+[snal2] varchar(100),
+[snal3] varchar(10),
+[jnal] varchar(20),
+[jnal1] varchar(100),
+[jnal2] varchar(100),
+[jnal3] varchar(10),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[reg_name] varchar(20),
+[email] varchar(50),
+[reg_date] varchar(20),
+[dept] varchar(100),
+[filename] varchar(100)
+)
+;
+CREATE TABLE [SYSTEM].[ground](
+[req_seq] numeric(10,0) NOT NULL,
+[req_date] varchar(8) NOT NULL,
+[req_time] varchar(6) NOT NULL,
+[req_id] varchar(20),
+[req_name] varchar(20) NOT NULL,
+[jumin_no] varchar(14),
+[email] varchar(50) NOT NULL,
+[telnum] varchar(14) NOT NULL,
+[use_name] varchar(60) NOT NULL,
+[use_date] varchar(8) NOT NULL,
+[use_time] varchar(2),
+[use_num] numeric(5,0) NOT NULL,
+[post_no] varchar(6) NOT NULL,
+[post_addr] varchar(100) NOT NULL,
+[next_addr] varchar(100) NOT NULL,
+[pwd] varchar(8) NOT NULL,
+[status] char(1) NOT NULL,
+[comments] varchar(1000),
+[whereis] varchar(50) NOT NULL,
+[onewhere] char(1)
+)
+;
+CREATE TABLE [SYSTEM].[guest_stat](
+[connect_day] varchar(8),
+[connect_page] varchar(4),
+[con_00] numeric(8,0),
+[con_01] numeric(8,0),
+[con_02] numeric(8,0),
+[con_03] numeric(8,0),
+[con_04] numeric(8,0),
+[con_05] numeric(8,0),
+[con_06] numeric(8,0),
+[con_07] numeric(8,0),
+[con_08] numeric(8,0),
+[con_09] numeric(8,0),
+[con_10] numeric(8,0),
+[con_11] numeric(8,0),
+[con_12] numeric(8,0),
+[con_13] numeric(8,0),
+[con_14] numeric(8,0),
+[con_15] numeric(8,0),
+[con_16] numeric(8,0),
+[con_17] numeric(8,0),
+[con_18] numeric(8,0),
+[con_19] numeric(8,0),
+[con_20] numeric(8,0),
+[con_21] numeric(8,0),
+[con_22] numeric(8,0),
+[con_23] numeric(8,0),
+[con_tot] numeric(8,0)
+)
+;
+CREATE TABLE [SYSTEM].[hasudo](
+[hhome1] numeric(6,0) NOT NULL COMMENT '??? 1??',
+[hhome2] numeric(6,0) NOT NULL COMMENT '??? 2??',
+[hhome3] numeric(6,0) NOT NULL COMMENT '??? 3??',
+[hhome4] numeric(6,0) NOT NULL COMMENT '??? 4??',
+[hhome1_1] numeric(6,0) NOT NULL,
+[hhome2_1] numeric(6,0) NOT NULL,
+[hhome3_1] numeric(6,0) NOT NULL,
+[hhome4_1] numeric(6,0) NOT NULL,
+[h1sale1] numeric(6,0) NOT NULL,
+[h1sale2] numeric(6,0) NOT NULL,
+[h1sale3] numeric(6,0) NOT NULL,
+[h1sale4] numeric(6,0) NOT NULL,
+[h1sale1_1] numeric(6,0) NOT NULL,
+[h1sale2_1] numeric(6,0) NOT NULL,
+[h1sale3_1] numeric(6,0) NOT NULL,
+[h1sale4_1] numeric(6,0) NOT NULL,
+[h2sale1] numeric(6,0) NOT NULL COMMENT '??? 1??',
+[h2sale2] numeric(6,0) NOT NULL COMMENT '??? 2??',
+[h2sale3] numeric(6,0) NOT NULL COMMENT '??? 3??',
+[h2sale4] numeric(6,0) NOT NULL COMMENT '??? 4??',
+[h2sale5] numeric(6,0) NOT NULL,
+[h2sale6] numeric(6,0) NOT NULL,
+[h2sale1_1] numeric(6,0) NOT NULL,
+[h2sale2_1] numeric(6,0) NOT NULL,
+[h2sale3_1] numeric(6,0) NOT NULL,
+[h2sale4_1] numeric(6,0) NOT NULL,
+[h2sale5_1] numeric(6,0) NOT NULL,
+[h2sale6_1] numeric(6,0) NOT NULL,
+[hbath11] numeric(6,0) NOT NULL COMMENT '??? 1??',
+[hbath21] numeric(6,0) NOT NULL,
+[hbath22] numeric(6,0) NOT NULL,
+[hbath23] numeric(6,0) NOT NULL,
+[hbath24] numeric(6,0) NOT NULL,
+[hbath21_1] numeric(6,0) NOT NULL,
+[hbath22_1] numeric(6,0) NOT NULL,
+[hbath23_1] numeric(6,0) NOT NULL,
+[hbath24_1] numeric(6,0) NOT NULL,
+[gonggong] numeric(6,0) NOT NULL,
+[gongjung] numeric(6,0) NOT NULL,
+[indust] numeric(6,0) NOT NULL COMMENT '???',
+[temp] numeric(6,0) NOT NULL,
+[hhome5] numeric(8,0),
+[hhome6] numeric(8,0),
+[hhome5_1] numeric(8,0),
+[hhome6_1] numeric(8,0),
+[gongg1] numeric(8,0) COMMENT '??? 1??',
+[gongg2] numeric(8,0) COMMENT '??? 2??',
+[gongg3] numeric(8,0) COMMENT '??? 3??',
+[gongg4] numeric(8,0) COMMENT '??? 4??',
+[gongg5] numeric(8,0) COMMENT '??? 5??',
+[gongg1_1] numeric(8,0),
+[gongg2_1] numeric(8,0),
+[gongg3_1] numeric(8,0),
+[gongg4_1] numeric(8,0),
+[gongg5_1] numeric(8,0),
+[hbath12] numeric(8,0) COMMENT '??? 2??',
+[hbath13] numeric(8,0) COMMENT '??? 3??',
+[hbath14] numeric(8,0) COMMENT '??? 4??',
+[hbath11_1] numeric(8,0),
+[hbath12_1] numeric(8,0),
+[hbath13_1] numeric(8,0),
+[hbath14_1] numeric(8,0),
+[updatedate] datetime
+)
+;
+CREATE TABLE [SYSTEM].[hasudo_120302](
+[hhome1] numeric(6,0) NOT NULL,
+[hhome2] numeric(6,0) NOT NULL,
+[hhome3] numeric(6,0) NOT NULL,
+[hhome4] numeric(6,0) NOT NULL,
+[hhome1_1] numeric(6,0) NOT NULL,
+[hhome2_1] numeric(6,0) NOT NULL,
+[hhome3_1] numeric(6,0) NOT NULL,
+[hhome4_1] numeric(6,0) NOT NULL,
+[h1sale1] numeric(6,0) NOT NULL,
+[h1sale2] numeric(6,0) NOT NULL,
+[h1sale3] numeric(6,0) NOT NULL,
+[h1sale4] numeric(6,0) NOT NULL,
+[h1sale1_1] numeric(6,0) NOT NULL,
+[h1sale2_1] numeric(6,0) NOT NULL,
+[h1sale3_1] numeric(6,0) NOT NULL,
+[h1sale4_1] numeric(6,0) NOT NULL,
+[h2sale1] numeric(6,0) NOT NULL,
+[h2sale2] numeric(6,0) NOT NULL,
+[h2sale3] numeric(6,0) NOT NULL,
+[h2sale4] numeric(6,0) NOT NULL,
+[h2sale5] numeric(6,0) NOT NULL,
+[h2sale6] numeric(6,0) NOT NULL,
+[h2sale1_1] numeric(6,0) NOT NULL,
+[h2sale2_1] numeric(6,0) NOT NULL,
+[h2sale3_1] numeric(6,0) NOT NULL,
+[h2sale4_1] numeric(6,0) NOT NULL,
+[h2sale5_1] numeric(6,0) NOT NULL,
+[h2sale6_1] numeric(6,0) NOT NULL,
+[hbath11] numeric(6,0) NOT NULL,
+[hbath21] numeric(6,0) NOT NULL,
+[hbath22] numeric(6,0) NOT NULL,
+[hbath23] numeric(6,0) NOT NULL,
+[hbath24] numeric(6,0) NOT NULL,
+[hbath21_1] numeric(6,0) NOT NULL,
+[hbath22_1] numeric(6,0) NOT NULL,
+[hbath23_1] numeric(6,0) NOT NULL,
+[hbath24_1] numeric(6,0) NOT NULL,
+[gonggong] numeric(6,0) NOT NULL,
+[gongjung] numeric(6,0) NOT NULL,
+[indust] numeric(6,0) NOT NULL,
+[temp] numeric(6,0) NOT NULL,
+[hhome5] numeric(8,0),
+[hhome6] numeric(8,0),
+[hhome5_1] numeric(8,0),
+[hhome6_1] numeric(8,0),
+[gongg1] numeric(8,0),
+[gongg2] numeric(8,0),
+[gongg3] numeric(8,0),
+[gongg4] numeric(8,0),
+[gongg5] numeric(8,0),
+[gongg1_1] numeric(8,0),
+[gongg2_1] numeric(8,0),
+[gongg3_1] numeric(8,0),
+[gongg4_1] numeric(8,0),
+[gongg5_1] numeric(8,0),
+[hbath12] numeric(8,0),
+[hbath13] numeric(8,0),
+[hbath14] numeric(8,0),
+[hbath11_1] numeric(8,0),
+[hbath12_1] numeric(8,0),
+[hbath13_1] numeric(8,0),
+[hbath14_1] numeric(8,0)
+)
+;
+CREATE TABLE [SYSTEM].[hasudo_200508](
+[hhome1] numeric(6,0) NOT NULL,
+[hhome2] numeric(6,0) NOT NULL,
+[hhome3] numeric(6,0) NOT NULL,
+[hhome4] numeric(6,0) NOT NULL,
+[hhome1_1] numeric(6,0) NOT NULL,
+[hhome2_1] numeric(6,0) NOT NULL,
+[hhome3_1] numeric(6,0) NOT NULL,
+[hhome4_1] numeric(6,0) NOT NULL,
+[h1sale1] numeric(6,0) NOT NULL,
+[h1sale2] numeric(6,0) NOT NULL,
+[h1sale3] numeric(6,0) NOT NULL,
+[h1sale4] numeric(6,0) NOT NULL,
+[h1sale1_1] numeric(6,0) NOT NULL,
+[h1sale2_1] numeric(6,0) NOT NULL,
+[h1sale3_1] numeric(6,0) NOT NULL,
+[h1sale4_1] numeric(6,0) NOT NULL,
+[h2sale1] numeric(6,0) NOT NULL,
+[h2sale2] numeric(6,0) NOT NULL,
+[h2sale3] numeric(6,0) NOT NULL,
+[h2sale4] numeric(6,0) NOT NULL,
+[h2sale5] numeric(6,0) NOT NULL,
+[h2sale6] numeric(6,0) NOT NULL,
+[h2sale1_1] numeric(6,0) NOT NULL,
+[h2sale2_1] numeric(6,0) NOT NULL,
+[h2sale3_1] numeric(6,0) NOT NULL,
+[h2sale4_1] numeric(6,0) NOT NULL,
+[h2sale5_1] numeric(6,0) NOT NULL,
+[h2sale6_1] numeric(6,0) NOT NULL,
+[hbath11] numeric(6,0) NOT NULL,
+[hbath21] numeric(6,0) NOT NULL,
+[hbath22] numeric(6,0) NOT NULL,
+[hbath23] numeric(6,0) NOT NULL,
+[hbath24] numeric(6,0) NOT NULL,
+[hbath21_1] numeric(6,0) NOT NULL,
+[hbath22_1] numeric(6,0) NOT NULL,
+[hbath23_1] numeric(6,0) NOT NULL,
+[hbath24_1] numeric(6,0) NOT NULL,
+[gonggong] numeric(6,0) NOT NULL,
+[gongjung] numeric(6,0) NOT NULL,
+[indust] numeric(6,0) NOT NULL,
+[temp] numeric(6,0) NOT NULL,
+[hhome5] numeric(8,0),
+[hhome6] numeric(8,0),
+[hhome5_1] numeric(8,0),
+[hhome6_1] numeric(8,0),
+[gongg1] numeric(8,0),
+[gongg2] numeric(8,0),
+[gongg3] numeric(8,0),
+[gongg4] numeric(8,0),
+[gongg5] numeric(8,0),
+[gongg1_1] numeric(8,0),
+[gongg2_1] numeric(8,0),
+[gongg3_1] numeric(8,0),
+[gongg4_1] numeric(8,0),
+[gongg5_1] numeric(8,0),
+[hbath12] numeric(8,0),
+[hbath13] numeric(8,0),
+[hbath14] numeric(8,0),
+[hbath11_1] numeric(8,0),
+[hbath12_1] numeric(8,0),
+[hbath13_1] numeric(8,0),
+[hbath14_1] numeric(8,0)
+)
+;
+CREATE TABLE [SYSTEM].[hasudo_20140305](
+[hhome1] numeric(6,0) NOT NULL,
+[hhome2] numeric(6,0) NOT NULL,
+[hhome3] numeric(6,0) NOT NULL,
+[hhome4] numeric(6,0) NOT NULL,
+[hhome1_1] numeric(6,0) NOT NULL,
+[hhome2_1] numeric(6,0) NOT NULL,
+[hhome3_1] numeric(6,0) NOT NULL,
+[hhome4_1] numeric(6,0) NOT NULL,
+[h1sale1] numeric(6,0) NOT NULL,
+[h1sale2] numeric(6,0) NOT NULL,
+[h1sale3] numeric(6,0) NOT NULL,
+[h1sale4] numeric(6,0) NOT NULL,
+[h1sale1_1] numeric(6,0) NOT NULL,
+[h1sale2_1] numeric(6,0) NOT NULL,
+[h1sale3_1] numeric(6,0) NOT NULL,
+[h1sale4_1] numeric(6,0) NOT NULL,
+[h2sale1] numeric(6,0) NOT NULL,
+[h2sale2] numeric(6,0) NOT NULL,
+[h2sale3] numeric(6,0) NOT NULL,
+[h2sale4] numeric(6,0) NOT NULL,
+[h2sale5] numeric(6,0) NOT NULL,
+[h2sale6] numeric(6,0) NOT NULL,
+[h2sale1_1] numeric(6,0) NOT NULL,
+[h2sale2_1] numeric(6,0) NOT NULL,
+[h2sale3_1] numeric(6,0) NOT NULL,
+[h2sale4_1] numeric(6,0) NOT NULL,
+[h2sale5_1] numeric(6,0) NOT NULL,
+[h2sale6_1] numeric(6,0) NOT NULL,
+[hbath11] numeric(6,0) NOT NULL,
+[hbath21] numeric(6,0) NOT NULL,
+[hbath22] numeric(6,0) NOT NULL,
+[hbath23] numeric(6,0) NOT NULL,
+[hbath24] numeric(6,0) NOT NULL,
+[hbath21_1] numeric(6,0) NOT NULL,
+[hbath22_1] numeric(6,0) NOT NULL,
+[hbath23_1] numeric(6,0) NOT NULL,
+[hbath24_1] numeric(6,0) NOT NULL,
+[gonggong] numeric(6,0) NOT NULL,
+[gongjung] numeric(6,0) NOT NULL,
+[indust] numeric(6,0) NOT NULL,
+[temp] numeric(6,0) NOT NULL,
+[hhome5] numeric(8,0),
+[hhome6] numeric(8,0),
+[hhome5_1] numeric(8,0),
+[hhome6_1] numeric(8,0),
+[gongg1] numeric(8,0),
+[gongg2] numeric(8,0),
+[gongg3] numeric(8,0),
+[gongg4] numeric(8,0),
+[gongg5] numeric(8,0),
+[gongg1_1] numeric(8,0),
+[gongg2_1] numeric(8,0),
+[gongg3_1] numeric(8,0),
+[gongg4_1] numeric(8,0),
+[gongg5_1] numeric(8,0),
+[hbath12] numeric(8,0),
+[hbath13] numeric(8,0),
+[hbath14] numeric(8,0),
+[hbath11_1] numeric(8,0),
+[hbath12_1] numeric(8,0),
+[hbath13_1] numeric(8,0),
+[hbath14_1] numeric(8,0),
+[updatedate] datetime
+)
+;
+CREATE TABLE [SYSTEM].[hasudo_201503](
+[hhome1] numeric(6,0) NOT NULL,
+[hhome2] numeric(6,0) NOT NULL,
+[hhome3] numeric(6,0) NOT NULL,
+[hhome4] numeric(6,0) NOT NULL,
+[hhome1_1] numeric(6,0) NOT NULL,
+[hhome2_1] numeric(6,0) NOT NULL,
+[hhome3_1] numeric(6,0) NOT NULL,
+[hhome4_1] numeric(6,0) NOT NULL,
+[h1sale1] numeric(6,0) NOT NULL,
+[h1sale2] numeric(6,0) NOT NULL,
+[h1sale3] numeric(6,0) NOT NULL,
+[h1sale4] numeric(6,0) NOT NULL,
+[h1sale1_1] numeric(6,0) NOT NULL,
+[h1sale2_1] numeric(6,0) NOT NULL,
+[h1sale3_1] numeric(6,0) NOT NULL,
+[h1sale4_1] numeric(6,0) NOT NULL,
+[h2sale1] numeric(6,0) NOT NULL,
+[h2sale2] numeric(6,0) NOT NULL,
+[h2sale3] numeric(6,0) NOT NULL,
+[h2sale4] numeric(6,0) NOT NULL,
+[h2sale5] numeric(6,0) NOT NULL,
+[h2sale6] numeric(6,0) NOT NULL,
+[h2sale1_1] numeric(6,0) NOT NULL,
+[h2sale2_1] numeric(6,0) NOT NULL,
+[h2sale3_1] numeric(6,0) NOT NULL,
+[h2sale4_1] numeric(6,0) NOT NULL,
+[h2sale5_1] numeric(6,0) NOT NULL,
+[h2sale6_1] numeric(6,0) NOT NULL,
+[hbath11] numeric(6,0) NOT NULL,
+[hbath21] numeric(6,0) NOT NULL,
+[hbath22] numeric(6,0) NOT NULL,
+[hbath23] numeric(6,0) NOT NULL,
+[hbath24] numeric(6,0) NOT NULL,
+[hbath21_1] numeric(6,0) NOT NULL,
+[hbath22_1] numeric(6,0) NOT NULL,
+[hbath23_1] numeric(6,0) NOT NULL,
+[hbath24_1] numeric(6,0) NOT NULL,
+[gonggong] numeric(6,0) NOT NULL,
+[gongjung] numeric(6,0) NOT NULL,
+[indust] numeric(6,0) NOT NULL,
+[temp] numeric(6,0) NOT NULL,
+[hhome5] numeric(8,0),
+[hhome6] numeric(8,0),
+[hhome5_1] numeric(8,0),
+[hhome6_1] numeric(8,0),
+[gongg1] numeric(8,0),
+[gongg2] numeric(8,0),
+[gongg3] numeric(8,0),
+[gongg4] numeric(8,0),
+[gongg5] numeric(8,0),
+[gongg1_1] numeric(8,0),
+[gongg2_1] numeric(8,0),
+[gongg3_1] numeric(8,0),
+[gongg4_1] numeric(8,0),
+[gongg5_1] numeric(8,0),
+[hbath12] numeric(8,0),
+[hbath13] numeric(8,0),
+[hbath14] numeric(8,0),
+[hbath11_1] numeric(8,0),
+[hbath12_1] numeric(8,0),
+[hbath13_1] numeric(8,0),
+[hbath14_1] numeric(8,0),
+[updatedate] datetime
+)
+;
+CREATE TABLE [SYSTEM].[hasudo_bak](
+[hhome1] numeric(6,0) NOT NULL,
+[hhome2] numeric(6,0) NOT NULL,
+[hhome3] numeric(6,0) NOT NULL,
+[hhome4] numeric(6,0) NOT NULL,
+[hhome1_1] numeric(6,0) NOT NULL,
+[hhome2_1] numeric(6,0) NOT NULL,
+[hhome3_1] numeric(6,0) NOT NULL,
+[hhome4_1] numeric(6,0) NOT NULL,
+[h1sale1] numeric(6,0) NOT NULL,
+[h1sale2] numeric(6,0) NOT NULL,
+[h1sale3] numeric(6,0) NOT NULL,
+[h1sale4] numeric(6,0) NOT NULL,
+[h1sale1_1] numeric(6,0) NOT NULL,
+[h1sale2_1] numeric(6,0) NOT NULL,
+[h1sale3_1] numeric(6,0) NOT NULL,
+[h1sale4_1] numeric(6,0) NOT NULL,
+[h2sale1] numeric(6,0) NOT NULL,
+[h2sale2] numeric(6,0) NOT NULL,
+[h2sale3] numeric(6,0) NOT NULL,
+[h2sale4] numeric(6,0) NOT NULL,
+[h2sale5] numeric(6,0) NOT NULL,
+[h2sale6] numeric(6,0) NOT NULL,
+[h2sale1_1] numeric(6,0) NOT NULL,
+[h2sale2_1] numeric(6,0) NOT NULL,
+[h2sale3_1] numeric(6,0) NOT NULL,
+[h2sale4_1] numeric(6,0) NOT NULL,
+[h2sale5_1] numeric(6,0) NOT NULL,
+[h2sale6_1] numeric(6,0) NOT NULL,
+[hbath11] numeric(6,0) NOT NULL,
+[hbath21] numeric(6,0) NOT NULL,
+[hbath22] numeric(6,0) NOT NULL,
+[hbath23] numeric(6,0) NOT NULL,
+[hbath24] numeric(6,0) NOT NULL,
+[hbath21_1] numeric(6,0) NOT NULL,
+[hbath22_1] numeric(6,0) NOT NULL,
+[hbath23_1] numeric(6,0) NOT NULL,
+[hbath24_1] numeric(6,0) NOT NULL,
+[gonggong] numeric(6,0) NOT NULL,
+[gongjung] numeric(6,0) NOT NULL,
+[indust] numeric(6,0) NOT NULL,
+[temp] numeric(6,0) NOT NULL,
+[hhome5] numeric(8,0),
+[hhome6] numeric(8,0),
+[hhome5_1] numeric(8,0),
+[hhome6_1] numeric(8,0),
+[gongg1] numeric(8,0),
+[gongg2] numeric(8,0),
+[gongg3] numeric(8,0),
+[gongg4] numeric(8,0),
+[gongg5] numeric(8,0),
+[gongg1_1] numeric(8,0),
+[gongg2_1] numeric(8,0),
+[gongg3_1] numeric(8,0),
+[gongg4_1] numeric(8,0),
+[gongg5_1] numeric(8,0),
+[hbath12] numeric(8,0),
+[hbath13] numeric(8,0),
+[hbath14] numeric(8,0),
+[hbath11_1] numeric(8,0),
+[hbath12_1] numeric(8,0),
+[hbath13_1] numeric(8,0),
+[hbath14_1] numeric(8,0)
+)
+;
+CREATE TABLE [SYSTEM].[hdoc_company](
+[seq] int,
+[gubun] varchar(50) DEFAULT '',
+[compname] varchar(40) DEFAULT '',
+[ceo] varchar(20) DEFAULT '',
+[address] varchar(100) DEFAULT '',
+[phone] varchar(20) DEFAULT '',
+[dept1] varchar(1) DEFAULT ''
+)
+;
+CREATE TABLE [SYSTEM].[hdoc_company_1](
+[seq] int DEFAULT 0 NOT NULL,
+[gubun] varchar(50) DEFAULT '',
+[gu] varchar(50) DEFAULT '',
+[compname] varchar(40) DEFAULT '',
+[ceo] varchar(20) DEFAULT '' NOT NULL,
+[address] varchar(100) DEFAULT '',
+[phone] varchar(20) DEFAULT '',
+[dept1] varchar(1) DEFAULT ''
+)
+;
+CREATE TABLE [SYSTEM].[hdoc_post](
+[seq] numeric(22,0) NOT NULL COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[hits] numeric(22,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[reg_id] varchar(20),
+[reg_name] varchar(20) COMMENT '?????',
+[reg_date] varchar(20) COMMENT '???'
+) COMMENT = '???????'
+;
+CREATE TABLE [SYSTEM].[help](
+[topic] varchar(50),
+[seq] numeric(38,15),
+[info] varchar(80)
+)
+;
+CREATE TABLE [SYSTEM].[h_board](
+[sn] numeric(38,15) NOT NULL,
+[title] varchar(1000),
+[url] varchar(1000),
+[comment1] varchar(4000),
+[comment2] varchar(4000),
+[comment3] varchar(4000),
+[comment4] varchar(4000)
+)
+;
+CREATE TABLE [SYSTEM].[imsiw_ziya1225](
+[mem_id] varchar(20),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[post_no] varchar(6),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[cust_nm] varchar(20),
+[input_dt] varchar(8),
+[update_dt] varchar(8)
+)
+;
+CREATE TABLE [SYSTEM].[imsi_ziya1225](
+[mem_id] varchar(20),
+[pwd] varchar(20),
+[mem_nm] varchar(20),
+[ssn] varchar(20),
+[post_no] varchar(6),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[tel_no] varchar(20),
+[phone_no] varchar(20),
+[email] varchar(50),
+[input_dt] varchar(8),
+[update_dt] varchar(8),
+[cust_yn] varchar(1) NOT NULL,
+[jubu_yn] varchar(1),
+[mail_yn] varchar(1),
+[ca_nm] varchar(50)
+)
+;
+CREATE TABLE [SYSTEM].[info_board](
+[no] numeric(13,0) COMMENT '????',
+[nal] varchar(15) COMMENT '???',
+[name] varchar(15) COMMENT '????',
+[regno] varchar(15) COMMENT '???',
+[title] varchar(100) COMMENT '??',
+[msg] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[email] varchar(40) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[ret] numeric(10,0) COMMENT '???',
+[filesize] numeric(30,0) COMMENT '??????',
+[nalza] numeric(8,0) COMMENT '?????',
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML????',
+[board_gb] varchar(1) COMMENT '????'
+) COMMENT = '???'
+;
+CREATE TABLE [SYSTEM].[inground_post](
+[seq] varchar(22) NOT NULL,
+[title] varchar(200),
+[content] varchar(4000),
+[inspect_place] varchar(100),
+[inspect_date] varchar(20),
+[hits] numeric(22,0),
+[pwd] varchar(8),
+[reg_id] varchar(20),
+[reg_name] varchar(20),
+[reg_date] varchar(20),
+[status] varchar(2)
+)
+;
+CREATE TABLE [SYSTEM].[inspect_post](
+[seq] varchar(22) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[inspect_place] varchar(100) COMMENT '????',
+[inspect_date] varchar(20) COMMENT '????',
+[hits] numeric(22,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[reg_id] varchar(20) COMMENT '???ID',
+[reg_name] varchar(20) COMMENT '?????',
+[reg_date] varchar(20) COMMENT '???'
+) COMMENT = '????'
+;
+CREATE TABLE [SYSTEM].[jachigu_7](
+[home1] numeric(6,0) NOT NULL COMMENT '???1',
+[home2] numeric(6,0) NOT NULL COMMENT '???2',
+[home3] numeric(6,0) NOT NULL COMMENT '???3',
+[home4] numeric(6,0) NOT NULL COMMENT '???4',
+[home1_1] numeric(6,0) NOT NULL,
+[home2_1] numeric(6,0) NOT NULL COMMENT '?????1',
+[home3_1] numeric(6,0) NOT NULL COMMENT '?????2',
+[home4_1] numeric(6,0) NOT NULL COMMENT '?????3',
+[job1] numeric(6,0) NOT NULL COMMENT '???1',
+[job2] numeric(6,0) NOT NULL COMMENT '???2',
+[job3] numeric(6,0) NOT NULL COMMENT '???3',
+[job4] numeric(6,0) NOT NULL COMMENT '???4',
+[job1_1] numeric(6,0) NOT NULL,
+[job2_1] numeric(6,0) NOT NULL COMMENT '?????1',
+[job3_1] numeric(6,0) NOT NULL COMMENT '?????2',
+[job4_1] numeric(6,0) NOT NULL COMMENT '?????3',
+[sales1] numeric(6,0) NOT NULL COMMENT '???1',
+[sales2] numeric(6,0) NOT NULL COMMENT '???2',
+[sales3] numeric(6,0) NOT NULL COMMENT '???3',
+[sales4] numeric(6,0) NOT NULL COMMENT '???4',
+[sales1_1] numeric(6,0) NOT NULL,
+[sales2_1] numeric(6,0) NOT NULL COMMENT '?????1',
+[sales3_1] numeric(6,0) NOT NULL COMMENT '?????2',
+[sales4_1] numeric(6,0) NOT NULL COMMENT '?????3',
+[bath1] numeric(6,0) NOT NULL COMMENT '???1',
+[bath2] numeric(6,0) NOT NULL COMMENT '???2',
+[bath3] numeric(6,0) NOT NULL COMMENT '???3',
+[bath4] numeric(6,0) NOT NULL COMMENT '???4',
+[bath1_1] numeric(6,0) NOT NULL,
+[bath2_1] numeric(6,0) NOT NULL COMMENT '?????1',
+[bath3_1] numeric(6,0) NOT NULL COMMENT '?????2',
+[bath4_1] numeric(6,0) NOT NULL COMMENT '?????3',
+[bath21] numeric(6,0) NOT NULL,
+[bath22] numeric(6,0) NOT NULL,
+[bath23] numeric(6,0) NOT NULL,
+[bath24] numeric(6,0) NOT NULL,
+[bath21_1] numeric(6,0) NOT NULL,
+[bath22_1] numeric(6,0) NOT NULL,
+[bath23_1] numeric(6,0) NOT NULL,
+[bath24_1] numeric(6,0) NOT NULL,
+[updatedate] datetime
+)
+;
+CREATE TABLE [SYSTEM].[jachigu_7_20050927](
+[home1] numeric(6,0) NOT NULL,
+[home2] numeric(6,0) NOT NULL,
+[home3] numeric(6,0) NOT NULL,
+[home4] numeric(6,0) NOT NULL,
+[home1_1] numeric(6,0) NOT NULL,
+[home2_1] numeric(6,0) NOT NULL,
+[home3_1] numeric(6,0) NOT NULL,
+[home4_1] numeric(6,0) NOT NULL,
+[job1] numeric(6,0) NOT NULL,
+[job2] numeric(6,0) NOT NULL,
+[job3] numeric(6,0) NOT NULL,
+[job4] numeric(6,0) NOT NULL,
+[job1_1] numeric(6,0) NOT NULL,
+[job2_1] numeric(6,0) NOT NULL,
+[job3_1] numeric(6,0) NOT NULL,
+[job4_1] numeric(6,0) NOT NULL,
+[sales1] numeric(6,0) NOT NULL,
+[sales2] numeric(6,0) NOT NULL,
+[sales3] numeric(6,0) NOT NULL,
+[sales4] numeric(6,0) NOT NULL,
+[sales1_1] numeric(6,0) NOT NULL,
+[sales2_1] numeric(6,0) NOT NULL,
+[sales3_1] numeric(6,0) NOT NULL,
+[sales4_1] numeric(6,0) NOT NULL,
+[bath1] numeric(6,0) NOT NULL,
+[bath2] numeric(6,0) NOT NULL,
+[bath3] numeric(6,0) NOT NULL,
+[bath4] numeric(6,0) NOT NULL,
+[bath1_1] numeric(6,0) NOT NULL,
+[bath2_1] numeric(6,0) NOT NULL,
+[bath3_1] numeric(6,0) NOT NULL,
+[bath4_1] numeric(6,0) NOT NULL,
+[bath21] numeric(6,0) NOT NULL,
+[bath22] numeric(6,0) NOT NULL,
+[bath23] numeric(6,0) NOT NULL,
+[bath24] numeric(6,0) NOT NULL,
+[bath21_1] numeric(6,0) NOT NULL,
+[bath22_1] numeric(6,0) NOT NULL,
+[bath23_1] numeric(6,0) NOT NULL,
+[bath24_1] numeric(6,0) NOT NULL
+)
+;
+CREATE TABLE [SYSTEM].[jachigu_7_201505](
+[home1] numeric(6,0) NOT NULL COMMENT '???1',
+[home2] numeric(6,0) NOT NULL COMMENT '???2',
+[home3] numeric(6,0) NOT NULL COMMENT '???3',
+[home4] numeric(6,0) NOT NULL COMMENT '???4',
+[home1_1] numeric(6,0) NOT NULL,
+[home2_1] numeric(6,0) NOT NULL COMMENT '?????1',
+[home3_1] numeric(6,0) NOT NULL COMMENT '?????2',
+[home4_1] numeric(6,0) NOT NULL COMMENT '?????3',
+[job1] numeric(6,0) NOT NULL COMMENT '???1',
+[job2] numeric(6,0) NOT NULL COMMENT '???2',
+[job3] numeric(6,0) NOT NULL COMMENT '???3',
+[job4] numeric(6,0) NOT NULL COMMENT '???4',
+[job1_1] numeric(6,0) NOT NULL,
+[job2_1] numeric(6,0) NOT NULL COMMENT '?????1',
+[job3_1] numeric(6,0) NOT NULL COMMENT '?????2',
+[job4_1] numeric(6,0) NOT NULL COMMENT '?????3',
+[sales1] numeric(6,0) NOT NULL COMMENT '???1',
+[sales2] numeric(6,0) NOT NULL COMMENT '???2',
+[sales3] numeric(6,0) NOT NULL COMMENT '???3',
+[sales4] numeric(6,0) NOT NULL COMMENT '???4',
+[sales1_1] numeric(6,0) NOT NULL,
+[sales2_1] numeric(6,0) NOT NULL COMMENT '?????1',
+[sales3_1] numeric(6,0) NOT NULL COMMENT '?????2',
+[sales4_1] numeric(6,0) NOT NULL COMMENT '?????3',
+[bath1] numeric(6,0) NOT NULL COMMENT '???1',
+[bath2] numeric(6,0) NOT NULL COMMENT '???2',
+[bath3] numeric(6,0) NOT NULL COMMENT '???3',
+[bath4] numeric(6,0) NOT NULL COMMENT '???4',
+[bath1_1] numeric(6,0) NOT NULL,
+[bath2_1] numeric(6,0) NOT NULL COMMENT '?????1',
+[bath3_1] numeric(6,0) NOT NULL COMMENT '?????2',
+[bath4_1] numeric(6,0) NOT NULL COMMENT '?????3',
+[bath21] numeric(6,0) NOT NULL,
+[bath22] numeric(6,0) NOT NULL,
+[bath23] numeric(6,0) NOT NULL,
+[bath24] numeric(6,0) NOT NULL,
+[bath21_1] numeric(6,0) NOT NULL,
+[bath22_1] numeric(6,0) NOT NULL,
+[bath23_1] numeric(6,0) NOT NULL,
+[bath24_1] numeric(6,0) NOT NULL,
+[updatedate] datetime
+)
+;
+CREATE TABLE [SYSTEM].[jejung_debt](
+[debt_year] numeric(4,0) COMMENT '????',
+[principal1] numeric(12,0) NOT NULL COMMENT '?????? ??',
+[interest1] numeric(12,0) NOT NULL COMMENT '?????? ??',
+[principal2] numeric(12,0) NOT NULL COMMENT '??? ??',
+[interest2] numeric(12,0) NOT NULL COMMENT '??? ??',
+[principal3] numeric(12,0) NOT NULL COMMENT '???? ??',
+[interest3] numeric(12,0) NOT NULL COMMENT '???? ??',
+[principal4] numeric(12,0) NOT NULL COMMENT '??? ??',
+[interest4] numeric(12,0) NOT NULL COMMENT '??? ??',
+[principal5] numeric(12,0) NOT NULL COMMENT 'OECF ?? ??',
+[interest5] numeric(12,0) NOT NULL COMMENT 'OECF ?? ??'
+) COMMENT = '??'
+;
+CREATE TABLE [SYSTEM].[jejung_jasan](
+[debt_year] numeric(4,0) COMMENT '????',
+[kind1] numeric(15,0) NOT NULL COMMENT '??',
+[kind2] numeric(15,0) NOT NULL COMMENT '??',
+[kind3] numeric(15,0) NOT NULL COMMENT '??',
+[kind4] numeric(15,0) NOT NULL COMMENT '???',
+[kind5] numeric(15,0) NOT NULL COMMENT '????',
+[kind6] numeric(15,0) NOT NULL COMMENT '?????',
+[kind7] numeric(15,0) NOT NULL COMMENT '?????',
+[kind8] numeric(15,0) NOT NULL COMMENT '????????'
+) COMMENT = '???? - ??'
+;
+CREATE TABLE [SYSTEM].[jejung_stats](
+[debt_year] numeric(4,0) COMMENT '????',
+[kind1] varchar(40),
+[kind1size] numeric(30,0),
+[kind2] varchar(40),
+[kind2size] numeric(30,0),
+[kind3] varchar(40),
+[kind3size] numeric(30,0),
+[kind4] varchar(40),
+[kind4size] numeric(30,0),
+[kind5] varchar(40),
+[kind5size] numeric(30,0),
+[kind6] varchar(40),
+[kind6size] numeric(30,0),
+[kind7] varchar(40),
+[kind7size] numeric(30,0),
+[kind8] varchar(40),
+[kind8size] numeric(30,0),
+[kind9] varchar(40),
+[kind9size] numeric(30,0),
+[kind10] varchar(40),
+[kind10size] numeric(30,0),
+[kind11] varchar(40),
+[kind11size] numeric(30,0),
+[kind12] varchar(40),
+[kind12size] numeric(30,0),
+[kind13] varchar(40),
+[kind13size] numeric(30,0),
+[kind14] varchar(40),
+[kind14size] numeric(30,0),
+[kind15] varchar(40),
+[kind15size] numeric(30,0),
+[kind16] varchar(40),
+[kind16size] numeric(30,0),
+[kind17] varchar(40),
+[kind17size] numeric(30,0),
+[kind18] varchar(40),
+[kind18size] numeric(30,0),
+[kind19] varchar(40),
+[kind19size] numeric(30,0),
+[kind20] varchar(40),
+[kind20size] numeric(30,0),
+[kind21] varchar(40),
+[kind21size] numeric(30,0),
+[kind22] varchar(40),
+[kind22size] numeric(30,0),
+[kind23] varchar(40),
+[kind23size] numeric(30,0),
+[kind24] varchar(40),
+[kind24size] numeric(30,0),
+[kind25] varchar(40),
+[kind25size] numeric(30,0),
+[kind26] varchar(40),
+[kind26size] numeric(30,0),
+[kind27] varchar(40),
+[kind27size] numeric(30,0),
+[kind28] varchar(40),
+[kind28size] numeric(30,0),
+[kind29] varchar(40),
+[kind29size] numeric(30,0),
+[kind30] varchar(40),
+[kind30size] numeric(30,0),
+[kind31] varchar(40),
+[kind31size] numeric(30,0),
+[kind32] varchar(40),
+[kind32size] numeric(30,0),
+[kind33] varchar(40),
+[kind33size] numeric(30,0),
+[kind34] varchar(40),
+[kind34size] numeric(30,0),
+[kind35] varchar(40),
+[kind35size] numeric(30,0),
+[kind36] varchar(40),
+[kind36size] numeric(30,0),
+[kind37] varchar(40),
+[kind37size] numeric(30,0),
+[kind38] varchar(40),
+[kind38size] numeric(30,0),
+[kind39] varchar(40),
+[kind39size] numeric(30,0),
+[kind40] varchar(40),
+[kind40size] numeric(30,0),
+[kind41] varchar(40),
+[kind41size] numeric(30,0),
+[kind42] varchar(40),
+[kind42size] numeric(30,0),
+[kind43] varchar(40),
+[kind43size] numeric(30,0),
+[kind44] varchar(40),
+[kind44size] numeric(30,0),
+[kind45] varchar(40),
+[kind45size] numeric(30,0),
+[kind46] varchar(40),
+[kind46size] numeric(30,0),
+[kind47] varchar(40),
+[kind47size] numeric(30,0),
+[kind48] varchar(40),
+[kind48size] numeric(30,0),
+[kind49] varchar(40),
+[kind49size] numeric(30,0),
+[kind50] varchar(40),
+[kind50size] numeric(30,0)
+) COMMENT = '???? - ??/??'
+;
+CREATE TABLE [SYSTEM].[jubu](
+[id] varchar(15),
+[name] varchar(15),
+[pwd] varchar(8),
+[ssn] varchar(20),
+[input_dt] varchar(8),
+[update_dt] varchar(8)
+)
+;
+CREATE TABLE [SYSTEM].[jubuwork_board](
+[seq] numeric(10,0) COMMENT '??',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(10,0) COMMENT '??????',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(10) COMMENT '????',
+[reg_id] varchar(10) COMMENT '???ID',
+[reg_name] varchar(20) COMMENT '???',
+[email] varchar(50) COMMENT '???',
+[reg_date] varchar(30) COMMENT '???',
+[mod_date] varchar(30) DEFAULT 'sysdate' COMMENT '???'
+) COMMENT = '??? ???? ??'
+;
+CREATE TABLE [SYSTEM].[jubu_dialog](
+[seq] numeric(10,0),
+[link] numeric(10,0) NOT NULL,
+[ans] numeric(10,0) NOT NULL,
+[step] numeric(10,0) NOT NULL,
+[title] varchar(200),
+[content] varchar(4000),
+[filename] varchar(100),
+[filesize] numeric(10,0),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[reg_id] varchar(20),
+[reg_name] varchar(20),
+[email] varchar(50),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[jubu_freecmt](
+[seq] numeric(10,0),
+[seqid] numeric(10,0) NOT NULL,
+[mem_id] varchar(20) NOT NULL,
+[pwd] varchar(20),
+[mem_nm] varchar(20) NOT NULL,
+[content] varchar(4000),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[jubu_note](
+[seq] numeric(10,0),
+[title] varchar(200),
+[content] varchar(4000),
+[filename] varchar(100),
+[filesize] numeric(10,0),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[dept] varchar(100),
+[email] varchar(50),
+[reg_id] varchar(20),
+[reg_name] varchar(20),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[kind_board](
+[seq] numeric(10,0) COMMENT '????',
+[title] varchar(200) COMMENT '????',
+[content] varchar(4000) COMMENT '????',
+[model_dept] varchar(100) COMMENT '??? ??',
+[model_name] varchar(20) COMMENT '??? ??',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[reg_name] varchar(20) COMMENT '??? ??',
+[email] varchar(50) COMMENT '??? ???',
+[reg_date] varchar(20) COMMENT '???',
+[filename] varchar(100) COMMENT '???? ??'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[love_discusscmt](
+[seq] numeric(10,0),
+[seqid] numeric(10,0) NOT NULL,
+[mem_id] varchar(20) NOT NULL,
+[pwd] varchar(20),
+[mem_nm] varchar(20) NOT NULL,
+[content] varchar(4000),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[love_gallery](
+[seq] numeric(10,0) COMMENT '????',
+[cid] varchar(100) COMMENT '??',
+[link] numeric(10,0) NOT NULL COMMENT '????',
+[ans] numeric(10,0) NOT NULL COMMENT '????',
+[step] numeric(10,0) NOT NULL COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(10,0) COMMENT '??????',
+[imgwidth] numeric(10,0) COMMENT '????????',
+[imgheight] numeric(10,0) COMMENT '????????',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[reg_id] varchar(20) COMMENT '???ID',
+[reg_name] varchar(20) COMMENT '???',
+[email] varchar(50) COMMENT '???',
+[reg_date] varchar(20) COMMENT '???',
+[isshow] char(1) COMMENT '??/??? ??',
+[attachfile] varchar(100) COMMENT '????',
+[attachsize] numeric(10,0) COMMENT '??????'
+) COMMENT = '??? ??, ??????, ???? ???'
+;
+CREATE TABLE [SYSTEM].[love_gallerycmt](
+[seq] numeric(10,0),
+[cid] varchar(100),
+[seqid] numeric(10,0) NOT NULL,
+[mem_id] varchar(20) NOT NULL,
+[pwd] varchar(20),
+[mem_nm] varchar(20) NOT NULL,
+[title] varchar(200),
+[content] varchar(4000),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[love_greeting](
+[seq] numeric(10,0) COMMENT '????',
+[link] numeric(10,0) NOT NULL COMMENT '????',
+[ans] numeric(10,0) NOT NULL COMMENT '????',
+[step] numeric(10,0) NOT NULL COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[reg_id] varchar(20) COMMENT '???ID',
+[reg_name] varchar(20) COMMENT '???',
+[email] varchar(50) COMMENT '???',
+[reg_date] varchar(20) COMMENT '???',
+[isshow] char(1) COMMENT '??/??? ??'
+) COMMENT = '??? ????'
+;
+CREATE TABLE [SYSTEM].[love_greetingcmt](
+[seq] numeric(10,0) COMMENT '????',
+[seqid] numeric(10,0) NOT NULL COMMENT '?? ????',
+[mem_id] varchar(20) NOT NULL COMMENT '??ID',
+[pwd] varchar(20) NOT NULL COMMENT '????',
+[mem_nm] varchar(20) NOT NULL COMMENT '????',
+[content] varchar(4000) COMMENT '??',
+[reg_date] varchar(20) COMMENT '???'
+) COMMENT = '????? ??'
+;
+CREATE TABLE [SYSTEM].[love_singo](
+[seq] numeric(10,0) COMMENT '????',
+[link] numeric(10,0) NOT NULL COMMENT '????',
+[ans] numeric(10,0) NOT NULL COMMENT '????',
+[step] numeric(10,0) NOT NULL COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[reg_id] varchar(20) COMMENT '???ID',
+[reg_name] varchar(20) COMMENT '???',
+[email] varchar(50) COMMENT '???',
+[reg_date] varchar(20) COMMENT '???',
+[isshow] char(1) COMMENT '??/??? ??'
+) COMMENT = '??? ??/??'
+;
+CREATE TABLE [SYSTEM].[love_tea](
+[seq] numeric(22,0) COMMENT '????',
+[link] numeric(22,0) NOT NULL COMMENT '????',
+[ans] numeric(22,0) NOT NULL COMMENT '????',
+[step] numeric(22,0) NOT NULL COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[hits] numeric(22,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[reg_id] varchar(20) COMMENT '???ID',
+[reg_name] varchar(20) COMMENT '???',
+[email] varchar(50) COMMENT '???',
+[reg_date] varchar(20) COMMENT '???',
+[isshow] char(1) COMMENT '??/??? ??'
+) COMMENT = '??? ???'
+;
+CREATE TABLE [SYSTEM].[love_thisway](
+[seq] numeric(22,0) COMMENT '????',
+[link] numeric(22,0) NOT NULL COMMENT '????',
+[ans] numeric(22,0) NOT NULL COMMENT '????',
+[step] numeric(22,0) NOT NULL COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[hits] numeric(22,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[reg_id] varchar(20) COMMENT '???ID',
+[reg_name] varchar(20) COMMENT '???',
+[email] varchar(50) COMMENT '???',
+[reg_date] varchar(20) COMMENT '???',
+[isshow] char(1) COMMENT '??/??? ??'
+) COMMENT = '??? ????'
+;
+CREATE TABLE [SYSTEM].[love_year](
+[seq] numeric(22,0) COMMENT '????',
+[yearid] numeric(22,0) NOT NULL COMMENT '????',
+[mem_id] varchar(20) COMMENT '???ID',
+[mem_nm] varchar(20) COMMENT '??? ??',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[pwd] varchar(20) COMMENT '????',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(22,0) COMMENT '??????',
+[filesrc] varchar(200) COMMENT '??????',
+[reg_date] varchar(20) COMMENT '???',
+[isshow] varchar(1) COMMENT '??/??? ??'
+) COMMENT = '???????'
+;
+CREATE TABLE [SYSTEM].[love_yearcmt](
+[seq] numeric(10,0) COMMENT '????',
+[seqid] numeric(10,0) NOT NULL COMMENT '???? ID',
+[mem_id] varchar(20) COMMENT '???ID',
+[mem_nm] varchar(20) COMMENT '???',
+[title] varchar(200) COMMENT '??',
+[reg_date] varchar(20) COMMENT '???'
+) COMMENT = '??????? ??'
+;
+CREATE TABLE [SYSTEM].[love_yearimg](
+[seq] numeric(10,0) COMMENT '????',
+[seqid] numeric(10,0) NOT NULL COMMENT '????ID',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(10,0) COMMENT '??????',
+[imgwidth] numeric(10,0) COMMENT '????????',
+[imgheight] numeric(10,0) COMMENT '????????',
+[title] varchar(200) COMMENT '??',
+[reg_id] varchar(20) COMMENT '???ID',
+[reg_name] varchar(20) COMMENT '???',
+[reg_date] varchar(20) COMMENT '???'
+) COMMENT = '??????? ?????'
+;
+CREATE TABLE [SYSTEM].[manageetcboard](
+[no] numeric(13,0) NOT NULL,
+[title] varchar(40),
+[regdept] varchar(10),
+[regnm] varchar(10),
+[day_sin1] numeric(8,0),
+[day_sin2] numeric(8,0),
+[day_gamsa1] numeric(8,0),
+[day_gamsa2] numeric(8,0),
+[naeyong] varchar(4000),
+[filename] varchar(100),
+[email] varchar(40),
+[pwd] varchar(8),
+[filesize] numeric(30,0),
+[nalza] varchar(15),
+[jin_code] varchar(8),
+[ishtml] char(1),
+[ret] numeric(10,0)
+)
+;
+CREATE TABLE [SYSTEM].[manager](
+[manager_id] varchar(20),
+[password] varchar(15),
+[name] varchar(30),
+[grade] numeric(2,0),
+[deptnm] varchar(30),
+[deptno] varchar(7),
+[branch] varchar(20),
+[no] numeric(38,15),
+[reg_date] varchar(20),
+[mod_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[manager_access](
+[seq] varchar(20) NOT NULL,
+[dept] varchar(50) NOT NULL,
+[id] varchar(20) NOT NULL,
+[name] varchar(50) NOT NULL,
+[reg_date] varchar(20) NOT NULL,
+[status] varchar(20) NOT NULL,
+[ip] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[media_press](
+[seq] numeric(22,0) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(22,0) COMMENT '??????',
+[hits] numeric(22,0) COMMENT '???',
+[reg_name] varchar(20) COMMENT '???',
+[reg_date] varchar(20) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[media_date] varchar(20) COMMENT '????'
+) COMMENT = '????'
+;
+CREATE TABLE [SYSTEM].[memo_board](
+[seq] numeric(10,0) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(10,0) COMMENT '??????',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[dept] varchar(100) COMMENT '????',
+[email] varchar(50) COMMENT '???',
+[reg_name] varchar(20) COMMENT '?????',
+[reg_date] varchar(20) COMMENT '???',
+[end_date] numeric(8,0) COMMENT '???',
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML ????'
+) COMMENT = '????? ???'
+;
+CREATE TABLE [SYSTEM].[minwon_admin](
+[seq] numeric(38,15),
+[req_cd] varchar(20),
+[admin_name] varchar(50),
+[phone] varchar(1000),
+[minwon_name] varchar(50)
+)
+;
+CREATE TABLE [SYSTEM].[minwon_admin_120327](
+[seq] numeric(38,15) NOT NULL,
+[req_cd] varchar(20),
+[admin_name] varchar(50),
+[phone] varchar(1000),
+[minwon_name] varchar(50)
+)
+;
+CREATE TABLE [SYSTEM].[minwon_faq](
+[seq] numeric(10,0),
+[gubun] varchar(200),
+[title] varchar(200),
+[content] varchar(4000),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[dept] varchar(100),
+[telnum] varchar(14),
+[email] varchar(50),
+[reg_name] varchar(20),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[minwon_qna](
+[seq] numeric(10,0),
+[title] varchar(200),
+[content] varchar(4000),
+[req_name] varchar(20),
+[jumin_no] varchar(14),
+[req_addr] varchar(200),
+[req_telnum] varchar(14),
+[req_email] varchar(50),
+[req_pwd] varchar(8),
+[req_date] varchar(20),
+[hits] numeric(10,0),
+[ansyn] char(1),
+[answer] varchar(4000),
+[dept] varchar(100),
+[reg_name] varchar(20),
+[telnum] varchar(14),
+[email] varchar(50),
+[pwd] varchar(8),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[model_board](
+[seq] numeric(10,0) COMMENT '????',
+[title] varchar(200) COMMENT '????',
+[content] varchar(4000) COMMENT '?? ?? ??',
+[model_dept] varchar(100) COMMENT '??? ??',
+[model_name] varchar(20) COMMENT '??? ??',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[reg_name] varchar(20) COMMENT '??? ??',
+[email] varchar(50) COMMENT '??? ???',
+[reg_date] varchar(20) COMMENT '???'
+) COMMENT = '?????'
+;
+CREATE TABLE [SYSTEM].[monitor](
+[id] varchar(10) COMMENT '???',
+[pwd] varchar(200) COMMENT '????',
+[name] varchar(20) COMMENT '??',
+[jumin] varchar(20) COMMENT '????',
+[tel1] varchar(100) COMMENT '????',
+[tel2] varchar(100) COMMENT '?????',
+[email] varchar(50) COMMENT '???',
+[addr] varchar(150) COMMENT '??',
+[addr_num] varchar(10) COMMENT '????',
+[job] varchar(50) COMMENT '??',
+[grade] varchar(50) COMMENT '??',
+[inputday] varchar(12) COMMENT '????',
+[new_pwd] varchar(200),
+[pwd_check] varchar(1)
+) COMMENT = '??? ????'
+;
+CREATE TABLE [SYSTEM].[monitor_120510jmh](
+[id] varchar(10) NOT NULL,
+[pwd] varchar(12),
+[name] varchar(20),
+[jumin] varchar(20),
+[tel1] varchar(100),
+[tel2] varchar(100),
+[email] varchar(50),
+[addr] varchar(99),
+[addr_num] varchar(10),
+[job] varchar(50),
+[grade] varchar(50),
+[inputday] varchar(12)
+)
+;
+CREATE TABLE [SYSTEM].[monitor_20120114](
+[id] varchar(8) NOT NULL,
+[pwd] varchar(12),
+[name] varchar(20),
+[jumin] varchar(20),
+[tel1] varchar(100),
+[tel2] varchar(100),
+[email] varchar(50),
+[addr] varchar(99),
+[addr_num] varchar(10),
+[job] varchar(50),
+[grade] varchar(50),
+[inputday] varchar(12)
+)
+;
+CREATE TABLE [SYSTEM].[monitor_20140227](
+[id] varchar(10) NOT NULL,
+[pwd] varchar(12),
+[name] varchar(20),
+[jumin] varchar(20),
+[tel1] varchar(100),
+[tel2] varchar(100),
+[email] varchar(50),
+[addr] varchar(150),
+[addr_num] varchar(10),
+[job] varchar(50),
+[grade] varchar(50),
+[inputday] varchar(12)
+)
+;
+CREATE TABLE [SYSTEM].[msearch_dblist](
+[sn] numeric(4,0),
+[comments] varchar(100),
+[table_name] varchar(100),
+[url] varchar(500),
+[searchfield1] varchar(20),
+[searchfield2] varchar(20),
+[searchfield3] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[mview$_adv_index](
+[runid#] numeric(38,15) NOT NULL,
+[rank#] numeric(38,15) NOT NULL,
+[mvindex#] numeric(38,15) NOT NULL,
+[index_type] numeric(38,15),
+[index_name] varchar(50),
+[column_name] varchar(32),
+[index_content] varchar(2000),
+[summary_owner] varchar(32)
+)
+;
+CREATE TABLE [SYSTEM].[mview$_adv_owb](
+[runid#] numeric(38,15),
+[objname] varchar(30),
+[ownername] varchar(30),
+[mvscript] varchar(1073741823),
+[indexscript] varchar(1073741823)
+)
+;
+CREATE TABLE [SYSTEM].[mview$_adv_partition](
+[runid#] numeric(38,15) NOT NULL,
+[rank#] numeric(38,15) NOT NULL,
+[summary_owner] varchar(32),
+[query_text] varchar(1073741823)
+)
+;
+CREATE TABLE [SYSTEM].[news_board](
+[seq] numeric(10,0) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(10,0) COMMENT '??????',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[dept] varchar(100) COMMENT '????',
+[email] varchar(50) COMMENT '???',
+[reg_name] varchar(20) COMMENT '?????',
+[reg_date] varchar(20) COMMENT '???',
+[end_date] numeric(8,0) COMMENT '?????',
+[ishtml] char(1) DEFAULT '0' COMMENT 'HTML????'
+) COMMENT = '???'
+;
+CREATE TABLE [SYSTEM].[ol$](
+[ol_name] varchar(30),
+[sql_text] varchar(1073741823),
+[textlen] numeric(38,15),
+[signature] bit varying(128),
+[hash_value] numeric(38,15),
+[hash_value2] numeric(38,15),
+[category] varchar(30),
+[version] varchar(64),
+[creator] varchar(30),
+[timestamp] datetime,
+[flags] numeric(38,15),
+[hintcount] numeric(38,15),
+[spare1] numeric(38,15),
+[spare2] varchar(1000)
+)
+;
+CREATE TABLE [SYSTEM].[ol$hints](
+[ol_name] varchar(30),
+[hint#] numeric(38,15),
+[category] varchar(30),
+[hint_type] numeric(38,15),
+[hint_text] varchar(512),
+[stage#] numeric(38,15),
+[node#] numeric(38,15),
+[table_name] varchar(30),
+[table_tin] numeric(38,15),
+[table_pos] numeric(38,15),
+[ref_id] numeric(38,15),
+[user_table_name] varchar(64),
+[cost] double,
+[cardinality] double,
+[bytes] double,
+[hint_textoff] numeric(38,15),
+[hint_textlen] numeric(38,15),
+[join_pred] varchar(2000),
+[spare1] numeric(38,15),
+[spare2] numeric(38,15),
+[hint_string] varchar(1073741823)
+)
+;
+CREATE TABLE [SYSTEM].[ol$nodes](
+[ol_name] varchar(30),
+[category] varchar(30),
+[node_id] numeric(38,15),
+[parent_id] numeric(38,15),
+[node_type] numeric(38,15),
+[node_textlen] numeric(38,15),
+[node_textoff] numeric(38,15),
+[node_name] varchar(64)
+)
+;
+CREATE TABLE [SYSTEM].[old_event_find](
+[seq] numeric(10,0) NOT NULL,
+[reg_name] varchar(20),
+[jumin_no] varchar(14),
+[telnum] varchar(14),
+[post_no] varchar(7),
+[post_addr] varchar(200),
+[next_addr] varchar(200),
+[email] varchar(100),
+[content] varchar(4000),
+[path] varchar(4000),
+[recommend] varchar(4000),
+[filename] varchar(100),
+[reg_date] varchar(20),
+[hit_num] numeric(10,0)
+)
+;
+CREATE TABLE [SYSTEM].[old_event_quiz](
+[seq] numeric(10,0) NOT NULL,
+[reg_name] varchar(20),
+[jumin_no] varchar(14),
+[telnum] varchar(14),
+[post_no] varchar(7),
+[post_addr] varchar(200),
+[next_addr] varchar(200),
+[email] varchar(100),
+[quiz_1] char(1),
+[quiz_2] char(1),
+[ansyn] char(1),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[paymail](
+[seq] numeric(10,0),
+[mem_id] varchar(20),
+[email] varchar(50),
+[mem_nm] varchar(20),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[prt_no] varchar(20),
+[mail_datetime] varchar(30),
+[prt_gb] varchar(1),
+[strxml] varchar(1073741823),
+[mail_reply] varchar(1) COMMENT '1:??, 2:????',
+[read_chk] varchar(20),
+[read_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[plan_table](
+[statement_id] varchar(30),
+[timestamp] datetime,
+[remarks] varchar(80),
+[operation] varchar(30),
+[options] varchar(30),
+[object_node] varchar(128),
+[object_owner] varchar(30),
+[object_name] varchar(30),
+[object_instance] int,
+[object_type] varchar(30),
+[optimizer] varchar(255),
+[search_columns] numeric(38,15),
+[id] int,
+[parent_id] int,
+[position] int,
+[cost] int,
+[cardinality] int,
+[bytes] int,
+[other_tag] varchar(255),
+[partition_start] varchar(255),
+[partition_stop] varchar(255),
+[partition_id] int,
+[other] varchar(1073741823),
+[distribution] varchar(30),
+[cpu_cost] int,
+[io_cost] int,
+[temp_space] int
+)
+;
+CREATE TABLE [SYSTEM].[poll_article](
+[seq] numeric(11,0) COMMENT '????',
+[a_seq] numeric(11,0) COMMENT '????',
+[content] varchar(250) COMMENT '????',
+[cnt] numeric(11,0) COMMENT '??????'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[poll_list](
+[seq] numeric(11,0) COMMENT '????',
+[title] varchar(250) COMMENT '??????',
+[article_cnt] numeric(11,0) COMMENT '????',
+[t_cnt] numeric(11,0) COMMENT '???????',
+[s_dt] varchar(10) COMMENT '????',
+[input_dt] varchar(10) COMMENT '????',
+[e_dt] varchar(10) COMMENT '????'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[praise_board](
+[seq] numeric(10,0),
+[title] varchar(200),
+[content] varchar(4000),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[reg_name] varchar(20),
+[jumin_no] varchar(14),
+[telnum] varchar(14),
+[email] varchar(50),
+[addr] varchar(200),
+[reg_date] varchar(20),
+[name] varchar(20),
+[dept] varchar(50),
+[position] varchar(50)
+)
+;
+CREATE TABLE [SYSTEM].[praise_board_121231](
+[seq] numeric(10,0) NOT NULL,
+[title] varchar(200),
+[content] varchar(4000),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[reg_name] varchar(20),
+[jumin_no] varchar(14),
+[telnum] varchar(14),
+[email] varchar(50),
+[addr] varchar(200),
+[reg_date] varchar(20),
+[name] varchar(20),
+[dept] varchar(50),
+[position] varchar(50)
+)
+;
+CREATE TABLE [SYSTEM].[ratmul](
+[chg_ym] varchar(8) COMMENT '????',
+[per] numeric(38,15) COMMENT '????',
+[danga] numeric(38,15) COMMENT '??',
+[bod_per] numeric(38,15) COMMENT '?? ??? ???',
+[rbod_per] numeric(38,15) COMMENT '?? ??? ???'
+) COMMENT = '????????'
+;
+CREATE TABLE [SYSTEM].[ratmul_120302](
+[chg_ym] varchar(8) NOT NULL,
+[per] numeric(38,15),
+[danga] numeric(38,15),
+[bod_per] numeric(38,15),
+[rbod_per] numeric(38,15)
+)
+;
+CREATE TABLE [SYSTEM].[request_board](
+[seq] numeric(10,0) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[req_name] varchar(20) COMMENT '??? ??',
+[jumin_no] varchar(14) COMMENT '??? ????',
+[req_addr] varchar(200) COMMENT '??? ??',
+[req_telnum] varchar(14) COMMENT '??? ????',
+[req_email] varchar(50) COMMENT '??? ???',
+[req_pwd] varchar(8) COMMENT '??? ????',
+[req_date] varchar(20) COMMENT '???',
+[hits] numeric(10,0) COMMENT '???',
+[ansyn] char(1) COMMENT '????',
+[answer] varchar(4000) COMMENT '????',
+[dept] varchar(100) COMMENT '????',
+[reg_name] varchar(20) COMMENT '??? ??',
+[telnum] varchar(14) COMMENT '??? ????',
+[email] varchar(50) COMMENT '??? ???',
+[pwd] varchar(12) COMMENT '??? ????',
+[reg_date] varchar(20) COMMENT '?????'
+) COMMENT = '???? ???'
+;
+CREATE TABLE [SYSTEM].[request_board_20101213](
+[seq] numeric(10,0) NOT NULL,
+[title] varchar(200),
+[content] varchar(4000),
+[req_name] varchar(20),
+[jumin_no] varchar(14),
+[req_addr] varchar(200),
+[req_telnum] varchar(14),
+[req_email] varchar(50),
+[req_pwd] varchar(8),
+[req_date] varchar(20),
+[hits] numeric(10,0),
+[ansyn] char(1),
+[answer] varchar(4000),
+[dept] varchar(100),
+[reg_name] varchar(20),
+[telnum] varchar(14),
+[email] varchar(50),
+[pwd] varchar(8),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[satisfaction](
+[seq] numeric(38,15),
+[mem_id] varchar(50) NOT NULL,
+[user_name] varchar(50) NOT NULL,
+[address] varchar(500),
+[item1] varchar(20),
+[item2] varchar(20),
+[item3] varchar(20),
+[item4] varchar(20),
+[item5] varchar(20),
+[item6] varchar(20),
+[item7] varchar(20),
+[item8] varchar(20),
+[item9] varchar(20),
+[item10] varchar(20),
+[msg] varchar(4000),
+[reg_data] varchar(20),
+[isdel] varchar(2),
+[place] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[siljukpyunggaboard](
+[no] numeric(13,0) NOT NULL,
+[title] varchar(40),
+[regdept] varchar(10),
+[regnm] varchar(10),
+[day_sin1] numeric(8,0),
+[day_sin2] numeric(8,0),
+[day_gamsa1] numeric(8,0),
+[day_gamsa2] numeric(8,0),
+[naeyong] varchar(4000),
+[filename] varchar(100),
+[email] varchar(40),
+[pwd] varchar(8),
+[filesize] numeric(30,0),
+[nalza] varchar(15),
+[jin_code] varchar(8),
+[ishtml] char(1),
+[ret] numeric(10,0)
+)
+;
+CREATE TABLE [SYSTEM].[singo1_121231](
+[no] numeric(13,0) NOT NULL,
+[nal] varchar(20),
+[addr] varchar(100),
+[name] varchar(20),
+[tel1] varchar(5),
+[tel2] varchar(5),
+[tel3] varchar(5),
+[mail] varchar(40),
+[job] varchar(50),
+[position] varchar(20),
+[koname] varchar(20),
+[title] varchar(100),
+[content] varchar(4000),
+[jumin] varchar(14)
+)
+;
+CREATE TABLE [SYSTEM].[singo2_121231](
+[no] numeric(13,0) NOT NULL,
+[nal] varchar(30),
+[addr] varchar(100),
+[name] varchar(20),
+[tel1] varchar(5),
+[tel2] varchar(5),
+[tel3] varchar(5),
+[mail] varchar(40),
+[job] varchar(50),
+[position] varchar(20),
+[koname] varchar(20),
+[title] varchar(100),
+[content] varchar(4000),
+[jumin] varchar(14)
+)
+;
+CREATE TABLE [SYSTEM].[singo3](
+[no] numeric(13,0) NOT NULL COMMENT '????',
+[nal] varchar(30) COMMENT '???',
+[addr] varchar(100) COMMENT '??',
+[name] varchar(20) COMMENT '??? ??',
+[tel1] varchar(5) COMMENT '????1',
+[tel2] varchar(5) COMMENT '????2',
+[tel3] varchar(5) COMMENT '????3',
+[mail] varchar(40) COMMENT '??',
+[job] varchar(50) COMMENT '????? ??',
+[position] varchar(20) COMMENT '????? ??',
+[koname] varchar(20) COMMENT '????? ??',
+[title] varchar(100) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[jumin] varchar(14) COMMENT '????'
+) COMMENT = '?????'
+;
+CREATE TABLE [SYSTEM].[singo_clean](
+[no] numeric(38,15),
+[jumin_name] varchar(20) NOT NULL,
+[jumin_no] varchar(13) NOT NULL,
+[reg_date] datetime NOT NULL,
+[i_cname] varchar(100),
+[i_birth] varchar(20),
+[i_addr] varchar(200),
+[i_addr2] varchar(200),
+[i_tel] varchar(20),
+[i_conname] varchar(200),
+[i_condate] varchar(20),
+[i_conpart] varchar(200),
+[i_password] varchar(20),
+[i_res1] char(1),
+[i_clean1] char(1),
+[i_res2] char(1),
+[i_clean2] char(1),
+[i_res3] char(1),
+[i_clean3] char(1),
+[i_res4] char(1),
+[i_clean4] char(1),
+[i_res5] char(1),
+[i_clean5] char(1),
+[i_content] varchar(4000)
+)
+;
+CREATE TABLE [SYSTEM].[smslog](
+[seq] numeric(22,0),
+[prt_no] varchar(14),
+[send_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[sms_history](
+[sms_log_no] varchar(14) COMMENT 'SMS????',
+[sms_send_gbn] varchar(6) COMMENT '????',
+[sms_send_date] varchar(8) COMMENT '????',
+[sms_send_yn] varchar(1) COMMENT '????',
+[sms_recv_mem_id] varchar(20) COMMENT '??? ???',
+[sms_recv_mem_nm] varchar(20) COMMENT '??? ??',
+[sms_recv_mem_phone] varchar(20) COMMENT '??? ????(???)',
+[sms_sender_no] varchar(20) COMMENT '????? ????',
+[sms_sender_nm] varchar(30) COMMENT '????? ??',
+[sms_to_crm_yn] varchar(1) DEFAULT 'N' COMMENT 'CRM????',
+[sms_msg] varchar(100) COMMENT 'SMS?? ???',
+[sms_prtno] varchar(100) COMMENT '??? ?????'
+) COMMENT = 'SMS?? ?????'
+;
+CREATE TABLE [SYSTEM].[sms_test](
+[msgkey] varchar(50),
+[compkey] varchar(50),
+[id] varchar(20),
+[phone] varchar(20),
+[callback] varchar(20),
+[reqdate] datetime,
+[msg] varchar(100),
+[etc1] varchar(10),
+[etc2] varchar(10),
+[etc3] varchar(10),
+[etc4] varchar(10)
+)
+;
+CREATE TABLE [SYSTEM].[soonsoo365_contest_2015](
+[intnum] numeric(38,15),
+[strgubun] varchar(20),
+[strteamname] varchar(200),
+[strname1] varchar(200),
+[straddress1] varchar(200),
+[strtel1] varchar(20),
+[strhp1] varchar(20),
+[stremail1] varchar(200),
+[strname2] varchar(20),
+[straddress2] varchar(200),
+[strtel2] varchar(20),
+[strhp2] varchar(20),
+[stremail2] varchar(200),
+[strcontent] varchar(4000),
+[strpwd] varchar(20),
+[strfile] varchar(200),
+[strsize] varchar(100),
+[strfile2] varchar(200),
+[strsize2] varchar(20),
+[strfile3] varchar(200),
+[strsize3] varchar(20),
+[datewtoday] varchar(20),
+[datemtoday] varchar(20),
+[strjob1] varchar(200),
+[strjob2] varchar(200),
+[strsubject] varchar(200),
+[strroot] varchar(200)
+)
+;
+CREATE TABLE [SYSTEM].[soonsoo365_contest_del](
+[intnum] numeric(38,15),
+[strgubun] varchar(20),
+[strteamname] varchar(200),
+[strname1] varchar(200),
+[straddress1] varchar(200),
+[strtel1] varchar(20),
+[strhp1] varchar(20),
+[stremail1] varchar(200),
+[strname2] varchar(20),
+[straddress2] varchar(200),
+[strtel2] varchar(20),
+[strhp2] varchar(20),
+[stremail2] varchar(200),
+[strcontent] varchar(4000),
+[strpwd] varchar(40),
+[strfile] varchar(200),
+[strsize] varchar(100),
+[strfile2] varchar(200),
+[strsize2] varchar(20),
+[strfile3] varchar(200),
+[strsize3] varchar(20),
+[datewtoday] varchar(20),
+[datemtoday] varchar(20),
+[strjob1] varchar(200),
+[strjob2] varchar(200),
+[strsubject] varchar(200),
+[strroot] varchar(200)
+)
+;
+CREATE TABLE [SYSTEM].[staffinformation](
+[step1] varchar(40) DEFAULT '',
+[step2] varchar(40) DEFAULT '',
+[staffname] varchar(20) DEFAULT '',
+[staffposition] varchar(40) DEFAULT '',
+[stafftel] varchar(10) DEFAULT '',
+[staffemail] varchar(50) DEFAULT '',
+[staffjob] varchar(400) DEFAULT ''
+)
+;
+CREATE TABLE [SYSTEM].[staffinformation1](
+[seq] numeric(5,0) DEFAULT 0,
+[step1] varchar(40) DEFAULT '',
+[step2] varchar(40) DEFAULT '',
+[staffname] varchar(20) DEFAULT '',
+[staffposition] varchar(40) DEFAULT '',
+[stafftel] varchar(10) DEFAULT '',
+[staffemail] varchar(50) DEFAULT '',
+[staffjob] varchar(400) DEFAULT ''
+)
+;
+CREATE TABLE [SYSTEM].[staffinformation2](
+[seq] numeric(5,0) DEFAULT 0,
+[step1] varchar(40) DEFAULT '',
+[step2] varchar(40) DEFAULT '',
+[staffname] varchar(20) DEFAULT '',
+[staffposition] varchar(40) DEFAULT '',
+[stafftel] varchar(10) DEFAULT '',
+[staffemail] varchar(50) DEFAULT '',
+[staffjob] varchar(400) DEFAULT ''
+)
+;
+CREATE TABLE [SYSTEM].[standard1](
+[day] numeric(8,0) NOT NULL,
+[ds_prod] numeric(10,0),
+[hm_prod] numeric(10,0),
+[mj_prod] numeric(10,0),
+[oy_prod] numeric(10,0),
+[bum_prod] numeric(10,0),
+[kj_prod] numeric(10,0),
+[spa_dongrae_prod] numeric(10,0),
+[sap_haeun_prod] numeric(10,0),
+[prod_tot] numeric(10,0),
+[oldph] varchar(30),
+[oldbri] varchar(30),
+[oldnh3] varchar(30),
+[oldcod] varchar(30),
+[oldbod] varchar(30),
+[newph] varchar(30),
+[newbri] varchar(30),
+[newnh3] varchar(30),
+[newthm] varchar(30),
+[newcod] varchar(30),
+[newbod] varchar(30),
+[ggokjiph] varchar(30),
+[ggokjise] varchar(30),
+[ggokjidae] varchar(30),
+[ggokjicl] varchar(30),
+[ggokjibri] varchar(30),
+[ggokjicol] varchar(30),
+[ggokjife] varchar(30),
+[ggokjimn] varchar(30),
+[s_tothei] numeric(10,2),
+[s_totqua] numeric(10,0),
+[s_hdhei] numeric(10,2),
+[s_hdqua] numeric(10,0),
+[s_bkhei] numeric(10,2),
+[s_bkqua] numeric(10,0),
+[up_tothei] numeric(10,1),
+[up_totqua] numeric(10,0),
+[up_adhei] numeric(10,1),
+[up_adqua] numeric(10,0),
+[up_ihhei] numeric(10,1),
+[up_ihqua] numeric(10,0),
+[up_hchei] numeric(10,1),
+[up_hcqua] numeric(10,0),
+[up_nkhei] numeric(10,1),
+[up_nkqua] numeric(10,0),
+[updam_totqua] numeric(10,0),
+[updam_adqua] numeric(10,0),
+[updam_ihqua] numeric(10,0),
+[updam_hcqua] numeric(10,0),
+[updam_nkqua] numeric(10,0)
+)
+;
+CREATE TABLE [SYSTEM].[statistics](
+[title] varchar(4000),
+[filename] varchar(4000)
+)
+;
+CREATE TABLE [SYSTEM].[suggest_board](
+[seq] numeric(10,0),
+[title] varchar(200),
+[content] varchar(4000),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[email] varchar(50),
+[reg_name] varchar(20),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[suggest_data](
+[intnum] numeric(38,15),
+[strname] varchar(200),
+[strtel] varchar(20),
+[strhp] varchar(20),
+[strzipcode] varchar(20),
+[straddress1] varchar(200),
+[straddress2] varchar(200),
+[strcontect] varchar(4000),
+[datetoday] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[suzildata](
+[seq] numeric(10,0) COMMENT '????',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[filename] varchar(100) COMMENT '??????',
+[filesize] numeric(10,0) COMMENT '??????',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[dept] varchar(100) COMMENT '????',
+[email] varchar(50) COMMENT '???',
+[reg_name] varchar(20) COMMENT '?????',
+[reg_date] varchar(20) COMMENT '???',
+[input_search] varchar(10),
+[input_year] varchar(10)
+) COMMENT = '????? ???'
+;
+CREATE TABLE [SYSTEM].[suzildata_20091103](
+[seq] numeric(10,0) NOT NULL,
+[title] varchar(200),
+[content] varchar(4000),
+[filename] varchar(100),
+[filesize] numeric(10,0),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[dept] varchar(100),
+[email] varchar(50),
+[reg_name] varchar(20),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[suzilterm_board](
+[seq] numeric(10,0),
+[title] varchar(200),
+[content] varchar(4000),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[dept] varchar(100),
+[email] varchar(50),
+[reg_name] varchar(20),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[tbl_01](
+[a] int,
+[b] timestamp
+)
+;
+CREATE TABLE [SYSTEM].[tbl_busu_code](
+[index_code] varchar(5),
+[bu_code] varchar(5),
+[bu_name] varchar(50),
+[goa_code] varchar(5),
+[goa_name] varchar(50)
+)
+;
+CREATE TABLE [SYSTEM].[tbl_job_code](
+[index_code] varchar(5),
+[user_name] varchar(20),
+[busu_code] varchar(5),
+[user_email] varchar(30),
+[user_phone] varchar(20),
+[user_upmu] varchar(1000)
+)
+;
+CREATE TABLE [SYSTEM].[tbl_vote_20080916](
+[ch1_int] int DEFAULT 0,
+[ch2_int] int DEFAULT 0,
+[ch3_int] int DEFAULT 0,
+[ch4_int] int DEFAULT 0,
+[ch4_str] char(255),
+[ch5_int] int DEFAULT 0,
+[ch5_str] char(255),
+[ch6_int] int DEFAULT 0,
+[ch6_str] char(255),
+[ch7_int] int DEFAULT 0,
+[ch8_str] varchar(1000),
+[strip] char(20) NOT NULL,
+[strregdate] char(20) NOT NULL
+)
+;
+CREATE TABLE [SYSTEM].[tb_busanorg_data](
+[strorgname] varchar(200),
+[strorgcode1] varchar(20),
+[strorgcode2] varchar(7)
+)
+;
+CREATE TABLE [SYSTEM].[tb_busanorg_data2](
+[strorgname] varchar(200),
+[strorgcode1] varchar(20),
+[strorgcode2] varchar(7)
+)
+;
+CREATE TABLE [SYSTEM].[tb_busantel_data](
+[strid] varchar(200),
+[strname] varchar(200),
+[strdept] varchar(200),
+[strdeptcode] varchar(200),
+[strdept2] varchar(200),
+[strtel] varchar(200),
+[strinfo] varchar(4000)
+)
+;
+CREATE TABLE [SYSTEM].[tb_busantel_data2](
+[strid] varchar(200),
+[strname] varchar(200),
+[strdept] varchar(200),
+[strdeptcode] varchar(200),
+[strdept2] varchar(200),
+[strtel] varchar(200),
+[strinfo] varchar(4000)
+)
+;
+CREATE TABLE [SYSTEM].[tb_evaluation](
+[intnum] numeric(38,15),
+[strurl] varchar(400),
+[strnavi] varchar(400),
+[intstart] numeric(38,15),
+[strcontents] varchar(4000),
+[datetoday] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[tb_menu_data](
+[strmcode] numeric(38,15),
+[strmstepcode] numeric(38,15),
+[strmname] varchar(200),
+[strpath] varchar(500),
+[strurl] varchar(500),
+[strtarget] varchar(20),
+[strtype] varchar(20),
+[stroption] varchar(20),
+[charuse] varchar(1),
+[intref] varchar(20),
+[strdept] varchar(200),
+[strname] varchar(200),
+[strtel] varchar(200),
+[strdate] varchar(20),
+[stretc] varchar(400),
+[strsite] varchar(200),
+[charsearch] varchar(1),
+[charetc] varchar(1),
+[charnbsp] varchar(1)
+)
+;
+CREATE TABLE [SYSTEM].[tb_pageadm_data](
+[intnum] numeric(38,15),
+[strdept] varchar(200),
+[strname] varchar(200),
+[strtel] varchar(200),
+[strpagepath] varchar(400),
+[strpagename] varchar(400),
+[strdate] varchar(20),
+[charetc] varchar(10),
+[charnbsp] varchar(1)
+)
+;
+CREATE TABLE [SYSTEM].[tb_watertel_data](
+[strid] varchar(200),
+[strname] varchar(200),
+[strdept] varchar(200),
+[strdeptcode] varchar(200),
+[strdept2] varchar(200),
+[strtel] varchar(200),
+[strinfo] varchar(4000),
+[charuse] varchar(1),
+[charnbsp] varchar(1),
+[datetoday] datetime DEFAULT SYSDATE
+)
+;
+CREATE TABLE [SYSTEM].[tb_water_tour_data](
+[intnum] numeric(38,15),
+[strname] varchar(200),
+[strpwd] varchar(200),
+[strgroup] varchar(20),
+[stremail] varchar(200),
+[strtel] varchar(200),
+[straddress] varchar(200),
+[intappcount1] varchar(20),
+[intappcount2] varchar(20),
+[intappcount3] varchar(20),
+[strhopedate1] varchar(200),
+[strcourse1] varchar(50),
+[strcourse2] varchar(50),
+[strcourse3] varchar(50),
+[datetoday] varchar(20),
+[charnbsp] varchar(1),
+[strsubject] varchar(400),
+[strhopedate2] varchar(20),
+[inthopedate] numeric(38,15)
+)
+;
+CREATE TABLE [SYSTEM].[telcutoff](
+[call_close_date] varchar(8) NOT NULL,
+[call_close_time] varchar(2) NOT NULL,
+[div_cd] varchar(3) NOT NULL,
+[cust_no] varchar(6) NOT NULL,
+[meter_id] varchar(1) NOT NULL,
+[bu_no] varchar(2) NOT NULL,
+[name] varchar(60) NOT NULL,
+[gu_nm] varchar(20),
+[dong_nm] varchar(20),
+[cutoff_s_date] varchar(8),
+[cutoff_s_time] varchar(4),
+[cutoff_e_date] varchar(8),
+[cutoff_e_time] varchar(4),
+[cutoff_code] varchar(2),
+[cutoff_area] varchar(50),
+[upd_date] varchar(8),
+[upd_time] varchar(6),
+[upd_emp] varchar(14),
+[cutoff_desc] varchar(100),
+[delay_s_date] varchar(8) COMMENT '??????',
+[delay_s_time] varchar(4) COMMENT '??????',
+[delay_e_date] varchar(8) COMMENT '??????',
+[delay_e_time] varchar(4) COMMENT '??????',
+[scenario_kind] varchar(1) DEFAULT '1' COMMENT '??????(1:??, 2:??, 3:??)',
+[call_schedule] datetime COMMENT '??????'
+)
+;
+CREATE TABLE [SYSTEM].[telcutoff_old](
+[call_close_date] varchar(8),
+[call_close_time] varchar(2),
+[div_cd] varchar(3),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[name] varchar(20) NOT NULL,
+[gu_nm] varchar(20),
+[dong_nm] varchar(20),
+[cutoff_s_date] varchar(8),
+[cutoff_s_time] varchar(4),
+[cutoff_e_date] varchar(8),
+[cutoff_e_time] varchar(4),
+[cutoff_code] varchar(2),
+[cutoff_area] varchar(50),
+[upd_date] varchar(8),
+[upd_time] varchar(6),
+[upd_emp] varchar(14)
+)
+;
+CREATE TABLE [SYSTEM].[tel_1](
+[call_close_date] varchar(8) NOT NULL,
+[call_close_time] varchar(2) NOT NULL,
+[div_cd] varchar(3) NOT NULL,
+[cust_no] varchar(6) NOT NULL,
+[meter_id] varchar(1) NOT NULL,
+[bu_no] varchar(2) NOT NULL,
+[name] varchar(20) NOT NULL,
+[gu_nm] varchar(20),
+[dong_nm] varchar(20),
+[cutoff_s_date] varchar(8),
+[cutoff_s_time] varchar(4),
+[cutoff_e_date] varchar(8),
+[cutoff_e_time] varchar(4),
+[cutoff_code] varchar(2),
+[cutoff_area] varchar(50),
+[upd_date] varchar(8),
+[upd_time] varchar(6),
+[upd_emp] varchar(14)
+)
+;
+CREATE TABLE [SYSTEM].[test](
+[seq] numeric(10,0) NOT NULL,
+[title] varchar(200),
+[content] varchar(4000),
+[filename] varchar(100),
+[filesize] numeric(10,0),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[reg_id] varchar(20),
+[reg_name] varchar(20),
+[email] varchar(50),
+[reg_date] datetime,
+[isshow] char(1),
+[cont2] varchar(1073741823),
+[filename2] varchar(100),
+[filesize2] numeric(10,0)
+)
+;
+CREATE TABLE [SYSTEM].[test_ser](
+[req_no] varchar(14) NOT NULL
+)
+;
+CREATE TABLE [SYSTEM].[toad_plan_table](
+[statement_id] varchar(30),
+[plan_id] numeric(38,15),
+[timestamp] datetime,
+[remarks] varchar(4000),
+[operation] varchar(30),
+[options] varchar(255),
+[object_node] varchar(128),
+[object_owner] varchar(30),
+[object_name] varchar(30),
+[object_alias] varchar(65),
+[object_instance] int,
+[object_type] varchar(30),
+[optimizer] varchar(255),
+[search_columns] numeric(38,15),
+[id] int,
+[parent_id] int,
+[depth] int,
+[position] int,
+[cost] int,
+[cardinality] int,
+[bytes] int,
+[other_tag] varchar(255),
+[partition_start] varchar(255),
+[partition_stop] varchar(255),
+[partition_id] int,
+[other] varchar(1073741823),
+[distribution] varchar(30),
+[cpu_cost] int,
+[io_cost] int,
+[temp_space] int,
+[access_predicates] varchar(4000),
+[filter_predicates] varchar(4000),
+[projection] varchar(4000),
+[time] int
+)
+;
+CREATE TABLE [SYSTEM].[tocust_faq](
+[seq] numeric(10,0) COMMENT '????',
+[faqgubun] varchar(1) COMMENT 'FAQ??',
+[gubun] varchar(200) COMMENT '??',
+[title] varchar(200) COMMENT '??',
+[content] varchar(4000) COMMENT '??',
+[hits] numeric(10,0) COMMENT '???',
+[pwd] varchar(8) COMMENT '????',
+[dept] varchar(100) COMMENT '????',
+[telnum] varchar(14) COMMENT '????',
+[email] varchar(50) COMMENT '???',
+[reg_name] varchar(20) COMMENT '???',
+[reg_date] varchar(20) COMMENT '???'
+) COMMENT = '??????? ??????'
+;
+CREATE TABLE [SYSTEM].[tocust_qna](
+[seq] numeric(10,0),
+[gubun] varchar(1),
+[title] varchar(200),
+[content] varchar(4000),
+[req_name] varchar(20),
+[jumin_no] varchar(14),
+[req_addr] varchar(200),
+[req_telnum] varchar(20),
+[req_email] varchar(50),
+[req_pwd] varchar(20),
+[req_date] varchar(20),
+[hits] numeric(10,0),
+[ansyn] char(1),
+[answer] varchar(4000),
+[dept] varchar(100),
+[reg_name] varchar(20),
+[telnum] varchar(20),
+[email] varchar(50),
+[pwd] varchar(15),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[tocust_qna_del](
+[seq] numeric(10,0) NOT NULL,
+[gubun] varchar(1),
+[title] varchar(200),
+[content] varchar(4000),
+[req_name] varchar(20),
+[jumin_no] varchar(14),
+[req_addr] varchar(200),
+[req_telnum] varchar(20),
+[req_email] varchar(50),
+[req_pwd] varchar(20),
+[req_date] varchar(20),
+[hits] numeric(10,0),
+[ansyn] char(1),
+[answer] varchar(4000),
+[dept] varchar(100),
+[reg_name] varchar(20),
+[telnum] varchar(20),
+[email] varchar(50),
+[pwd] varchar(15),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[todaysujil_count](
+[intnum] numeric(38,15),
+[strname] varchar(50),
+[intcount] numeric(38,15),
+[datetoday] numeric(38,15)
+)
+;
+CREATE TABLE [SYSTEM].[tour2012](
+[intnum] numeric(38,15),
+[strname] varchar(200),
+[strzipcode] varchar(20),
+[straddress1] varchar(200),
+[straddress2] varchar(200),
+[strtel] varchar(20),
+[strhp] varchar(20),
+[datetoday] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[visit](
+[req_seq] numeric(10,0) COMMENT '????',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[req_id] varchar(20) COMMENT '???ID',
+[req_name] varchar(20) COMMENT '?????',
+[jumin_no] varchar(14) COMMENT '??? ????',
+[email] varchar(50) COMMENT '??? ???',
+[telnum] varchar(14) COMMENT '????',
+[visit_name] varchar(60) COMMENT '????(??)?',
+[visit_date] varchar(8) COMMENT '????',
+[visit_time] varchar(2) COMMENT '????',
+[visit_num] numeric(5,0) COMMENT '????',
+[post_no] varchar(6) COMMENT '????',
+[post_addr] varchar(100) COMMENT '??????',
+[next_addr] varchar(100) COMMENT '????',
+[pwd] varchar(8) COMMENT '????',
+[whereis] varchar(50) COMMENT '??????',
+[status] char(1) COMMENT '???? ????',
+[comments] varchar(1000) COMMENT '????????'
+) COMMENT = '????? ??'
+;
+CREATE TABLE [SYSTEM].[voluntary](
+[seq] numeric(22,0),
+[dept] varchar(30),
+[reg_name] varchar(20),
+[reg_date] varchar(20),
+[email] varchar(50),
+[title] varchar(200),
+[contract_date] varchar(20),
+[contract_term1] varchar(20),
+[contract_term2] varchar(20),
+[previous_money] numeric(22,0),
+[contract_money] numeric(22,0),
+[contract_percentage] numeric(3,0),
+[company] varchar(50),
+[director_name] varchar(20),
+[addr] varchar(200),
+[reason] varchar(4000),
+[place] varchar(50),
+[etc] varchar(200),
+[filename] varchar(100),
+[filesize] numeric(22,0),
+[hits] numeric(22,0),
+[pwd] varchar(8)
+)
+;
+CREATE TABLE [SYSTEM].[waterterm_board](
+[seq] numeric(10,0),
+[gubun] varchar(200),
+[title] varchar(200),
+[content] varchar(4000),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[dept] varchar(100),
+[email] varchar(50),
+[reg_name] varchar(20),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[water_board](
+[seq] numeric(10,0),
+[title] varchar(200),
+[content] varchar(4000),
+[hits] numeric(10,0),
+[pwd] varchar(8),
+[dept] varchar(100),
+[email] varchar(50),
+[reg_name] varchar(20),
+[reg_date] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[water_data](
+[no] numeric(22,0),
+[nal] varchar(15),
+[name] varchar(15),
+[regno] varchar(15),
+[title] varchar(50),
+[msg] varchar(4000),
+[filename] varchar(100),
+[email] varchar(40),
+[pwd] varchar(8),
+[ret] numeric(22,0),
+[filesize] numeric(22,0)
+)
+;
+CREATE TABLE [SYSTEM].[water_eval](
+[intnum] numeric(38,15) NOT NULL COMMENT '????',
+[strname] varchar(200) COMMENT '??',
+[strbirth] varchar(20) COMMENT '????',
+[straddress] varchar(200) COMMENT '??',
+[strtel] varchar(20) COMMENT '????',
+[strtel2] varchar(20) COMMENT '????',
+[strhp] varchar(20) NOT NULL COMMENT '????',
+[stremail] varchar(200) COMMENT '???',
+[strcontent] varchar(4000) COMMENT '????',
+[strpwd] varchar(20) COMMENT '????',
+[datewtoday] varchar(20) COMMENT '???',
+[datemtoday] varchar(20) COMMENT '???',
+[strjob] varchar(200) COMMENT '??'
+)
+;
+CREATE TABLE [SYSTEM].[webact](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[act_jobcd] varchar(6) COMMENT '???? ????',
+[act_jobnm] varchar(6) COMMENT '???? ???',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[post_no] varchar(6) COMMENT '??? ????',
+[post_addr] varchar(60) COMMENT '??? ???? ??',
+[next_addr] varchar(40) COMMENT '??? ????',
+[addr] varchar(99) COMMENT '??? ??',
+[up_type] varchar(2) COMMENT '??????',
+[up_typenm] varchar(20) COMMENT '?????',
+[up_use] varchar(20) COMMENT '??',
+[mm_qty] varchar(20) COMMENT '????',
+[mm_bore] varchar(20) COMMENT '?????'
+) COMMENT = '???? ????'
+;
+CREATE TABLE [SYSTEM].[webcountm](
+[cust_no] varchar(6) NOT NULL COMMENT '????',
+[meter_id] varchar(1) NOT NULL COMMENT '?????',
+[bu_no] varchar(2) NOT NULL COMMENT '???',
+[chk_ym] varchar(6) NOT NULL COMMENT '????',
+[pre_date] varchar(8) COMMENT '?????',
+[pre_cnt] numeric(7,0) COMMENT '????',
+[pchk_id] varchar(1) COMMENT '?????? +',
+[pre_qty] numeric(6,0) COMMENT '?????',
+[pusr_num] numeric(4,0) COMMENT '????? +',
+[pup_type] varchar(2) COMMENT '???? +',
+[act_cnt] numeric(7,0) COMMENT '????',
+[act_qty] numeric(6,0) COMMENT '???',
+[adj_yn] varchar(1) COMMENT '????',
+[adj_qty] numeric(6,0) COMMENT '???',
+[chk_id] varchar(1) COMMENT '????',
+[chk_nm] varchar(20) COMMENT '?????',
+[name] varchar(20) COMMENT '????',
+[usr_num] numeric(4,0) COMMENT '???',
+[up_type] varchar(2) COMMENT '??',
+[up_tpnm] varchar(20) COMMENT '??? ???',
+[up_type2] varchar(2) COMMENT '???',
+[up_tpnm2] varchar(20) COMMENT '??? ????',
+[hup_type] varchar(2) COMMENT '??? ??',
+[hup_tpnm] varchar(20) COMMENT '??? ???',
+[hup_type2] varchar(2) COMMENT '??? ???',
+[hup_tpnm2] varchar(20) COMMENT '??? ????',
+[chk_date] varchar(8) COMMENT '????',
+[gu_cd] varchar(3) COMMENT '???',
+[gu_nm] varchar(20) COMMENT '??',
+[dong_cd] varchar(3) COMMENT '???',
+[dong_nm] varchar(20) COMMENT '??',
+[bungu] varchar(3) COMMENT '??',
+[ser_no] varchar(4) COMMENT '????',
+[insp_cd] varchar(1) COMMENT '??????',
+[prt_cd] varchar(1) COMMENT '??????',
+[chk_man] varchar(14) COMMENT '???ID',
+[err_cd] varchar(2) COMMENT '????',
+[boj_qty] numeric(6,0) COMMENT '?????? -',
+[hap_qty] numeric(6,0) COMMENT '??? ??? +',
+[much_yn] varchar(1) COMMENT '????? ??',
+[upd_emp] varchar(14) COMMENT '??? ID',
+[upd_date] varchar(14) COMMENT '????',
+[div_cd] varchar(3) COMMENT '?????'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[webcust](
+[mem_id] varchar(20),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[post_no] varchar(7),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[cust_nm] varchar(50),
+[input_dt] varchar(8),
+[update_dt] varchar(8),
+[sms_yn] varchar(1),
+[vdiscrno] varchar(13),
+[zip_type] varchar(1),
+[new_postaddr] varchar(150),
+[new_addr] varchar(150)
+)
+;
+CREATE TABLE [SYSTEM].[webcust_120510jmh](
+[mem_id] varchar(20),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[post_no] varchar(6),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[cust_nm] varchar(20),
+[input_dt] varchar(8),
+[update_dt] varchar(8),
+[sms_yn] varchar(1),
+[vdiscrno] varchar(13),
+[zip_type] varchar(1),
+[new_postaddr] varchar(150),
+[new_addr] varchar(150)
+)
+;
+CREATE TABLE [SYSTEM].[webcust_jmh0511](
+[mem_id] varchar(20),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[post_no] varchar(6),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[cust_nm] varchar(20),
+[input_dt] varchar(8),
+[update_dt] varchar(8),
+[sms_yn] varchar(1),
+[vdiscrno] varchar(13),
+[zip_type] varchar(1),
+[new_postaddr] varchar(150),
+[new_addr] varchar(150)
+)
+;
+CREATE TABLE [SYSTEM].[webdel](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[del_date] varchar(8) COMMENT '?????',
+[ask_desc] varchar(200) COMMENT '????',
+[post_no] varchar(6) COMMENT '??? ????',
+[post_addr] varchar(60) COMMENT '??? ???? ??',
+[next_addr] varchar(40) COMMENT '??? ????',
+[addr] varchar(99) COMMENT '??? ??',
+[move_post_no] varchar(6) COMMENT '??? ????',
+[move_post_addr] varchar(60) COMMENT '??? ???? ??',
+[move_next_addr] varchar(40) COMMENT '??? ????',
+[move_addr] varchar(99) COMMENT '??? ??',
+[countm] numeric(10,0) COMMENT '????',
+[up_type] varchar(2) COMMENT '??????',
+[up_typenm] varchar(20) COMMENT '????',
+[mm_bore] varchar(20) COMMENT '?????'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[webdelymm](
+[rcv_ym] varchar(6) NOT NULL COMMENT '???????',
+[prt_no] varchar(14) COMMENT '????',
+[rcv_date] varchar(8) COMMENT '????',
+[band_cd] varchar(1) COMMENT 'B:????,C:????',
+[chk_1] varchar(1),
+[cust_no] varchar(13) COMMENT '????',
+[chk_2] varchar(1),
+[prt_amt] numeric(11,0) COMMENT '?????',
+[chk_3] varchar(1),
+[tot_amt] numeric(11,0) COMMENT '?????',
+[htot_amt] numeric(11,0) COMMENT '?????',
+[mtot_amt] numeric(11,0) COMMENT '??????',
+[prt_del1] varchar(8) COMMENT '????',
+[stt_ym] varchar(6) COMMENT '?????',
+[end_ym] varchar(6) COMMENT '?????',
+[chk_5] varchar(2),
+[rcv_amt] varchar(8) COMMENT '????',
+[pro_gb] varchar(1) COMMENT '????',
+[over_gb] varchar(1) COMMENT '1:???, 2:???',
+[bank_code] varchar(6) COMMENT '????',
+[gu_cd] varchar(2) COMMENT '???',
+[upd_emp] varchar(14) COMMENT '??????',
+[upd_date] varchar(14) COMMENT '????',
+[upd_name] varchar(14) COMMENT '????',
+[div_cd] varchar(3) COMMENT '?????',
+[serial_no] varchar(10) COMMENT '???? ????'
+) COMMENT = '???? - ??'
+;
+CREATE TABLE [SYSTEM].[webest](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[up_type] varchar(2) COMMENT '??????',
+[up_typenm] varchar(6) COMMENT '????',
+[mm_bore] varchar(20) COMMENT '?????'
+) COMMENT = '???????'
+;
+CREATE TABLE [SYSTEM].[webfee](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO(??-SEQ4)',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[req_title] varchar(50) COMMENT '??',
+[req_cont] varchar(2000) COMMENT '??',
+[req_ym] varchar(6) COMMENT '??????',
+[req_desc] varchar(2000) COMMENT '??'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[webfee_bak](
+[req_seq] varchar(25) NOT NULL,
+[div_cd] varchar(6),
+[req_no] varchar(11),
+[req_date] varchar(8),
+[req_time] varchar(6),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[req_id] varchar(20),
+[lmt_date] varchar(8),
+[req_title] varchar(50),
+[req_cont] varchar(200),
+[req_ym] varchar(6),
+[req_desc] varchar(2000)
+)
+;
+CREATE TABLE [SYSTEM].[webgam](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO(??-SEQ4)',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[st_ym] varchar(6) COMMENT '???????',
+[end_ym] varchar(6) COMMENT '??????',
+[nusu_date] varchar(8) COMMENT '??????',
+[nusu_fee] numeric(8,0) COMMENT '??????',
+[req_desc] varchar(200) COMMENT '???????',
+[mm_bore] varchar(20) COMMENT '??',
+[up_type] varchar(2) COMMENT '????',
+[mm_qty] numeric(8,0) COMMENT '????',
+[nusu_qty] numeric(8,0) COMMENT '?????'
+) COMMENT = '????????'
+;
+CREATE TABLE [SYSTEM].[webimsi](
+[a] varchar(1) NOT NULL,
+[b] varchar(1) NOT NULL
+)
+;
+CREATE TABLE [SYSTEM].[webjhj](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[post_no] varchar(6) COMMENT '??? ????',
+[post_addr] varchar(60) COMMENT '??? ???? ??',
+[next_addr] varchar(40) COMMENT '??? ????',
+[addr] varchar(99) COMMENT '??? ??',
+[pay_date] varchar(8) COMMENT '???????',
+[req_desc] varchar(200) COMMENT '????'
+) COMMENT = '????????'
+;
+CREATE TABLE [SYSTEM].[webjng](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO(??-SEQ4)',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[up_type] varchar(3) COMMENT '????',
+[up_typenm] varchar(20) COMMENT '???',
+[b_use] varchar(20) COMMENT '???????',
+[b_width] varchar(20) COMMENT '?????',
+[jng_qty] numeric(8,0) COMMENT '??????',
+[use_qty] numeric(8,0) COMMENT '??????',
+[jng_type] varchar(30) COMMENT '??????',
+[jng_date] varchar(8) COMMENT '???????',
+[st_date] varchar(8) COMMENT '???????',
+[jng_use] varchar(200) COMMENT '?????'
+) COMMENT = '???????'
+;
+CREATE TABLE [SYSTEM].[weblmt](
+[req_cd] varchar(2) COMMENT '??????',
+[req_nm] varchar(20) COMMENT '?????',
+[lmt_cnt] numeric(2,0) COMMENT '????',
+[pg_yn] varchar(1) COMMENT '?????',
+[pg_amt] numeric(6,0) COMMENT '??? ??',
+[b_cd] varchar(2) COMMENT '????',
+[g4c_nm] varchar(30) COMMENT 'G4C?????',
+[g4c_code] varchar(15) COMMENT 'G4C??????'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[webmember](
+[mem_id] varchar(20) COMMENT '?????',
+[pwd] varchar(200) COMMENT '??',
+[mem_nm] varchar(20) COMMENT '??',
+[ssn] varchar(20) COMMENT '???? ??',
+[post_no] varchar(7) COMMENT '????',
+[post_addr] varchar(60) COMMENT '??????',
+[next_addr] varchar(40) COMMENT '????',
+[addr] varchar(99) COMMENT '??',
+[tel_no] varchar(20) COMMENT '????',
+[phone_no] varchar(20) COMMENT '?????',
+[email] varchar(50) COMMENT '???',
+[input_dt] varchar(8) COMMENT '?? ??',
+[update_dt] varchar(8) COMMENT '?? ??',
+[cust_yn] varchar(1) NOT NULL COMMENT '??? ??',
+[jubu_yn] varchar(1) COMMENT '???????',
+[mail_yn] varchar(1) DEFAULT 'N' COMMENT '????????',
+[ca_nm] varchar(50) COMMENT '?????? ??',
+[sms_yn] varchar(1) COMMENT 'SMS????',
+[vdiscrno] varchar(13),
+[cust_cnt] numeric(2,0) DEFAULT 0 COMMENT '??? ??',
+[virtualno] varchar(150),
+[dupinfo] varchar(200),
+[age14] varchar(10) COMMENT '14 ???',
+[zip_type] varchar(1) COMMENT '???? 1:???? 2:????? by jmh',
+[new_postaddr] varchar(150) COMMENT '??? ??????',
+[new_addr] varchar(150) COMMENT '??? ??',
+[new_pwd] varchar(200),
+[pwd_check] varchar(1)
+) COMMENT = '????????'
+;
+CREATE TABLE [SYSTEM].[webmember_2011_11](
+[mem_id] varchar(20),
+[pwd] varchar(20),
+[mem_nm] varchar(20),
+[ssn] varchar(20),
+[post_no] varchar(6),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[tel_no] varchar(20),
+[phone_no] varchar(20),
+[email] varchar(50),
+[input_dt] varchar(8),
+[update_dt] varchar(8),
+[cust_yn] varchar(1) NOT NULL,
+[jubu_yn] varchar(1),
+[mail_yn] varchar(1),
+[ca_nm] varchar(50),
+[sms_yn] varchar(1),
+[vdiscrno] varchar(13),
+[cust_cnt] numeric(1,0),
+[virtualno] varchar(50),
+[dupinfo] varchar(100),
+[age14] varchar(10)
+)
+;
+CREATE TABLE [SYSTEM].[webmember_20140227](
+[mem_id] varchar(20),
+[pwd] varchar(200),
+[mem_nm] varchar(20),
+[ssn] varchar(20),
+[post_no] varchar(6),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[tel_no] varchar(20),
+[phone_no] varchar(20),
+[email] varchar(50),
+[input_dt] varchar(8),
+[update_dt] varchar(8),
+[cust_yn] varchar(1) NOT NULL,
+[jubu_yn] varchar(1),
+[mail_yn] varchar(1),
+[ca_nm] varchar(50),
+[sms_yn] varchar(1),
+[vdiscrno] varchar(13),
+[cust_cnt] numeric(1,0),
+[virtualno] varchar(50),
+[dupinfo] varchar(100),
+[age14] varchar(10),
+[zip_type] varchar(1),
+[new_postaddr] varchar(150),
+[new_addr] varchar(150)
+)
+;
+CREATE TABLE [SYSTEM].[webmember_event_20050430](
+[mem_id] varchar(20),
+[pwd] varchar(20),
+[mem_nm] varchar(20),
+[ssn] varchar(20),
+[post_no] varchar(6),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[tel_no] varchar(20),
+[phone_no] varchar(20),
+[email] varchar(50),
+[input_dt] varchar(8),
+[update_dt] varchar(8),
+[cust_yn] varchar(1) NOT NULL,
+[jubu_yn] varchar(1),
+[mail_yn] varchar(1),
+[ca_nm] varchar(50),
+[sms_yn] varchar(1)
+)
+;
+CREATE TABLE [SYSTEM].[webmember_jmh0511](
+[mem_id] varchar(20),
+[pwd] varchar(20),
+[mem_nm] varchar(20),
+[ssn] varchar(20),
+[post_no] varchar(6),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[tel_no] varchar(20),
+[phone_no] varchar(20),
+[email] varchar(50),
+[input_dt] varchar(8),
+[update_dt] varchar(8),
+[cust_yn] varchar(1) NOT NULL,
+[jubu_yn] varchar(1),
+[mail_yn] varchar(1),
+[ca_nm] varchar(50),
+[sms_yn] varchar(1),
+[vdiscrno] varchar(13),
+[cust_cnt] numeric(1,0),
+[virtualno] varchar(50),
+[dupinfo] varchar(100),
+[age14] varchar(10),
+[zip_type] varchar(1),
+[new_postaddr] varchar(150),
+[new_addr] varchar(150)
+)
+;
+CREATE TABLE [SYSTEM].[webnam](
+[req_seq] varchar(25),
+[div_cd] varchar(6),
+[req_no] varchar(11),
+[req_date] varchar(8),
+[req_time] varchar(6),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[req_id] varchar(20),
+[lmt_date] varchar(8),
+[oname] varchar(20),
+[opost_no] varchar(6),
+[opost_addr] varchar(60),
+[onext_addr] varchar(40),
+[oaddr] varchar(99),
+[nname] varchar(20),
+[npost_no] varchar(6),
+[npost_addr] varchar(60),
+[nnext_addr] varchar(40),
+[naddr] varchar(99),
+[req_desc] varchar(200)
+)
+;
+CREATE TABLE [SYSTEM].[webnum](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO(??-SEQ4)',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[ousr_num] numeric(4,0) COMMENT '?????',
+[ausr_num] numeric(4,0) COMMENT '?????',
+[up_type] varchar(2) COMMENT '??????',
+[up_typenm] varchar(20) COMMENT '?????',
+[up_nm] varchar(10) COMMENT '?????',
+[manager] varchar(10) COMMENT '???',
+[req_desc] varchar(200) COMMENT '????'
+) COMMENT = '????????'
+;
+CREATE TABLE [SYSTEM].[weboff](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[req_gb] varchar(3) COMMENT '????',
+[req_dbnm] varchar(20) COMMENT '?????',
+[ask_desc] varchar(200) COMMENT '????',
+[post_no] varchar(6) COMMENT '??? ????',
+[post_addr] varchar(60) COMMENT '??? ???? ??',
+[next_addr] varchar(40) COMMENT '??? ????',
+[addr] varchar(99) COMMENT '??? ??',
+[off_date1] varchar(8) COMMENT '?????',
+[off_date2] varchar(8) COMMENT '?????',
+[ext_date1] varchar(8) COMMENT '?????',
+[ext_date2] varchar(8) COMMENT '?????',
+[on_date1] varchar(8) COMMENT '?????',
+[up_type] varchar(2) COMMENT '???? ??',
+[up_typenm] varchar(20) COMMENT '????',
+[mm_bore] varchar(20) COMMENT '?????'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[webpay](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO(??-SEQ4)',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '??? ????',
+[lmt_date] varchar(8) COMMENT '????',
+[req_gb] varchar(3) COMMENT '????(??+??)',
+[req_gbnm] varchar(20) COMMENT '?????',
+[obank_code] varchar(6) COMMENT '?? ??????',
+[obank_nm] varchar(20) COMMENT '?? ?????',
+[ocust_acno] varchar(20) COMMENT '?? ??? ????',
+[ocust_acnm] varchar(20) COMMENT '?? ?????',
+[ocust_nmno] varchar(20) COMMENT '?? ????',
+[nbank_code] varchar(6) COMMENT '?? ??????',
+[nbank_nm] varchar(20) COMMENT '?? ?????',
+[ncust_acno] varchar(20) COMMENT '?? ??? ????',
+[ncust_acnm] varchar(20) COMMENT '?? ?????',
+[ncust_nmno] varchar(20) COMMENT '?? ????',
+[obusin_cd] varchar(20) COMMENT '?????????',
+[nbusin_cd] varchar(20) COMMENT '?????????'
+) COMMENT = '?? ???? ??'
+;
+CREATE TABLE [SYSTEM].[webrecvmm](
+[rcv_ym] varchar(6) NOT NULL COMMENT '??????',
+[prt_no] varchar(14) COMMENT '?????',
+[rcv_date] varchar(8) COMMENT '????',
+[band_cd] varchar(1) COMMENT 'B:????, C: ????',
+[chk_1] varchar(1),
+[cust_no] varchar(13) COMMENT '????',
+[chk_2] varchar(1),
+[prt_amt] numeric(11,0) COMMENT '?????',
+[prt_amt2] numeric(11,0) COMMENT '?????',
+[chk_3] varchar(1),
+[tot_amt] numeric(11,0) COMMENT '??? ?????',
+[htot_amt] numeric(11,0) COMMENT '??? ?????',
+[tot_amt1] numeric(11,0) COMMENT '??? ?????',
+[htot_amt1] numeric(11,0) COMMENT '??? ?????',
+[mtot_amt] numeric(11,0) COMMENT '??? ?????',
+[mtot_amt1] numeric(11,0) COMMENT '??? ?????',
+[etc_amt] numeric(11,0),
+[prt_del1] varchar(8) COMMENT '?????',
+[chk_5] varchar(2),
+[rcv_amt] varchar(8) COMMENT '????',
+[pro_gb] varchar(1) COMMENT '????',
+[over_gb] varchar(1) COMMENT '1:???, 2:???',
+[bank_code] varchar(6) COMMENT '????',
+[gu_cd] varchar(2) COMMENT '???',
+[upd_emp] varchar(14) COMMENT '??????',
+[upd_date] varchar(14) COMMENT '????',
+[upd_name] varchar(14) COMMENT '????',
+[div_cd] varchar(3) COMMENT '?????',
+[serial_no] varchar(10) COMMENT '???? ????'
+) COMMENT = '???? - ??'
+;
+CREATE TABLE [SYSTEM].[webreqfee](
+[req_no] varchar(14) COMMENT '??NO',
+[prt_no] varchar(14) NOT NULL COMMENT '????? ????',
+[cust_no] varchar(6) NOT NULL COMMENT '????',
+[meter_id] varchar(1) NOT NULL COMMENT '?????',
+[bu_no] varchar(2) NOT NULL COMMENT '???',
+[pre_date] varchar(8) COMMENT '????',
+[req_dt] varchar(200) COMMENT '??????',
+[req_id] varchar(20) COMMENT '???ID',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(8) COMMENT '????',
+[req_stnm] varchar(30) COMMENT '????',
+[req_stat] varchar(3) COMMENT '????',
+[div_cd] varchar(3) COMMENT '?????',
+[stat_date] varchar(15) COMMENT '??????',
+[mail_reply] varchar(1) DEFAULT '9' COMMENT '??????'
+) COMMENT = '????????'
+;
+CREATE TABLE [SYSTEM].[webrpt](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '??? ??',
+[req_no] varchar(11) COMMENT '??NO(SUSDNJF-SEQ4)',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[req_gb] varchar(3) COMMENT '????',
+[req_gbnm] varchar(20) COMMENT '?????',
+[rpt_ym1] varchar(6) COMMENT '??????',
+[rpt_ym2] varchar(6) COMMENT '?????',
+[ask_desc] varchar(500) COMMENT '??',
+[ask_qty] numeric(2,0) COMMENT '????',
+[ask_gb] varchar(20) COMMENT '????',
+[ask_div] varchar(200) COMMENT '??????'
+) COMMENT = '?? ????'
+;
+CREATE TABLE [SYSTEM].[websms](
+[mem_id] varchar(20),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[mem_nm] varchar(20),
+[phone_no] varchar(20),
+[ssn] varchar(20),
+[input_dt] varchar(8),
+[update_dt] varchar(8),
+[fee_yn] varchar(1),
+[dansu_yn] varchar(1),
+[minwon_yn] varchar(1),
+[gongji_yn] varchar(1),
+[sms1] varchar(1),
+[sms2] varchar(1),
+[sms3] varchar(1),
+[sms4] varchar(1)
+)
+;
+CREATE TABLE [SYSTEM].[websub](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO(??-SEQ4)',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '??? ????',
+[lmt_date] varchar(8) COMMENT '????',
+[req_gb] varchar(3) COMMENT '????',
+[req_gbnm] varchar(20) COMMENT '?????',
+[req_typenm] varchar(40) COMMENT '?????',
+[req_nm] varchar(20) COMMENT '???????',
+[req_ssn] varchar(20) COMMENT '????? ????',
+[grade_cd] varchar(20) COMMENT '??(????)',
+[grade_nm] varchar(20) COMMENT '?????????',
+[grade_no] varchar(30) COMMENT '???????',
+[grade_num] varchar(30) COMMENT '????????',
+[req_tel] varchar(20) COMMENT '????',
+[post_no] varchar(6) COMMENT '??? ????',
+[post_addr] varchar(60) COMMENT '??? ???? ??',
+[next_addr] varchar(40) COMMENT '??? ????',
+[addr] varchar(99) COMMENT '??? ??',
+[cust_nm] varchar(20) COMMENT '?????',
+[cust_link] varchar(20) COMMENT '???????',
+[cust_num] numeric(3,0) COMMENT '???',
+[up_type] varchar(20) COMMENT '????'
+) COMMENT = '???????'
+;
+CREATE TABLE [SYSTEM].[websup](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[use_nm] varchar(20) COMMENT '????????',
+[st_date] varchar(8) COMMENT '????????',
+[end_date] varchar(8) COMMENT '???????',
+[use_type] varchar(200) COMMENT '????',
+[use_qty] numeric(8,0) COMMENT '????'
+) COMMENT = '??????'
+;
+CREATE TABLE [SYSTEM].[webtyp](
+[req_seq] varchar(25),
+[div_cd] varchar(6),
+[req_no] varchar(11),
+[req_date] varchar(8),
+[req_time] varchar(6),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[req_id] varchar(20),
+[lmt_date] varchar(8),
+[post_no] varchar(6),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[oup_type] varchar(2),
+[oup_typenm] varchar(20),
+[nup_type] varchar(2),
+[nup_typenm] varchar(20),
+[req_desc] varchar(200),
+[gu_type] varchar(20),
+[gu_date] varchar(8),
+[gu_nm] varchar(40),
+[open_date] varchar(8),
+[app_date] varchar(8)
+)
+;
+CREATE TABLE [SYSTEM].[webust](
+[req_seq] varchar(25) COMMENT '????',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[cust_no] varchar(6) COMMENT '????',
+[meter_id] varchar(1) COMMENT '?????',
+[bu_no] varchar(2) COMMENT '???',
+[req_id] varchar(20) COMMENT '???????',
+[req_cd] varchar(2) COMMENT '??????',
+[req_gb] varchar(3) COMMENT '????',
+[req_gbnm] varchar(20) COMMENT '?????',
+[jumin_no] varchar(20) COMMENT '??? ????',
+[name] varchar(20) COMMENT '??? ??',
+[post_no] varchar(7) COMMENT '??? ????',
+[post_addr] varchar(60) COMMENT '??? ???? ??',
+[next_addr] varchar(40) COMMENT '??? ????',
+[addr] varchar(99) COMMENT '??? ??',
+[tel_no] varchar(20) COMMENT '??? ????',
+[req_jumin_no] varchar(20) COMMENT '??? ????',
+[req_name] varchar(20) COMMENT '??? ??',
+[req_post_no] varchar(7) COMMENT '??? ????',
+[req_post_addr] varchar(60) COMMENT '??? ???? ??',
+[req_next_addr] varchar(40) COMMENT '??? ????',
+[req_addr] varchar(99) COMMENT '??? ??',
+[req_tel_no] varchar(20) COMMENT '??? ????',
+[req_phone_no] varchar(20) COMMENT '??? ?????',
+[req_email] varchar(50) COMMENT '??? ???',
+[req_stat] varchar(3) COMMENT '??????',
+[req_stnm] varchar(16) COMMENT '?????',
+[stat_date] varchar(15) COMMENT '??????????',
+[stat_id] varchar(20) COMMENT '??????????',
+[stat_idnm] varchar(20) COMMENT '??????? ??',
+[stat_desc] varchar(200) COMMENT '????????',
+[stat_his] varchar(200) COMMENT '????HISTORY',
+[res_indate] varchar(15) COMMENT '?????????',
+[div_cd] varchar(3) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO(??-SEQ4)',
+[req_no0] varchar(11) COMMENT '??????',
+[lmt_date] varchar(8) COMMENT '????????',
+[res_outdate] varchar(20) COMMENT '?????????',
+[req_way] varchar(1) COMMENT '??????',
+[mail_reply] varchar(1) DEFAULT '9' COMMENT '??????',
+[obusin_cd] varchar(20) COMMENT '?????????',
+[nbusin_cd] varchar(20) COMMENT '?????????'
+) COMMENT = '???????'
+;
+CREATE TABLE [SYSTEM].[webust_del_hyc](
+[req_seq] varchar(25) NOT NULL,
+[req_date] varchar(8),
+[req_time] varchar(6),
+[cust_no] varchar(6),
+[meter_id] varchar(1),
+[bu_no] varchar(2),
+[req_id] varchar(20),
+[req_cd] varchar(2),
+[req_gb] varchar(3),
+[req_gbnm] varchar(20),
+[jumin_no] varchar(20),
+[name] varchar(20),
+[post_no] varchar(6),
+[post_addr] varchar(60),
+[next_addr] varchar(40),
+[addr] varchar(99),
+[tel_no] varchar(20),
+[req_jumin_no] varchar(20),
+[req_name] varchar(20),
+[req_post_no] varchar(6),
+[req_post_addr] varchar(60),
+[req_next_addr] varchar(40),
+[req_addr] varchar(99),
+[req_tel_no] varchar(20),
+[req_phone_no] varchar(20),
+[req_email] varchar(50),
+[req_stat] varchar(3),
+[req_stnm] varchar(8),
+[stat_date] varchar(15),
+[stat_id] varchar(20),
+[stat_idnm] varchar(20),
+[stat_desc] varchar(200),
+[stat_his] varchar(200),
+[res_indate] varchar(15),
+[div_cd] varchar(3),
+[req_no] varchar(11),
+[req_no0] varchar(11),
+[lmt_date] varchar(8),
+[res_outdate] varchar(20),
+[req_way] varchar(1),
+[mail_reply] varchar(1),
+[obusin_cd] varchar(20),
+[nbusin_cd] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[webwvr](
+[req_seq] varchar(25) COMMENT '????',
+[div_cd] varchar(6) COMMENT '?????',
+[req_no] varchar(11) COMMENT '??NO',
+[req_date] varchar(8) COMMENT '????',
+[req_time] varchar(6) COMMENT '????',
+[req_id] varchar(20) COMMENT '???????',
+[lmt_date] varchar(8) COMMENT '????',
+[rpt_date] varchar(8) COMMENT '???????',
+[ask_desc] varchar(200) COMMENT '??',
+[ask_qty] numeric(2,0) COMMENT '????',
+[ask_gb] varchar(20) COMMENT '????',
+[ask_div] varchar(30) COMMENT '??????'
+) COMMENT = '????????????'
+;
+CREATE TABLE [SYSTEM].[wlove_brief2012](
+[intnum] numeric(38,15),
+[strname] varchar(200),
+[strtel] varchar(20),
+[strhp] varchar(20),
+[strzipcode] varchar(20),
+[straddress1] varchar(200),
+[straddress2] varchar(200),
+[datetoday] varchar(20)
+)
+;
+CREATE TABLE [SYSTEM].[yearkmanageboard](
+[no] numeric(13,0) NOT NULL,
+[title] varchar(40),
+[regdept] varchar(10),
+[regnm] varchar(10),
+[day_sin1] numeric(8,0),
+[day_sin2] numeric(8,0),
+[day_gamsa1] numeric(8,0),
+[day_gamsa2] numeric(8,0),
+[naeyong] varchar(4000),
+[filename] varchar(100),
+[email] varchar(40),
+[pwd] varchar(8),
+[filesize] numeric(30,0),
+[nalza] varchar(15),
+[jin_code] varchar(8),
+[ishtml] char(1),
+[ret] numeric(10,0)
+)
+;
+CREATE TABLE [SYSTEM].[yoibupyunggaboard](
+[no] numeric(13,0) NOT NULL,
+[title] varchar(40),
+[regdept] varchar(10),
+[regnm] varchar(10),
+[day_sin1] numeric(8,0),
+[day_sin2] numeric(8,0),
+[day_gamsa1] numeric(8,0),
+[day_gamsa2] numeric(8,0),
+[naeyong] varchar(4000),
+[filename] varchar(100),
+[email] varchar(40),
+[pwd] varchar(8),
+[filesize] numeric(30,0),
+[nalza] varchar(15),
+[jin_code] varchar(8),
+[ishtml] char(1),
+[ret] numeric(10,0),
+[sihaeng1] varchar(100),
+[sihaeng2] varchar(4000),
+[sihaeng3] varchar(4000)
+)
+;
+CREATE VIEW [SYSTEM].[menu_view](
+[STRMCODE] numeric(38,15),
+[MENUPATH] varchar(4000),
+[MENUNAME] varchar(200),
+[MENUURL] varchar(500)
+)
+;
+CREATE VIEW [SYSTEM].[minwonform_view](
+[STRMCODE] numeric(38,15),
+[MENUPATH] varchar(4000),
+[MENUNAME] varchar(200),
+[MENUURL] varchar(500),
+[FILEPATH] varchar(500),
+[FILEURL] varchar(200)
+)
+;
+CREATE VIEW [SYSTEM].[product_privs](
+[PRODUCT] varchar(30),
+[USERID] varchar(30),
+[ATTRIBUTE] varchar(240),
+[SCOPE] varchar(240),
+[NUMERIC_VALUE] numeric(15,2),
+[CHAR_VALUE] varchar(240),
+[DATE_VALUE] datetime,
+[LONG_VALUE] varchar(1073741823)
+)
+;
+CREATE VIEW [SYSTEM].[tb_pageadm_data2](
+[STRPAGENAME] varchar(200),
+[STRDEPT] varchar(200),
+[STRNAME] varchar(200),
+[STRTEL] varchar(200),
+[CHARETC] varchar(1),
+[STRPAGEPATH] varchar(500)
+)
+;
+CREATE VIEW [SYSTEM].[v_dansu](
+[SEQ] numeric(10,0),
+[ADDR] varchar(200),
+[DANSU_DATE] varchar(200),
+[END_DATE] numeric(8,0),
+[CONTENT] varchar(4000)
+)
+;
+CREATE VIEW [SYSTEM].[webpage_view](
+[STRMCODE] numeric(38,15),
+[MENUPATH] varchar(4000),
+[MENUNAME] varchar(200),
+[STRPATH] varchar(500),
+[MENUURL] varchar(500)
+)
+;
+CREATE PRIVATE SYNONYM [SYSTEM].[catalog] FOR [SYS].[catalog];
+CREATE PRIVATE SYNONYM [SYSTEM].[col] FOR [SYS].[col];
+CREATE PRIVATE SYNONYM [SYSTEM].[publicsyn] FOR [SYS].[publicsyn];
+CREATE PRIVATE SYNONYM [SYSTEM].[syscatalog] FOR [SYS].[syscatalog];
+CREATE PRIVATE SYNONYM [SYSTEM].[sysfiles] FOR [SYS].[sysfiles];
+CREATE PRIVATE SYNONYM [SYSTEM].[tab] FOR [SYS].[tab];
+CREATE PRIVATE SYNONYM [SYSTEM].[tabquotas] FOR [SYS].[tabquotas];
+CREATE SERIAL [SYSTEM].[boardsq] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[crm_sms_seq] START WITH 421572 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999 CYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[logmnr_evolve_seq$] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 2;
+CREATE SERIAL [SYSTEM].[logmnr_seq$] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 2;
+CREATE SERIAL [SYSTEM].[logmnr_uids$] START WITH 100 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 2;
+CREATE SERIAL [SYSTEM].[manager_access_seq] START WITH 3976 INCREMENT BY 1 MINVALUE 1 MAXVALUE  999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[mview$_advseq_generic] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  4294967295 NOCYCLE CACHE 50;
+CREATE SERIAL [SYSTEM].[mview$_advseq_id] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  4294967295 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_exceptions_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_flavors_s] START WITH 1 INCREMENT BY 1 MINVALUE -2147483647 MAXVALUE  2147483647 NOCYCLE CACHE 2;
+CREATE SERIAL [SYSTEM].[repcat$_flavor_name_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 2;
+CREATE SERIAL [SYSTEM].[repcat$_refresh_templates_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_repprop_key] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_runtime_parms_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_template_objects_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_template_parms_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_template_refgroups_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_template_sites_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_temp_output_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_user_authorizations_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat$_user_parm_values_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[repcat_log_sequence] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[sms_seq] START WITH 752 INCREMENT BY 1 MINVALUE 1 MAXVALUE  999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[tb_evaluationnum] START WITH 4872 INCREMENT BY 1 MINVALUE 1 MAXVALUE  999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[tb_menu_num] START WITH 481 INCREMENT BY 1 MINVALUE 1 MAXVALUE  99999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[tb_pageadm_datanum] START WITH 14 INCREMENT BY 1 MINVALUE 1 MAXVALUE  999999999999999999999999999 NOCYCLE CACHE 2;
+CREATE SERIAL [SYSTEM].[template$_targets_s] START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[test_seq] START WITH 141 INCREMENT BY 1 MINVALUE 1 MAXVALUE  999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE SERIAL [SYSTEM].[todaysujil_count_num] START WITH 166849 INCREMENT BY 1 MINVALUE 1 MAXVALUE  9999999999999999999999999999 NOCYCLE CACHE 20;
+CREATE /*+ NO_STATS */  UNIQUE INDEX [ol$name] ON [SYSTEM].[ol$]([ol_name]);
+CREATE /*+ NO_STATS */  UNIQUE INDEX [ol$signature] ON [SYSTEM].[ol$]([signature],[category]);
+CREATE /*+ NO_STATS */  UNIQUE INDEX [ol$hnt_num] ON [SYSTEM].[ol$hints]([ol_name],[hint#]);
+ALTER VIEW [SYSTEM].[menu_view] ADD QUERY SELECT STRMCODE,  ltrim(sys_connect_by_path (to_char (STRMNAME), ' &gt; '), ' &gt; ') as MENUPATH  ,
+STRMNAME AS MENUNAME, STRURL AS MENUURL
+ FROM TB_MENU_DATA MENU WHERE CHARNBSP = '1'
+AND CHARUSE = '1' AND STRTYPE = 'file'  and STRSITE != 'minwon'  AND STRURL IS NOT NULL
+START WITH MENU.STRSITE = 'all' CONNECT BY PRIOR   
+MENU.STRMCODE = MENU.STRMSTEPCODE;
+ALTER VIEW [SYSTEM].[minwonform_view] ADD QUERY SELECT STRMCODE,  ltrim(sys_connect_by_path (to_char (STRMNAME), ' &gt; '), ' &gt; ') as MENUPATH  ,
+STRMNAME AS MENUNAME, STRURL AS MENUURL,
+STRPATH AS FILEPATH, STRTEL AS FILEURL
+ FROM TB_MENU_DATA MENU WHERE CHARNBSP = '1'
+AND CHARUSE = '1' AND STRTYPE = 'file' and STRSITE = 'minwon' AND STRURL IS NOT NULL
+START WITH MENU.STRSITE = 'all' CONNECT BY PRIOR   
+MENU.STRMCODE = MENU.STRMSTEPCODE;
+ALTER VIEW [SYSTEM].[product_privs] ADD QUERY SELECT PRODUCT, USERID, ATTRIBUTE, SCOPE,
+         NUMERIC_VALUE, CHAR_VALUE, DATE_VALUE, LONG_VALUE
+  FROM SQLPLUS_PRODUCT_PROFILE
+  WHERE USERID = 'PUBLIC' OR USER LIKE USERID;
+ALTER VIEW [SYSTEM].[tb_pageadm_data2] ADD QUERY SELECT STRMNAME AS STRPAGENAME , STRDEPT, STRNAME, STRTEL, CHARETC, REPLACE(REPLACE(STRURL, 'http://water.busan.go.kr',''), 'https://water.busan.go.kr','') AS STRPAGEPATH FROM TB_MENU_DATA WHERE STRTYPE = 'file'  AND  STRDEPT IS NOT NULL;
+ALTER VIEW [SYSTEM].[v_dansu] ADD QUERY SELECT SEQ,ADDR,DANSU_DATE,END_DATE,CONTENT FROM DANSU_BOARD;
+ALTER VIEW [SYSTEM].[webpage_view] ADD QUERY SELECT STRMCODE,  ltrim(sys_connect_by_path (to_char (STRMNAME), ' &gt; '), ' &gt; ') as MENUPATH  ,
+STRMNAME AS MENUNAME, STRPATH, STRURL AS MENUURL
+ FROM TB_MENU_DATA MENU WHERE CHARNBSP = '1' AND STRURL IS NOT NULL AND STRPATH IS NOT NULL
+AND CHARUSE = '1' AND STRTYPE = 'file' AND CHARSEARCH = '1' AND STROPTION = 'page' AND STRPATH IS NOT NULL
+START WITH MENU.STRSITE = 'all' CONNECT BY PRIOR   
+MENU.STRMCODE = MENU.STRMSTEPCODE;

@@ -1,0 +1,7 @@
+CREATE PRIVATE SYNONYM [catalog] FOR [catalog];
+CREATE PRIVATE SYNONYM [col] FOR [col];
+CREATE PRIVATE SYNONYM [publicsyn] FOR [publicsyn];
+CREATE PRIVATE SYNONYM [syscatalog] FOR [syscatalog];
+CREATE PRIVATE SYNONYM [sysfiles] FOR [sysfiles];
+CREATE PRIVATE SYNONYM [tab] FOR [tab];
+CREATE PRIVATE SYNONYM [tabquotas] FOR [tabquotas];

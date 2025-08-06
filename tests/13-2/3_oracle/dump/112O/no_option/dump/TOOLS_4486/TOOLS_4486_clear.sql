@@ -1,0 +1,3 @@
+DROP TABLE [TOOLS_4486].[tools_4486_tb];
+DROP TABLE [TOOLS_4486].[tools_4486_tb_2];
+DROP VIEW [TOOLS_4486].[tools_4486_view];

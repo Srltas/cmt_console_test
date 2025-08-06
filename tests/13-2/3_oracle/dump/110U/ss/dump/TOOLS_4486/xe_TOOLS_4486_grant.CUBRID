@@ -1,0 +1,13 @@
+GRANT UPDATE ON [credit1] TO [TOOLS_4486];
+GRANT SELECT ON [credit1] TO [TOOLS_4486];
+GRANT INSERT ON [credit1] TO [TOOLS_4486];
+GRANT INDEX ON [credit1] TO [TOOLS_4486];
+GRANT DELETE ON [credit1] TO [TOOLS_4486];
+GRANT ALTER ON [credit1] TO [TOOLS_4486];
+GRANT INDEX ON [cubrid_image_list] TO [TOOLS_4486];
+GRANT ALTER ON [cubrid_image_list] TO [TOOLS_4486];
+GRANT DELETE ON [cubrid_image_list] TO [TOOLS_4486];
+GRANT UPDATE ON [cubrid_image_list] TO [TOOLS_4486];
+GRANT INSERT ON [cubrid_image_list] TO [TOOLS_4486];
+GRANT SELECT ON [cubrid_image_list] TO [TOOLS_4486];
+GRANT SELECT ON [tools4376_v1] TO [TOOLS_4486];

@@ -1,0 +1,1 @@
+CREATE /*+ NO_STATS */ INDEX [tools4376_col2_idx] ON [CUBRID].[tools4376]([col2]);

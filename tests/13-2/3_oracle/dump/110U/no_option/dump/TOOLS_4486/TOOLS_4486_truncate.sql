@@ -1,0 +1,2 @@
+TRUNCATE TABLE [tools_4486_tb];
+TRUNCATE TABLE [tools_4486_tb_2];
